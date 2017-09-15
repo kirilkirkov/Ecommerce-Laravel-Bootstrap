@@ -27,32 +27,32 @@
             Tip 2: you can also add an image using data-image tag
                 -->
                 <div class="logo">
-                    <a href="{{ url('/') }}" class="simple-text">
+                    <a href="{{ lang_url('/') }}" class="simple-text">
                         Creative Tim
                     </a>
                 </div>
                 <div class="sidebar-wrapper">
                     <ul class="nav">
                         <li class="active">
-                            <a href="{{ url('/admin') }}">
+                            <a href="{{ lang_url('/admin') }}">
                                 <i class="material-icons">dashboard</i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/users') }}">
+                            <a href="{{ lang_url('admin/users') }}">
                                 <i class="material-icons">person</i>
                                 <p>User Profile</p>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/table') }}">
+                            <a href="{{ lang_url('admin/table') }}">
                                 <i class="material-icons">content_paste</i>
                                 <p>Table List</p>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/typo') }}">
+                            <a href="{{ lang_url('admin/typo') }}">
                                 <i class="material-icons">library_books</i>
                                 <p>Typography</p>
                             </a>
@@ -70,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/notify') }}">
+                            <a href="{{ lang_url('admin/notify') }}">
                                 <i class="material-icons text-gray">notifications</i>
                                 <p>Notifications</p>
                             </a>

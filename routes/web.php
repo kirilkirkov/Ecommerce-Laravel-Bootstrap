@@ -11,25 +11,40 @@
   |
  */
 
-Auth::routes();
-
 Route::get('/', 'HomeController@index');
+Route::get('{locale}', 'HomeController@index')
+        ->where('locale', implode('|', Config::get('app.locales')));
 
-Route::get('/admin/{locale?}', 'Admin\\HomeController@index')->middleware('auth');
-
-Route::get('/admin/{locale}/users', function() {
-    return View::make("admin.users");
-})->middleware('auth');
-
-Route::get('/admin/table', function() {
-    return View::make("admin.table");
-})->middleware('auth');
-
-Route::get('/admin/typo', function() {
-    return View::make("admin.typo");
-})->middleware('auth');
-
-Route::get('/admin/notify', function() {
-    return View::make("admin.notify");
-})->middleware('auth');
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('admin', 'Admin\\HomeController@index');
+    Route::get('{locale}/admin', 'Admin\\HomeController@index')
+            ->where('locale', implode('|', Config::get('app.locales')));
+//////////////
+    Route::get('admin/users', function() {
+        return View::make("admin.users");
+    });
+    Route::get('{locale}/admin/users', function() {
+        return View::make("admin.users");
+    })->where('locale', implode('|', Config::get('app.locales')));
+//////////////
+    Route::get('admin/table', function() {
+        return View::make("admin.table");
+    });
+    Route::get('{locale}/admin/table', function() {
+        return View::make("admin.table");
+    })->where('locale', implode('|', Config::get('app.locales')));
+//////////////
+    Route::get('admin/typo', function() {
+        return View::make("admin.typo");
+    });
+    Route::get('{locale}/admin/typo', function() {
+        return View::make("admin.typo");
+    })->where('locale', implode('|', Config::get('app.locales')));
+//////////////
+    Route::get('admin/notify', function() {
+        return View::make("admin.notify");
+    })->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/notify', function() {
+        return View::make("admin.notify");
+    });
+});

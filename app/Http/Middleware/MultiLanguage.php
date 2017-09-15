@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App;
+use Config;
 use Closure;
 
 class MultiLanguage
@@ -16,7 +17,21 @@ class MultiLanguage
      */
     public function handle($request, Closure $next)
     {
-        App::setLocale('bg');
+        /*
+         * segment 1 is public
+         * segment 2 is admin
+         */ 
+        $segment = request()->segment(1);
+
+        $lang = Config::get('app.locale'); // get default locale
+        $supportedLocales = Config::get('app.locales');
+
+        if (in_array($segment, $supportedLocales)) {
+            $lang = $segment;
+        }
+
+        App::setLocale($lang);
         return $next($request);
     }
+
 }
