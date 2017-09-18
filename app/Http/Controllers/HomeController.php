@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
- 
 
     /**
      * Show the application dashboard.

@@ -1,65 +1,41 @@
-@media (min-width: 992px) {
-    .typo-line {
-        padding-left: 140px;
-        margin-bottom: 40px;
-        position: relative;
-    }
-    .typo-line .category {
-        transform: translateY(-50%);
-        top: 50%;
-        left: 0px;
-        position: absolute;
-    }
-    .sidebar .nav>li.active-pro {
-        position: absolute;
-        width: 100%;
-        bottom: 10px;
-    }
-}
-
-#map {
-    position: relative;
-    width: 100%;
-    height: calc(100% - 60px);
-    margin-top: 70px;
-}
-
-.places-buttons .btn {
-    margin-bottom: 30px
-}
-
-.space-70 {
-    height: 70px;
-    display: block;
-}
-
-.tim-row {
-    margin-bottom: 20px;
-}
-
-.tim-typo {
-    padding-left: 25%;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.tim-typo .tim-note {
-    bottom: 10px;
-    color: #c0c1c2;
-    display: block;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 13px;
-    left: 0;
-    margin-left: 20px;
-    position: absolute;
-    width: 260px;
-}
-
-.tim-row {
-    padding-top: 50px;
-}
-
-.tim-row h3 {
-    margin-top: 0;
-}
+html, body { height: 100%;}
+body {background-color: #eeeeee;}
+#wrapper {min-height: 100%;   position: relative;}
+#content {padding-bottom: 100px;}
+nav.navbar {border:0; box-shadow: none;}
+.left-side {box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);  top:0; bottom: 0; display: block; left: 0; overflow: auto; padding: 0; position: absolute; background-image: url('../img/sidebar-1.jpg'); background-position:center center; background-size:cover; z-index: 100;}
+.left-side .menu-logo {padding: 15px;}
+.left-side .menu-logo a {  color: #3c4858;  display: block;  font-size: 18px;  font-weight: 400;  line-height: 30px; padding: 5px 0; text-align: center;  text-transform: uppercase; border-bottom: 1px solid #d3d3d3; padding-bottom: 20px;}
+.left-side .nav i { float: left; float: left;   font-size: 24px;  line-height: 30px;  margin-right: 15px;  text-align: center; width: 30px;}
+.left-side .nav p {font-size: 14px; line-height: 30px; margin: 0; text-align: left; text-transform: capitalize;}
+.left-side ul.nav li a {box-shadow: none;}
+.left-side ul.nav li a p, .left-side ul.nav li a i {color:#a9afbb;} 
+.left-side ul.nav li.active a p, .left-side ul.nav li.active a i {color:#fff;} 
+.left-side ul.nav li.active a {background-color: #a6c;  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
+.left-side ul.nav .bottom { bottom: 10px;  position: absolute;  width: 100%;}
+.right-side {padding-top: 10px;}
+.right-side nav.navbar .navbar-brand {color:#333;}
+.right-side ul.nav li a {color:#333;}
+.card {background-color: #fff;}
+.card-body {padding: 20px;}
+.card-body h3 {text-align: left;}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {width: auto !important;}
+.btn.dropdown-toggle {margin: 0; padding: 10px;}
+.md-form label {font-size:14px; }
+.bootstrap-switch-secondary {background-color: #a6c; color:#fff;}
+.element-label-text {margin-left: 45px;}
+label.alone {width: 40px; word-break: break-all;}
+.bordered-div {border-bottom:1px solid #ccc; padding-bottom: 20px;}
+.upload-wrap { position: relative; margin-left: -5px;}
+.upload-btn {  position: absolute; left: 0;  opacity: 0;  top:0; width:150px; height: 50px;  z-index: 12; cursor: pointer;}
+.btn-upload-design {width:150px; height: 50px;}
+.upload-wrap .file-name {display:none; border: 1px solid #ccc; padding: 10px;}
+footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15px; width:100%;}
+.right-side-wrapper {padding-top: 50px;}
+.btn-round {border-radius: 30px;   line-height: 1em;  padding: 12px;}
+.btn-white {background-color: #ffffff;    color: #999999;}
+.btn-white i {color:#999; font-size:22px;}
+.nav-bar-search {margin-top: -7px;}
+footer .nav li {display: inline-block;}
+footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
+footer .nav li.in-right {float:right;}
