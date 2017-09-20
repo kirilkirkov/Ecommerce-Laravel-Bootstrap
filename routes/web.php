@@ -22,6 +22,9 @@ Route::middleware(['auth'])->group(function () {
 //////////////
     Route::get('admin/publish', 'Admin\\PublishController@index')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/publish', 'Admin\\PublishController@index');
+//////////////
+    Route::post('admin/publish', 'Admin\\PublishController@setProduct')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/publish', 'Admin\\PublishController@setProduct');
 });
 
 // Authentication Routes...

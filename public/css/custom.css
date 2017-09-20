@@ -36,6 +36,12 @@ footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15
 .btn-white {background-color: #ffffff;    color: #999999;}
 .btn-white i {color:#999; font-size:22px;}
 .nav-bar-search {margin-top: -7px;}
+.locale-container {display: none;}
+.btn.btn-outline-secondary.active {background-color: #a6c; color:#fff !important;}
+.available-translations span {color:#757575;}
+.alert-top { left: 50%; margin-left: -125px; position: absolute; top: 20px; width: 250px; text-align: center;}
+.alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}
+.alert.alert-success {background-color: #5cb860;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);    color: #ffffff; border-color: transparent;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
 footer .nav li.in-right {float:right;}

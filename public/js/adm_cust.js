@@ -8,4 +8,11 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
     });
+    $('.locale-change').click(function () {
+        var toLocale = $(this).data('locale-change');
+        $('.locale-container').hide();
+        $('.locale-container-' + toLocale).show();
+        $('.locale-change').removeClass('active');
+        $(this).addClass('active');
+    });
 });

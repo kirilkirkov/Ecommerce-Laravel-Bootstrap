@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <meta name="csrf-token" content="{{ csrf_token() }}"> 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}</title>   
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" /> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" rel="stylesheet" />
@@ -121,7 +121,16 @@
                     </div>
                 </div>
             </footer>
-        </div> 
+        </div>
+        @if (session('msg'))
+        <div class="alert {{ session('result') === true ? "alert-success" : "alert-danger" }} alert-top">  
+            @if (is_array(session('msg')))
+            {!! implode('<br>',session('msg')) !!}
+            @else
+            {{session('msg')}}
+            @endif
+        </div>
+        @endif
         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
         <script src="{{ asset('js/adm_cust.js') }}"></script> 

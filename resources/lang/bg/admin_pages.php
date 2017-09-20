@@ -18,7 +18,14 @@ return [
     'hidden_product' => 'Скрит',
      'vip_product' => 'Вип',
     'choose_file' => 'Избери файл',
-    'image' => 'Снимка',
+    'cover_image' => 'Главна снимка',
     'search_product' => 'Търси продукт',
-    'logout' => 'Изход'
+    'logout' => 'Изход',
+    'choose_locale' => 'Преводи',
+    'no_entered_product_name' => 'Не сте въвели име на продукта',
+    'no_entered_product_categ' => 'Не сте въвели категория към която е продукта',
+    'product_is_published' => 'Продукта е публикуван',
+    'no_selected_img' => 'Не е избрана картинка',
+    'add_gallery_image' => 'Добави картинка',
+    'gallery_images' => 'Галерия'
 ];

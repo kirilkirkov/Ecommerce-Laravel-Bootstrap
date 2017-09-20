@@ -18,7 +18,14 @@ return [
     'hidden_product' => 'Hidden',
     'vip_product' => 'Vip',
     'choose_file' => 'Choose file',
-    'image' => 'Image',
+    'cover_image' => 'Cover image',
     'search_product' => 'Search product',
-    'logout' => 'Logout'
- ];
+    'logout' => 'Logout',
+    'choose_locale' => 'Available translations',
+    'no_entered_product_name' => 'No entered product name',
+    'no_entered_product_categ' => 'No entered category of product',
+    'product_is_published' => 'The product is published',
+    'no_selected_img' => 'No selected images',
+    'add_gallery_image' => 'Add image',
+    'gallery_images' => 'Gallery'
+];

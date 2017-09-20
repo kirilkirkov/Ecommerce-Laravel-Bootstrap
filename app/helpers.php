@@ -11,3 +11,8 @@ function lang_url($url = '/')
     }
     return url($url);
 }
+
+function stringToUrl($string)
+{
+    return mb_ereg_replace('[^\w\s]', '', $string);
+}
