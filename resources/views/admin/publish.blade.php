@@ -1,7 +1,7 @@
 @extends('layouts.app_admin')
 
 @section('content')
-<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet">
+<link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" /> 
 <link href="{{ asset('css/bootstrap-switch.min.css') }}" rel="stylesheet">
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -37,7 +37,7 @@
                             <label for="productDescr-{{$locale}}">{{__('admin_pages.product_description')}}({{$locale}})</label>
                         </div>
                         <div class="md-form">
-                             <i class="fa fa-eur prefix grey-text"></i>
+                            <i class="fa fa-eur prefix grey-text"></i>
                             <input type="text" name="price[]" value="{{ $lKey !== false ? $product['translations'][$lKey]->price : '' }}" id="publishForm-price-{{$locale}}" class="form-control">
                             <label for="publishForm-price-{{$locale}}">{{__('admin_pages.product_price')}}({{$locale}})</label>
                         </div>  
@@ -146,16 +146,16 @@
         </form>
     </div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 <script>
-                                $('.selectpicker').selectpicker();
-                                $('.switch-me').bootstrapSwitch();
-                                document.getElementById('cover-upload').onchange = function () {
-                                $('.upload-wrap .file-name').show().append(this.value);
-                                };
-                                function showMeNewImgUpload() {
-                                $('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
-                                }
+$('.selectpicker').selectpicker();
+$('.switch-me').bootstrapSwitch();
+    document.getElementById('cover-upload').onchange = function () {
+$('.upload-wrap .file-name').show().append(this.value);
+};
+function showMeNewImgUpload() {
+    $('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
+}
 </script>
 @endsection
