@@ -24,9 +24,9 @@
             <thead>
                 <tr>
                     <th scope="row"><input type="checkbox" id="checkAll"></th>
-                    <th class="th-lg"><a>{{__('admin_pages.category_name')}} <i class="fa fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a href="">{{__('admin_pages.category_parent')}}<i class="fa fa-sort ml-1"></i></a></th>
-                    <th class="th-lg text-right"><a href="">{{__('admin_pages.category_position')}}<i class="fa fa-sort ml-1"></i></a></th> 
+                    <th class="th-lg"><a class="text-secondary">{{__('admin_pages.category_name')}} <i class="fa fa-sort ml-1"></i></a></th>
+                    <th class="th-lg"><a class="text-secondary">{{__('admin_pages.category_parent')}}<i class="fa fa-sort ml-1"></i></a></th>
+                    <th class="th-lg text-right"><a class="text-secondary">{{__('admin_pages.category_position')}}<i class="fa fa-sort ml-1"></i></a></th> 
                 </tr>
             </thead> 
             <tbody>

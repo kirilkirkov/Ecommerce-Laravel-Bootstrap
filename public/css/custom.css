@@ -67,6 +67,8 @@ table.table td, table.table th {padding: 20px !important;}
 #modalAddEditCategory .close {position: absolute; right: -15px; top: -15px;}
 #modalAddEditCategory .picker-left {margin-left: 90px;}
 .bg-secondary {background-color: #a6c;}
+.text-secondary {color:#a6c;}
+.text-secondary:hover {color:#9841c4;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
 footer .nav li.in-right {float:right;}
