@@ -39,5 +39,22 @@ return [
     'product_is_deleted' => 'Product is deleted',
     'product_price' => 'Price',
     'no_product_results' => 'No products',
-    'are_u_sure_delete' => 'Are you sure want to delete this product?'
+    'are_u_sure_delete' => 'Are you sure want to delete this product?',
+    'categories' => 'Categories',
+    'manage_categories' => 'Manage categories',
+    'sure_del_category' => 'Are you sure want to delete this category?',
+    'category_name' => 'Category name',
+    'category_parent' => 'Parent',
+    'category_position' => 'Position',
+    'save' => 'Save',
+    'add_edit_category' => 'Add/edit category',
+    'none_selected' => 'None selected',
+    'no_entered_categ_name' => 'You have no enter category name',
+    'category_is_published' => 'Category is published',
+    'category_is_updated' => 'Category is updated',
+    'select_only_one_category' => 'Please check in one category',
+    'select_just_one_categ' => 'Please check only one category',
+    'no_categories_found' => 'There are no added categories',
+    'confirm_delete_categories' => 'Are you sure want to delete selected categories?',
+    'selected_categ_deleted' => 'Selected categories are deleted'
 ];

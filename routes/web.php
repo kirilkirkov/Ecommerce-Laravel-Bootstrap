@@ -36,10 +36,19 @@ Route::middleware(['auth'])->group(function () { // check for autherization
     Route::get('{locale}/admin/products', 'Admin\\ProductsController@index');
 //////////////
     Route::get('admin/categories', 'Admin\\ProductsCategoryController@index')->where('locale', implode('|', Config::get('app.locales')));
-    Route::get('{locale}/admin/categories', 'Admin\\ProductsCategoryController@indexs');
+    Route::get('{locale}/admin/categories', 'Admin\\ProductsCategoryController@index');
+//////////////
+    Route::post('admin/categories', 'Admin\\ProductsCategoryController@setCategory')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/categories', 'Admin\\ProductsCategoryController@setCategory');
+//////////////
+    Route::post('admin/categories/{number}', 'Admin\\ProductsCategoryController@setCategory')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/categories/{number}', 'Admin\\ProductsCategoryController@setCategory');
 //////////////
     Route::get('admin/delete/product/{number}', 'Admin\\ProductsController@deleteProduct')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/delete/product/{number}', 'Admin\\ProductsController@deleteProduct');
+//////////////
+    Route::get('admin/delete/categories', 'Admin\\ProductsCategoryController@deleteCategories')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/delete/categories', 'Admin\\ProductsCategoryController@deleteCategories');
 //////////////
     Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 });

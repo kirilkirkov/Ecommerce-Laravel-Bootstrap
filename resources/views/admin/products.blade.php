@@ -15,7 +15,7 @@
                 </a>
             </div> 
             <div class="card-body text-center no-padding"> 
-                <h5>Shoes</h5>
+                <h5>{{$product->categoryName}}</h5>
                 <h4 class="card-title"><strong><a href="">{{$product->name}}</a></strong></h4> 
                 <p class="card-text">
                     {{strip_tags($product->description)}}

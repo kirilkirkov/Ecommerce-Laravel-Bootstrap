@@ -61,10 +61,10 @@
                     <div class="md-form">
                         <label class="alone">{{__('admin_pages.choose_category')}}</label>
                         <div class="element-label-text bordered-div">
-                            <select class="selectpicker" name="category_id" data-style="btn-secondary">
-                                <option value="4" selected="">Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Barbecue</option>
+                            <select class="selectpicker" name="category_id" data-style="btn-secondary"> 
+                                @foreach ($allCategories as $aCateg) 
+                                <option value="{{$aCateg->id}}" {{isset($product['product']->category_id) && $product['product']->category_id == $aCateg->id ? 'selected' : ''}}>{{$aCateg->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -149,13 +149,13 @@
 <script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 <script>
-$('.selectpicker').selectpicker();
-$('.switch-me').bootstrapSwitch();
-    document.getElementById('cover-upload').onchange = function () {
-$('.upload-wrap .file-name').show().append(this.value);
-};
-function showMeNewImgUpload() {
-    $('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
-}
+                                $('.selectpicker').selectpicker();
+                                $('.switch-me').bootstrapSwitch();
+                                document.getElementById('cover-upload').onchange = function () {
+                                $('.upload-wrap .file-name').show().append(this.value);
+                                };
+                                function showMeNewImgUpload() {
+                                $('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
+                                }
 </script>
 @endsection

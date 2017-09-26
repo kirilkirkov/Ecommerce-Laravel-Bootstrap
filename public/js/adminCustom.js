@@ -21,14 +21,14 @@ $('.confirm').click(function (e) {
     var lHref = $(this).attr('href');
     var myMessage = $(this).data('my-message')
     bootbox.confirm({
-        message: "Are you sure want to delete?",
+        message: myMessage,
         buttons: {
             confirm: {
-                label: 'Yes',
+                label: '<i class="fa fa-check" aria-hidden="true"></i>',
                 className: 'btn-success'
             },
             cancel: {
-                label: 'No',
+                label: '<i class="fa fa-times" aria-hidden="true"></i>',
                 className: 'btn-danger'
             }
         },
@@ -38,6 +38,9 @@ $('.confirm').click(function (e) {
             }
         }
     });
+});
+$("#checkAll").click(function () {
+    $('input:checkbox').not(this).prop('checked', this.checked);
 });
 function removeGalleryImage(image, imgNum) {
     $.ajax({
@@ -52,4 +55,57 @@ function removeGalleryImage(image, imgNum) {
             $('#image-container-' + imgNum).remove();
         }
     });
+}
+function editSelectedCategory() {
+    var selected = $('[name="category_id[]"]:checked');
+    if (selected.length == 0) {
+        showAlert('danger', langs.selectOnlyOneCateg);
+    }
+    if (selected.length > 1) {
+        showAlert('danger', langs.selectJustOneCateg);
+    }
+    if (selected.length == 1) {
+        location.href = urls.editCategory + '?edit=' + selected.val();
+    }
+}
+function showAlert(type, message) {
+    $('#temporary-alert').remove();
+    if (type == 'danger') {
+        type = 'alert-danger';
+    }
+    if (type == 'success') {
+        type = 'alert-success';
+    }
+    var obj = $('body').prepend('<div class="alert ' + type + ' alert-top" id="temporary-alert">' + message + '</div>');
+    $('#temporary-alert').delay(3000).queue(function () {
+        $(this).remove();
+    });
+}
+function deleteSelectedCategory() {
+    var selected = $('[name="category_id[]"]:checked');
+    if (selected.length == 0) {
+        showAlert('danger', langs.selectOnlyOneCateg);
+    } else {
+        bootbox.confirm({
+            message: langs.confirmDeleteCategories,
+            buttons: {
+                confirm: {
+                    label: '<i class="fa fa-check" aria-hidden="true"></i>',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '<i class="fa fa-times" aria-hidden="true"></i>',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                if (result) {
+                    var searchIDs = selected.map(function () {
+                        return $(this).val();
+                    }).get();
+                    window.location.href = urls.deleteCategories + '?ids=' + searchIDs;
+                }
+            }
+        });
+    }
 }

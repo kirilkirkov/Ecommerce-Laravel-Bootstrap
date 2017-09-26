@@ -54,10 +54,28 @@ footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15
 .gallery-images div {display: inline-block; position:relative;}
 .gallery-images div img {height: 100px;}
 .gallery-images div a {position:absolute; right:0; top:0; background-color: #fff; color:#a6c;}
+.card .table-name { box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 50px; margin-top: -30px; padding: 10px;}
+.card .table-name .left-btns {float: left;}
+.card .table-name .right-btns {float: right;}
+.card .table-name .btn {padding: 10px;}
+.card .table-name .header-txt {line-height: 50px;}
+.card.categories {padding: 20px;}
+.btn-rounded {border-radius: 20px;}
+table.table td, table.table th {padding: 20px !important;}
+#modalAddEditCategory .modal-header {border: medium none; border-radius: 3px;  margin: 0;  padding: 1.5rem;  text-align: center; display: inline-block; width:100%; margin-top: -30px; margin-bottom: 20px;}
+#modalAddEditCategory .modal-content {padding-left: 10px; padding-right: 10px;}
+#modalAddEditCategory .close {position: absolute; right: -15px; top: -15px;}
+#modalAddEditCategory .picker-left {margin-left: 90px;}
+.bg-secondary {background-color: #a6c;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
 footer .nav li.in-right {float:right;}
 
+@media screen and (max-width: 991px) {
+    table.table td, table.table th {padding: 15px !important;}
+}
+
 @media screen and (max-width: 767px) {
     .overlay img {height: auto;}
+    table.table td, table.table th {padding: 10px !important;}
 }

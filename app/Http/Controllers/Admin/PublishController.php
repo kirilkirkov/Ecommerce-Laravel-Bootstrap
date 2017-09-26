@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Lang;
 use Config;
 use App\Models\Admin\PublishModel;
+use App\Models\Admin\CategoriesModel;
 use Storage;
 
 class PublishController extends Controller
@@ -15,6 +16,7 @@ class PublishController extends Controller
     public function index(Request $request)
     {
         $productInfo = null;
+        $categoriesModel = new CategoriesModel();
         if (isset($request->number) && (int) $request->number > 0) {
             $publishModel = new PublishModel();
             $productInfo = $publishModel->getProductInfo($request->number);
@@ -22,11 +24,13 @@ class PublishController extends Controller
                 abort(404);
             }
         }
+        $allCategories = $categoriesModel->getAllCategories();
         return view('admin.publish', [
             'page_title_lang' => Lang::get('admin_pages.publish'),
             'locales' => Config::get('app.locales'),
             'currentLocale' => app()->getLocale(),
-            'product' => $productInfo
+            'product' => $productInfo,
+            'allCategories' => $allCategories
         ]);
     }
 
