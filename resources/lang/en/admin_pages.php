@@ -17,7 +17,7 @@ return [
     'choose_category' => 'Category',
     'hidden_product' => 'Hidden',
     'vip_product' => 'Vip',
-    'choose_file' => 'Choose file',
+    'choose_cover_img' => 'Choose image',
     'cover_image' => 'Cover image',
     'search_product' => 'Search product',
     'logout' => 'Logout',
@@ -27,5 +27,16 @@ return [
     'product_is_published' => 'The product is published',
     'no_selected_img' => 'No selected images',
     'add_gallery_image' => 'Add image',
-    'gallery_images' => 'Gallery'
+    'gallery_images' => 'Gallery',
+    'products_list' => 'Products list',
+    'delete' => 'Delete',
+    'edit' => 'Edit',
+    'no_choosed_image' => 'No image',
+    'choose_new_cover_img' => 'Choose new image',
+    'link_to' => 'Link to',
+    'product_is_updated' => 'The product is updated',
+    'categories' => 'Categories',
+    'product_is_deleted' => 'Product is deleted',
+    'product_price' => 'Price',
+    'no_product_results' => 'No products'
 ];

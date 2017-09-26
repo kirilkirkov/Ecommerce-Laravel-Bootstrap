@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@index');
 Route::get('{locale}', 'HomeController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () { // check for autherization
     Route::get('admin', 'Admin\\DashboardController@index');
     Route::get('{locale}/admin', 'Admin\\DashboardController@index')
             ->where('locale', implode('|', Config::get('app.locales')));
@@ -23,8 +23,25 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/publish', 'Admin\\PublishController@index')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/publish', 'Admin\\PublishController@index');
 //////////////
+    Route::get('admin/edit/pruduct/{number}', 'Admin\\PublishController@index')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/edit/pruduct/{number}', 'Admin\\PublishController@index');
+//////////////
     Route::post('admin/publish', 'Admin\\PublishController@setProduct')->where('locale', implode('|', Config::get('app.locales')));
     Route::post('{locale}/admin/publish', 'Admin\\PublishController@setProduct');
+//////////////
+    Route::post('admin/edit/pruduct/{number}', 'Admin\\PublishController@setProduct')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/edit/pruduct/{number}', 'Admin\\PublishController@setProduct');
+//////////////
+    Route::get('admin/products', 'Admin\\ProductsController@index')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/products', 'Admin\\ProductsController@index');
+//////////////
+    Route::get('admin/categories', 'Admin\\ProductsCategoryController@index')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/categories', 'Admin\\ProductsCategoryController@indexs');
+//////////////
+    Route::get('admin/delete/product/{number}', 'Admin\\ProductsController@deleteProduct')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/delete/product/{number}', 'Admin\\ProductsController@deleteProduct');
+//////////////
+    Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 });
 
 // Authentication Routes...

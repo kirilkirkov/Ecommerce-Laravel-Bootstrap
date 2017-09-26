@@ -38,19 +38,25 @@
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="dashboard.html" class="btn waves-effect waves-light">
+                                    <a href="{{ lang_url('admin/products') }}" class="btn waves-effect waves-light">
                                         <i class="material-icons">list</i>
                                         <p>{{__('admin_pages.products')}}</p>
                                     </a> 
+                                </li> 
+                                <li>
+                                    <a href="{{ lang_url('admin/categories') }}" class="btn waves-effect waves-light">
+                                        <i class="material-icons">star_rate</i>
+                                        <p>{{__('admin_pages.categories')}}</p>
+                                    </a> 
                                 </li>
                                 <li>
-                                    <a href="dashboard.html" class="btn waves-effect waves-light">
+                                    <a href="#" class="btn waves-effect waves-light">
                                         <i class="material-icons">shopping_basket</i>
                                         <p>{{__('admin_pages.orders')}}</p>
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="dashboard.html" class="btn waves-effect waves-light">
+                                    <a href="#" class="btn waves-effect waves-light">
                                         <i class="material-icons">group</i>
                                         <p>{{__('admin_pages.users')}}</p>
                                     </a> 
@@ -79,9 +85,9 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <form class="navbar-form navbar-right nav-bar-search" role="search">
-                                        <div class="form-group is-empty">
-                                            <input class="form-control" placeholder="{{ __('admin_pages.search_product') }}" type="text">
+                                    <form class="navbar-form navbar-right nav-bar-search" action="{{lang_url('admin/products')}}" role="search">
+                                        <div class="form-group is-empty waves-light waves-effect waves-light">
+                                            <input class="form-control" placeholder="{{ __('admin_pages.search_product') }}" value="{{ Request::get('search') }}" name="search" type="text">
                                             <span class="material-input"></span>
                                             <span class="material-input"></span>
                                         </div>
@@ -133,6 +139,11 @@
         @endif
         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
-        <script src="{{ asset('js/adm_cust.js') }}"></script> 
+        <script>
+var urls = {
+    removeGalleryImage: "{{ url('admin/removeGalleryImage') }}"
+};
+        </script>
+        <script src="{{ asset('js/adminCustom.js') }}"></script> 
     </body>
 </html>

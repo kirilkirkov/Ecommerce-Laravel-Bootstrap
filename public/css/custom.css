@@ -27,8 +27,7 @@ nav.navbar {border:0; box-shadow: none;}
 label.alone {width: 40px; word-break: break-all;}
 .bordered-div {border-bottom:1px solid #ccc; padding-bottom: 20px;}
 .upload-wrap { position: relative; margin-left: -5px;}
-.upload-btn {  position: absolute; left: 0;  opacity: 0;  top:0; width:150px; height: 50px;  z-index: 12; cursor: pointer;}
-.btn-upload-design {width:150px; height: 50px;}
+.upload-btn {  position: absolute; left: 0;  opacity: 0;  top:0; width:150px; height: 50px;  z-index: 12; cursor: pointer;} 
 .upload-wrap .file-name {display:none; border: 1px solid #ccc; padding: 10px;}
 footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15px; width:100%;}
 .right-side-wrapper {padding-top: 50px;}
@@ -42,6 +41,23 @@ footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15
 .alert-top { left: 50%; margin-left: -125px; position: absolute; top: 20px; width: 250px; text-align: center;}
 .alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}
 .alert.alert-success {background-color: #5cb860;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);    color: #ffffff; border-color: transparent;}
+.card.card-cascade.narrower .view {margin-left: 4%; margin-right: 4%; text-align: center;}
+.card.card-cascade .view {border-radius: 4px;}
+.card-footer {border-top: 1px solid rgba(0, 0, 0, 0.125); padding: 5px;}
+.overlay img {transition: all 0.2s linear 0s;display: inline-block;  position: relative; height: 200px; text-align: center;}
+.card .card-title a {overflow: hidden; height: 20px; display: inline-block;}
+.card { margin-bottom: 20px; }
+.card .price {height: 20px; overflow: hidden; margin-bottom: 5px;}
+.card h5 {height: 15px; overflow: hidden;}
+.card .card-text {overflow: hidden; height: 40px;}
+.hm-white-slight {box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);} 
+.gallery-images div {display: inline-block; position:relative;}
+.gallery-images div img {height: 100px;}
+.gallery-images div a {position:absolute; right:0; top:0; background-color: #fff; color:#a6c;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
 footer .nav li.in-right {float:right;}
+
+@media screen and (max-width: 767px) {
+    .overlay img {height: auto;}
+}

@@ -16,8 +16,8 @@ return [
     'order_position' => 'Позиция',
     'choose_category' => 'Категория',
     'hidden_product' => 'Скрит',
-     'vip_product' => 'Вип',
-    'choose_file' => 'Избери файл',
+    'vip_product' => 'Вип',
+    'choose_cover_img' => 'Избери снимка',
     'cover_image' => 'Главна снимка',
     'search_product' => 'Търси продукт',
     'logout' => 'Изход',
@@ -27,5 +27,16 @@ return [
     'product_is_published' => 'Продукта е публикуван',
     'no_selected_img' => 'Не е избрана картинка',
     'add_gallery_image' => 'Добави картинка',
-    'gallery_images' => 'Галерия'
+    'gallery_images' => 'Галерия',
+    'products_list' => 'Продукти',
+    'delete' => 'Изтрий',
+    'edit' => 'Редактирай',
+    'no_choosed_image' => 'Не е избрана картинка',
+    'choose_new_cover_img' => 'Избери нова снима',
+    'link_to' => 'Води към',
+    'product_is_updated' => 'Продукта е обновен',
+    'categories' => 'Категории',
+    'product_is_deleted' => 'Продукта е изтрит',
+    'product_price' => 'Цена',
+    'no_product_results' => 'Няма намерени продукти'
 ];

@@ -34,6 +34,7 @@ class PublishModel extends Model
                     'category_id' => $this->post['category_id'],
                     'quantity' => (float) $this->post['quantity'],
                     'order_position' => (int) $this->post['order_position'],
+                    'link_to' => $this->post['link_to'],
                     'vip' => isset($this->post['vip']) ? 1 : 0,
                     'hidden' => isset($this->post['hidden']) ? 1 : 0,
                     'url' => stringToUrl($this->nameOfProduct)
@@ -44,6 +45,7 @@ class PublishModel extends Model
                         'for_id' => $id,
                         'name' => htmlspecialchars(trim($this->post['name'][$i])),
                         'description' => htmlspecialchars(trim($this->post['description'][$i])),
+                        'price' => htmlspecialchars(trim($this->post['price'][$i])),
                         'locale' => $translate
                     ]);
                     $i++;
@@ -93,17 +95,82 @@ class PublishModel extends Model
 
     private function filesUpload()
     {
-        $timeNow = time();
-        Storage::makeDirectory('moreImagesFolders/' . $timeNow);
-        $this->post['folder'] = $timeNow;
-        $this->post['image'] = Storage::putFile('images', $this->post['cover_image']);
+        if ($this->post['folder'] <= 0) {
+            $timeNow = time();
+            Storage::makeDirectory('public/moreImagesFolders/' . $timeNow);
+            $this->post['folder'] = $timeNow;
+        }
+
+        $this->post['image'] = '';
+        if (isset($this->post['cover_image'])) {
+            $this->post['image'] = Storage::putFile('public/images', $this->post['cover_image']);
+        }
+        if (isset($this->post['old_image']) && !isset($this->post['cover_image'])) {
+            $this->post['image'] = $this->post['old_image'];
+        }
         /*
          * Upload gallery images
          */
         if (isset($this->post['gallery_image']) && !empty($this->post['gallery_image'])) {
             foreach ($this->post['gallery_image'] as $galleryImage) {
-                Storage::putFile('moreImagesFolders/' . $timeNow, $galleryImage);
+                $aa = Storage::putFile('public/moreImagesFolders/' . $this->post['folder'], $galleryImage);
             }
+        }
+    }
+
+    public function getProductInfo($id)
+    {
+        $product = DB::table('products')
+                ->where('id', $id)
+                ->first();
+
+        $product_translations = DB::table('products_translations')
+                        ->where('for_id', $id)
+                        ->get()->toArray();
+
+        return [
+            'product' => $product,
+            'translations' => $product_translations
+        ];
+    }
+
+    public function updateProduct($post, $id)
+    {
+        $this->post = $post;
+        $this->id = $id;
+        $isValid = $this->validateProduct();
+        if ($isValid['result'] === true) {
+            $this->filesUpload();
+            DB::transaction(function () {
+                DB::table('products')
+                        ->where('id', $this->id)
+                        ->update([
+                            'image' => str_replace('public/', '', $this->post['image']),
+                            'category_id' => $this->post['category_id'],
+                            'quantity' => (float) $this->post['quantity'],
+                            'order_position' => (int) $this->post['order_position'],
+                            'link_to' => $this->post['link_to'],
+                            'vip' => isset($this->post['vip']) ? 1 : 0,
+                            'hidden' => isset($this->post['hidden']) ? 1 : 0,
+                            'updated_at' => date('Y-m-d H:i:s', time())
+                ]);
+                $i = 0;
+                foreach ($this->post['translation_order'] as $translate) {
+                    DB::table('products_translations')
+                            ->where('for_id', $this->id)
+                            ->where('locale', $translate)
+                            ->update([
+                                'name' => htmlspecialchars(trim($this->post['name'][$i])),
+                                'description' => htmlspecialchars(trim($this->post['description'][$i])),
+                                'price' => htmlspecialchars(trim($this->post['price'][$i])),
+                    ]);
+                    $i++;
+                }
+            });
+            $isValid['msg'] = Lang::get('admin_pages.product_is_updated');
+            return $isValid;
+        } else {
+            return $isValid;
         }
     }
 

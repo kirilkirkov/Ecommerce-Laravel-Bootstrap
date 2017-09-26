@@ -16,3 +16,17 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
+function removeGalleryImage(image, imgNum) {
+    $.ajax({
+        type: "POST",
+        url: urls.removeGalleryImage,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {image: image}
+    }).done(function (data) {
+        if (data == '1') {
+            $('#image-container-' + imgNum).remove();
+        }
+    });
+}
