@@ -38,5 +38,6 @@ return [
     'categories' => 'Категории',
     'product_is_deleted' => 'Продукта е изтрит',
     'product_price' => 'Цена',
-    'no_product_results' => 'Няма намерени продукти'
+    'no_product_results' => 'Няма намерени продукти',
+    'are_u_sure_delete' => 'Сигурен ли сте, че искате да изтриете този продукт?'
 ];

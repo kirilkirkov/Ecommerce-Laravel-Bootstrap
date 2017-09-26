@@ -16,6 +16,29 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
+$('.confirm').click(function (e) {
+    e.preventDefault();
+    var lHref = $(this).attr('href');
+    var myMessage = $(this).data('my-message')
+    bootbox.confirm({
+        message: "Are you sure want to delete?",
+        buttons: {
+            confirm: {
+                label: 'Yes',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'No',
+                className: 'btn-danger'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+                window.location.href = lHref;
+            }
+        }
+    });
+});
 function removeGalleryImage(image, imgNum) {
     $.ajax({
         type: "POST",

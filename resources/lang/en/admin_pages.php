@@ -38,5 +38,6 @@ return [
     'categories' => 'Categories',
     'product_is_deleted' => 'Product is deleted',
     'product_price' => 'Price',
-    'no_product_results' => 'No products'
+    'no_product_results' => 'No products',
+    'are_u_sure_delete' => 'Are you sure want to delete this product?'
 ];

@@ -138,11 +138,12 @@
         </div>
         @endif
         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
         <script>
-var urls = {
-    removeGalleryImage: "{{ url('admin/removeGalleryImage') }}"
-};
+        var urls = {
+            removeGalleryImage: "{{ url('admin/removeGalleryImage') }}"
+        };
         </script>
         <script src="{{ asset('js/adminCustom.js') }}"></script> 
     </body>
