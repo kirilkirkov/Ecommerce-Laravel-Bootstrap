@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 20, 2017 at 12:36 PM
+-- Generation Time: Sep 26, 2017 at 05:55 PM
 -- Server version: 5.7.19-0ubuntu0.16.04.1
 -- PHP Version: 5.6.31-4+ubuntu16.04.1+deb.sury.org+4
 
@@ -23,18 +23,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `parent` int(10) UNSIGNED NOT NULL,
+  `position` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories_translations`
+--
+
+CREATE TABLE `categories_translations` (
+  `id` int(11) NOT NULL,
+  `for_id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `locale` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `image` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `folder` int(10) UNSIGNED NOT NULL COMMENT 'product_id is name of folder',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL,
   `category_id` int(10) UNSIGNED NOT NULL COMMENT 'category id',
-  `quantity` int(10) UNSIGNED NOT NULL,
+  `quantity` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `url` varchar(255) NOT NULL,
+  `link_to` varchar(255) DEFAULT NULL,
   `order_position` int(10) UNSIGNED NOT NULL,
   `procurements` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `vip` tinyint(1) NOT NULL DEFAULT '0',
@@ -52,6 +78,7 @@ CREATE TABLE `products_translations` (
   `for_id` int(10) UNSIGNED NOT NULL COMMENT 'id of product',
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
+  `price` varchar(20) NOT NULL,
   `locale` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -76,6 +103,18 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `categories_translations`
+--
+ALTER TABLE `categories_translations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -98,15 +137,25 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `categories_translations`
+--
+ALTER TABLE `categories_translations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `products_translations`
 --
 ALTER TABLE `products_translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `users`
 --
