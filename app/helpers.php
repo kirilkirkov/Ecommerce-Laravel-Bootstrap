@@ -14,5 +14,8 @@ function lang_url($url = '/')
 
 function stringToUrl($string)
 {
-    return mb_ereg_replace('[^\w\s]', '', $string);
+    $onlyLetters = mb_ereg_replace('[^\\p{L}\s]', '', $string);
+    $onlyLetters = preg_replace('/([\s])\1+/', ' ', $onlyLetters);
+    $onlyLetters = preg_replace('/\s/', '-', trim($onlyLetters));
+    return $onlyLetters;
 }
