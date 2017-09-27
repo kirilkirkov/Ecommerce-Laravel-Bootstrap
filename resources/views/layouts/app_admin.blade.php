@@ -56,7 +56,7 @@
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="#" class="btn waves-effect waves-light">
+                                    <a href="{{ lang_url('admin/users') }}" class="btn waves-effect waves-light">
                                         <i class="material-icons">group</i>
                                         <p>{{__('admin_pages.users')}}</p>
                                     </a> 
@@ -80,7 +80,7 @@
                                 <div id="navbar" class="collapse navbar-collapse"> 
                                     <ul class="nav navbar-nav navbar-right">
                                         <li>
-                                            <a href="#"> 
+                                            <a href="{{url('logout')}}"> 
                                                 {{ __('admin_pages.logout') }}
                                             </a>
                                         </li>
