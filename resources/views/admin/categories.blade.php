@@ -139,16 +139,19 @@
 </div> 
 <script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 <script>
-                $('.selectpicker').selectpicker();
-                @php
-                        if (isset($_GET['edit']))
-                {
-                @endphp
-                        $(document).ready(function(){
-                $('#modalAddEditCategory').modal('show');
-                });
-                        @php
-                }
-                @endphp
+$('.selectpicker').selectpicker();
+@php
+if (isset($_GET['edit']))
+{
+@endphp
+$(document).ready(function(){
+$('#modalAddEditCategory').modal('show');
+});
+$("#modalAddEditCategory").on("hidden.bs.modal", function () {
+ window.location.href = "{{ lang_url('admin/categories') }}";
+});
+@php
+}
+@endphp
 </script>
 @endsection

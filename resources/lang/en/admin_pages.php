@@ -56,5 +56,7 @@ return [
     'select_just_one_categ' => 'Please check only one category',
     'no_categories_found' => 'There are no added categories',
     'confirm_delete_categories' => 'Are you sure want to delete selected categories?',
-    'selected_categ_deleted' => 'Selected categories are deleted'
+    'selected_categ_deleted' => 'Selected categories are deleted',
+    'num_orders_by_month' => 'Number of orders by month',
+    'year' => 'Year'
 ];

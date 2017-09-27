@@ -56,5 +56,7 @@ return [
     'select_just_one_categ' => 'Моля изберете само една категория',
     'no_categories_found' => 'Няма добавени категории',
     'confirm_delete_categories' => 'Сигурен ли сте, че искате да изтриете избраните категории?',
-    'selected_categ_deleted' => 'Избраните категории бяха изтрити'
+    'selected_categ_deleted' => 'Избраните категории бяха изтрити',
+    'num_orders_by_month' => 'Брой поръчки по месец',
+    'year' => 'Година'
 ];

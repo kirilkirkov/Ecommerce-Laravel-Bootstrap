@@ -109,13 +109,18 @@
                     <div class="col-sm-9 col-md-9 col-lg-10 col-sm-offset-3 col-md-offset-3 col-lg-offset-2">
                         <ul class="nav">
                             <li>
-                                <a href="">
-                                    {{__('admin_pages.dashboard')}}
+                                <a href="{{ lang_url('admin/publish') }}">
+                                    {{__('admin_pages.publish')}}
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    {{__('admin_pages.publish')}}
+                                <a href="{{ lang_url('admin/products') }}">
+                                    {{__('admin_pages.products')}}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ lang_url('admin/categories') }}">
+                                    {{__('admin_pages.categories')}}
                                 </a>
                             </li>
                             <li class="in-right">
