@@ -11,10 +11,12 @@
   |
  */
 
-Route::get('/', 'HomeController@index');
-Route::get('{locale}', 'HomeController@index')
+/* Public Routes */
+Route::get('/', 'Publics\\HomeController@index');
+Route::get('{locale}', 'Publics\\HomeController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
+/* Administration Routes */
 Route::middleware(['auth'])->group(function () { // check for autherization
     Route::get('admin', 'Admin\\DashboardController@index');
     Route::get('{locale}/admin', 'Admin\\DashboardController@index')
