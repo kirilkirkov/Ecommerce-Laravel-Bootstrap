@@ -22,7 +22,7 @@ class ProductsCategoryController extends Controller
                 abort(404);
             }
         }
-        $categories = $categoriesModel->getCategoriesWithPagination();
+        $categories = $categoriesModel->getCategoriesWithPagination($request);
         $allCategories = $categoriesModel->getAllCategories();
         return view('admin.categories', [
             'page_title_lang' => Lang::get('admin_pages.categories'),

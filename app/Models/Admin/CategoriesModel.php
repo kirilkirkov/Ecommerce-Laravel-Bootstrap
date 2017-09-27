@@ -135,8 +135,19 @@ class CategoriesModel extends Model
         return $categories;
     }
 
-    public function getCategoriesWithPagination()
+    public function getCategoriesWithPagination($request)
     {
+        $order_by = $request->input('order_by');
+        $type = $request->input('type');
+
+        if ($order_by != 'name' && $order_by != 'parent' && $order_by != 'position') {
+            $order_by = 'id';
+        }
+
+        if ($type != 'asc' && $type != 'desc') {
+            $type = 'desc';
+        }
+
         $categories = DB::table('categories')
                 ->select(DB::raw('categories.*, categories_translations.name, '
                                 . '(SELECT categories_translations2.name FROM categories as categories2'
@@ -144,6 +155,9 @@ class CategoriesModel extends Model
                                 . 'ON categories_translations2.for_id =  categories2.id WHERE categories2.id = categories.parent '
                                 . 'AND categories_translations2.locale="en") as parent'))
                 ->where('categories_translations.locale', $this->defaultLang)
+                ->when($order_by, function ($query) use ($order_by, $type) {
+                    return $query->orderBy($order_by, $type);
+                })
                 ->join('categories_translations', 'categories.id', '=', 'categories_translations.for_id')
                 ->paginate(10);
         return $categories;

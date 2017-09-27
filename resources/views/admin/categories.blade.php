@@ -23,10 +23,35 @@
         <table class="table table-hover table-responsive mb-0"> 
             <thead>
                 <tr>
+                    @php
+                    if(!isset($_GET['type']) || $_GET['type'] == 'asc'){
+                    $type='desc';
+                    }else {
+                    $type='asc';
+                    } 
+                    @endphp
                     <th scope="row"><input type="checkbox" id="checkAll"></th>
-                    <th class="th-lg"><a class="text-secondary">{{__('admin_pages.category_name')}} <i class="fa fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a class="text-secondary">{{__('admin_pages.category_parent')}}<i class="fa fa-sort ml-1"></i></a></th>
-                    <th class="th-lg text-right"><a class="text-secondary">{{__('admin_pages.category_position')}}<i class="fa fa-sort ml-1"></i></a></th> 
+                    <th class="th-lg">
+                        <a href="?order_by=name&type={{$type}}" class="text-secondary">{{__('admin_pages.category_name')}} 
+                            @if ($type == 'desc' && isset($_GET['order_by']) && $_GET['order_by'] == 'name')<i class="fa fa-sort-asc ml-1"></i> 
+                            @elseif ($type == 'asc' && isset($_GET['order_by']) && $_GET['order_by'] == 'name') <i class="fa fa-sort-desc ml-1"></i>
+                            @elseif (!isset($_GET['order_by']) || $_GET['order_by'] != 'name') <i class="fa fa-sort ml-1"></i> @endif
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a href="?order_by=parent&type={{$type}}" class="text-secondary">{{__('admin_pages.category_parent')}}
+                            @if ($type == 'desc' && isset($_GET['order_by']) && $_GET['order_by'] == 'parent')<i class="fa fa-sort-asc ml-1"></i> 
+                            @elseif ($type == 'asc' && isset($_GET['order_by']) && $_GET['order_by'] == 'parent') <i class="fa fa-sort-desc ml-1"></i>
+                            @elseif (!isset($_GET['order_by']) || $_GET['order_by'] != 'parent') <i class="fa fa-sort ml-1"></i> @endif
+                        </a>
+                    </th>
+                    <th class="th-lg text-right">
+                        <a href='?order_by=position&type={{$type}}' class="text-secondary">{{__('admin_pages.category_position')}}
+                            @if ($type == 'desc' && isset($_GET['order_by']) && $_GET['order_by'] == 'position')<i class="fa fa-sort-asc ml-1"></i> 
+                            @elseif ($type == 'asc' && isset($_GET['order_by']) && $_GET['order_by'] == 'position') <i class="fa fa-sort-desc ml-1"></i>
+                            @elseif (!isset($_GET['order_by']) || $_GET['order_by'] != 'position') <i class="fa fa-sort ml-1"></i> @endif
+                        </a>
+                    </th> 
                 </tr>
             </thead> 
             <tbody>
