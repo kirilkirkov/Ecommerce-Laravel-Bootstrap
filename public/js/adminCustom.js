@@ -42,6 +42,11 @@ $('.confirm').click(function (e) {
 $("#checkAll").click(function () {
     $('input:checkbox').not(this).prop('checked', this.checked);
 });
+$('.menu-btn-xs').click(function() {
+  $('.left-side').slideToggle( "slow", function() {
+    
+  });
+});
 function removeGalleryImage(image, imgNum) {
     $.ajax({
         type: "POST",

@@ -97,6 +97,7 @@
                                     </form>
                                 </div>
                             </nav>
+                            <button type="button" class="btn purple-gradient btn-sm menu-btn-xs">{{__('admin_pages.show_mine_menu')}}</button>
                             <div class="right-side-wrapper">
                                 @yield('content')
                             </div>

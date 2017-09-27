@@ -58,5 +58,6 @@ return [
     'confirm_delete_categories' => 'Сигурен ли сте, че искате да изтриете избраните категории?',
     'selected_categ_deleted' => 'Избраните категории бяха изтрити',
     'num_orders_by_month' => 'Брой поръчки по месец',
-    'year' => 'Година'
+    'year' => 'Година',
+    'show_mine_menu' => 'Покажи менюто'
 ];

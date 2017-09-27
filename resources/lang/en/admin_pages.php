@@ -58,5 +58,6 @@ return [
     'confirm_delete_categories' => 'Are you sure want to delete selected categories?',
     'selected_categ_deleted' => 'Selected categories are deleted',
     'num_orders_by_month' => 'Number of orders by month',
-    'year' => 'Year'
+    'year' => 'Year',
+    'show_mine_menu' => 'Show menu'
 ];

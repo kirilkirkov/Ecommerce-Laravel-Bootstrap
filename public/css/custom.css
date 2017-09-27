@@ -69,6 +69,8 @@ table.table td, table.table th {padding: 20px !important;}
 .bg-secondary {background-color: #a6c;}
 .text-secondary {color:#a6c;}
 .text-secondary:hover {color:#9841c4;}
+.menu-btn-xs {display: none;}
+.btn.purple-gradient {background: rgba(0, 0, 0, 0) linear-gradient(40deg, #ff6ec4, #7873f5) repeat scroll 0 0;   transition: all 0.5s ease 0s;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
 footer .nav li.in-right {float:right;}
@@ -78,6 +80,9 @@ footer .nav li.in-right {float:right;}
 }
 
 @media screen and (max-width: 767px) {
+    .left-side {display: none;}
+    .left-side .nav p {font-size:12px;}
+    .menu-btn-xs {display: block;}
     .overlay img {height: auto;}
     table.table td, table.table th {padding: 10px !important;}
 }
