@@ -155,7 +155,8 @@
         var langs = {
             selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
             selectJustOneCateg: "{{__('admin_pages.select_just_one_categ')}}",
-            confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}"
+            confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}",
+            encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
         }
         </script>
         <script src="{{ asset('js/adminCustom.js') }}"></script> 

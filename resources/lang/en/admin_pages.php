@@ -59,5 +59,21 @@ return [
     'selected_categ_deleted' => 'Selected categories are deleted',
     'num_orders_by_month' => 'Number of orders by month',
     'year' => 'Year',
-    'show_mine_menu' => 'Show menu'
+    'show_mine_menu' => 'Show menu',
+    'user_email' => 'Email',
+    'user_created_at' => 'Created at',
+    'user_updated_at' => 'Updated at',
+    'edit_user' => 'Edit',
+    'add_user' => 'Add user',
+    'user_settings' => 'User settings',
+    'save_changes' => 'Save changes',
+    'close' => 'Close',
+    'user_password' => 'Password',
+    'delete_user' => 'Delete',
+    'incorrect_email_addr' => 'Incorrect email address',
+    'user_name' => 'Name',
+    'user_is_updated' => 'User is updated',
+    'user_is_added' => 'User is added',
+    'are_u_sure_delete_u' => 'Are you sure want to delete this user?',
+    'user_is_deleted' => 'The user is deleted'
 ];

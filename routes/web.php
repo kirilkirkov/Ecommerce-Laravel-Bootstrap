@@ -55,6 +55,12 @@ Route::middleware(['auth'])->group(function () { // check for autherization
     Route::get('admin/users', 'Admin\\UsersController@index')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/users', 'Admin\\UsersController@index');
 //////////////
+    Route::post('admin/users', 'Admin\\UsersController@setUser')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/users', 'Admin\\UsersController@setUser');
+//////////////
+    Route::get('admin/delete/user/{userId}', 'Admin\\UsersController@deleteUser')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/delete/user/{userId}', 'Admin\\UsersController@deleteUser');
+//////////////
     Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 });
 

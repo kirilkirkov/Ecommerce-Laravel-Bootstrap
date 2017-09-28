@@ -59,5 +59,21 @@ return [
     'selected_categ_deleted' => 'Избраните категории бяха изтрити',
     'num_orders_by_month' => 'Брой поръчки по месец',
     'year' => 'Година',
-    'show_mine_menu' => 'Покажи менюто'
+    'show_mine_menu' => 'Покажи менюто',
+    'user_email' => 'Имейл',
+    'user_created_at' => 'Създаден',
+    'user_updated_at' => 'Обновен',
+    'edit_user' => 'Редакция',
+    'add_user' => 'Добави потребител',
+    'user_settings' => 'Настройки на потребител',
+    'save_changes' => 'Запиши промените',
+    'close' => 'Затвори',
+    'user_password' => 'Парола',
+    'delete_user' => 'Изтрий',
+    'incorrect_email_addr' => 'Невалиден имейл адрес',
+    'user_name' => 'Име',
+    'user_is_updated' => 'Потребителят е обновен',
+    'user_is_added' => 'Потребителят е добавен',
+    'are_u_sure_delete_u' => 'Сигурен ли сте, че искате да изтриете този потребител?',
+    'user_is_deleted' => 'Потребителят е изтрит'
 ];
