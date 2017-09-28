@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Laravel') }}</title>   
+        <title>{{__('admin_pages.admin_panel').$page_title_lang}}</title>   
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" /> 
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/adminCustom.css') }}" rel="stylesheet" /> 
