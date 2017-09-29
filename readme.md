@@ -1,19 +1,24 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 <p align="center">Shopping Cart Solution - Laravel and Bootstrap</p>
 
-Bootsrap Responsive Online Shop with beautiful metro style administration!
+Bootsrap Responsive Online Shop with beautiful Metro Style administration!
+Blade template usage. Multi Language
 
 Current versions
 * Laravel Framework 5.5.3 (https://laravel.com/)
 * Bootstrap v3.3.7 (http://getbootstrap.com)
 
+### Server Requirements
+PHP >= 7.0.0
+
 ## Installation in 3 easy steps
-- Import lara_cms.sql to your mysql
-- Set hostname, username and password in .env for your SQL
-- Set APP_URL in .env
+1. Import lara_cms.sql to your mysql
+2. Set hostname, username and password in .env for your SQL
+3. Set APP_URL in .env
 (Maybe you know but you must set your virtual host point to public/ directory or start laravel web server for testing with php artisan serve)
 
 ## Login to administration
+http://yourdomain.com/admin
 * Email: kiro@dev.bg
 * Pass: admin
 

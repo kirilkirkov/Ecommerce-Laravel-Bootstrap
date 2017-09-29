@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{__('admin_pages.admin_panel').$page_title_lang}}</title>   
+        <title>{{__('admin_pages.admin_panel_title').$page_title_lang}}</title>   
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" /> 
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/adminCustom.css') }}" rel="stylesheet" /> 
@@ -62,7 +62,7 @@
                                     </a> 
                                 </li>
                                 <li class="bottom">
-                                    <a href="https://github.com/kirilkirkov" target="_blank" class="btn waves-effect waves-light">
+                                    <a href="https://github.com/kirilkirkov/Shopping-Cart-Solution-Laravel" target="_blank" class="btn waves-effect waves-light">
                                         <i class="material-icons">code</i>
                                         <p>GET SOURCE</p>
                                     </a> 
