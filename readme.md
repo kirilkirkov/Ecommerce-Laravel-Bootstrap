@@ -14,7 +14,7 @@ PHP >= 7.0.0
 ## Installation in 3 easy steps
 1. Import lara_cms.sql to your mysql
 2. Set hostname, username and password in .env for your SQL
-3. Set APP_URL in .env
+3. Set APP_URL in .env with your site url - http://yourdomain.com
 (Maybe you know but you must set your virtual host point to public/ directory or start laravel web server for testing with php artisan serve)
 
 ## Login to administration
