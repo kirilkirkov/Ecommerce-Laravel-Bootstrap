@@ -2,7 +2,8 @@
 
 @section('content')
 <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" /> 
-<link href="{{ asset('css/bootstrap-switch.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/bootstrap-switch.min.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/bootstrap-tagsinput.css') }}" rel="stylesheet" />
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <form action="" method="POST" enctype="multipart/form-data">
@@ -75,9 +76,9 @@
                         </div>
                     </div>
                     <div class="md-form">
-                        <label class="alone">{{__('admin_pages.vip_product')}}</label>
+                        <label class="alone">{{__('admin_pages.tags_product')}}</label>
                         <div class="element-label-text bordered-div">
-                            <input type="checkbox" class="switch-me" {{isset($product['product']->vip) && $product['product']->vip == 1 ? 'checked="checked"' : ''}} data-on-color="secondary" name="vip"> 
+                            <input type="text" data-role="tagsinput" value="{{isset($product['product']->tags) ? $product['product']->tags : ''}}" name="tags"  class="form-control"> 
                         </div>
                     </div>
                     @php 
@@ -148,6 +149,7 @@
 </div>
 <script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/bootstrap-tagsinput.min.js') }}" type="text/javascript"></script>
 <script>
                                 $('.selectpicker').selectpicker();
                                 $('.switch-me').bootstrapSwitch();

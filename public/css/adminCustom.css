@@ -72,6 +72,7 @@ table.table td, table.table th {padding: 20px !important;}
 .text-secondary:hover {color:#9841c4;}
 .menu-btn-xs {display: none;}
 .btn.purple-gradient {background: rgba(0, 0, 0, 0) linear-gradient(40deg, #ff6ec4, #7873f5) repeat scroll 0 0;   transition: all 0.5s ease 0s;}
+.bootstrap-tagsinput {border:0 !important; box-shadow: none !important;}
 footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15px; width:100%;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}

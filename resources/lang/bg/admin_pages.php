@@ -16,7 +16,7 @@ return [
     'order_position' => 'Позиция',
     'choose_category' => 'Категория',
     'hidden_product' => 'Скрит',
-    'vip_product' => 'Вип',
+    'tags_product' => 'Тагове',
     'choose_cover_img' => 'Избери снимка',
     'cover_image' => 'Главна снимка',
     'search_product' => 'Търси продукт',

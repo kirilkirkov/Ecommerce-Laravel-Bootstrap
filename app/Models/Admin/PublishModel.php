@@ -37,7 +37,7 @@ class PublishModel extends Model
                     'quantity' => (float) $this->post['quantity'],
                     'order_position' => (int) $this->post['order_position'],
                     'link_to' => $this->post['link_to'],
-                    'vip' => isset($this->post['vip']) ? 1 : 0,
+                    'tags' => trim($this->post['tags']),
                     'hidden' => isset($this->post['hidden']) ? 1 : 0,
                     'url' => stringToUrl($this->nameOfProduct) . '-' . $idIs
                 ]);
@@ -153,7 +153,7 @@ class PublishModel extends Model
                             'quantity' => (float) $this->post['quantity'],
                             'order_position' => (int) $this->post['order_position'],
                             'link_to' => $this->post['link_to'],
-                            'vip' => isset($this->post['vip']) ? 1 : 0,
+                            'tags' => trim($this->post['tags']),
                             'hidden' => isset($this->post['hidden']) ? 1 : 0,
                             'updated_at' => date('Y-m-d H:i:s', time())
                 ]);

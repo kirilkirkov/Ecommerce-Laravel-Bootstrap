@@ -16,7 +16,7 @@ return [
     'order_position' => 'Position',
     'choose_category' => 'Category',
     'hidden_product' => 'Hidden',
-    'vip_product' => 'Vip',
+    'tags_product' => 'Tags',
     'choose_cover_img' => 'Choose image',
     'cover_image' => 'Cover image',
     'search_product' => 'Search product',
