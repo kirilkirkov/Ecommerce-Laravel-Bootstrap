@@ -33,18 +33,18 @@
             <div class="col-xs-12 products-title">
                 <h2>{{__('public_pages.promo_products')}}</h2>
             </div>
-            @foreach ($vipProducts as $vipProduct)
+            @foreach ($promoProducts as $promoProduct)
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="{{ lang_url($vipProduct->url) }}" class="buy-product">
-                            <img src="{{asset('storage/'.$vipProduct->image)}}" alt="{{$vipProduct->name}}">
+                        <a href="{{ lang_url($promoProduct->url) }}" class="buy-product">
+                            <img src="{{asset('storage/'.$promoProduct->image)}}" alt="{{$promoProduct->name}}">
                         </a>
                     </div>
-                    <a href="{{ lang_url($vipProduct->url) }}" class="buy-product">
-                        <h1>{{$vipProduct->name}}</h1>
+                    <a href="{{ lang_url($promoProduct->url) }}" class="buy-product">
+                        <h1>{{$promoProduct->name}}</h1>
                     </a>
-                    <span class="price">{{$vipProduct->price}}</span>
+                    <span class="price">{{$promoProduct->price}}</span>
                     <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>

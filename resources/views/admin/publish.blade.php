@@ -78,7 +78,7 @@
                     <div class="md-form">
                         <label class="alone">{{__('admin_pages.tags_product')}}</label>
                         <div class="element-label-text bordered-div">
-                            <input type="text" data-role="tagsinput" value="{{isset($product['product']->tags) ? $product['product']->tags : ''}}" name="tags"  class="form-control"> 
+                            <input type="text" data-role="tagsinput" value="{{isset($product['product']->tags) ? $product['product']->tags : ''}}" name="tags"  class="form-control input-tags"> 
                         </div>
                     </div>
                     @php 
@@ -151,13 +151,18 @@
 <script src="{{ asset('js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}" type="text/javascript"></script>
 <script>
-                                $('.selectpicker').selectpicker();
-                                $('.switch-me').bootstrapSwitch();
-                                document.getElementById('cover-upload').onchange = function () {
-                                $('.upload-wrap .file-name').show().append(this.value);
-                                };
-                                function showMeNewImgUpload() {
-                                $('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
-                                }
+$('.selectpicker').selectpicker();
+$('.switch-me').bootstrapSwitch();
+document.getElementById('cover-upload').onchange = function () {
+$('.upload-wrap .file-name').show().append(this.value);
+};
+function showMeNewImgUpload() {
+$('.clones').append('<div><input type="file" name="gallery_image[]" multiple></div>');
+}
+$('.input-tags').tagsinput({
+    tagClass: function() { 
+        return 'label label-secondary';
+    }
+});
 </script>
 @endsection

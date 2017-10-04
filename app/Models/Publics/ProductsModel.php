@@ -21,4 +21,27 @@ class ProductsModel extends Model
         return $product;
     }
 
+    public function getProductsWithTags($arrayTags)
+    {
+        $products = DB::table('products')
+                ->whereIn('tags', $arrayTags)
+                ->where('hidden', '=', 0)
+                ->where('locale', '=', app()->getLocale())
+                ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
+                ->get();
+        return $products;
+    }
+
+    public function getMostSelledProducts()
+    {
+        $products = DB::table('products')
+                ->where('hidden', '=', 0)
+                ->where('locale', '=', app()->getLocale())
+                ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
+                ->orderBy('procurements', 'desc')
+                ->limit(10)
+                ->get();
+        return $products;
+    }
+
 }

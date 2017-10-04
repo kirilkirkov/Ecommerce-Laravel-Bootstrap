@@ -4,18 +4,18 @@ namespace App\Http\Controllers\Publics;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Publics\HomeModel;
+use App\Models\Publics\ProductsModel;
 
 class HomeController extends Controller
 {
 
     public function index()
     {
-        $homeModel = new HomeModel();
-        $vipProducts = $homeModel->getVipProducts();
-        $mostSelledProducts = $homeModel->getMostSelledProducts();
+        $productsModel = new ProductsModel();
+        $promoProducts = $productsModel->getProductsWithTags(['promo']);
+        $mostSelledProducts = $productsModel->getMostSelledProducts();
         return view('publics.home', [
-            'vipProducts' => $vipProducts,
+            'promoProducts' => $promoProducts,
             'mostSelledProducts' => $mostSelledProducts
         ]);
     }

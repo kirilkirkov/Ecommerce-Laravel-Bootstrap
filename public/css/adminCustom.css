@@ -25,6 +25,7 @@ nav.navbar {border:0; box-shadow: none;}
 .btn.dropdown-toggle {margin: 0; padding: 10px;}
 .md-form label {font-size:14px; }
 .bootstrap-switch-secondary {background-color: #a6c; color:#fff;}
+.label-secondary {background-color: #a6c; color:#fff;}
 .element-label-text {margin-left: 45px;}
 label.alone {width: 40px; word-break: break-all;}
 .bordered-div {border-bottom:1px solid #ccc; padding-bottom: 20px;}
