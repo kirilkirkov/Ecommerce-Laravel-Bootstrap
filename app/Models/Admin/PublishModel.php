@@ -104,6 +104,7 @@ class PublishModel extends Model
         $this->post['image'] = '';
         if (isset($this->post['cover_image'])) {
             $this->post['image'] = Storage::putFile('public/images', $this->post['cover_image']);
+            $this->post['image'] = str_replace('public/', '', $this->post['image']);
         }
         if (isset($this->post['old_image']) && !isset($this->post['cover_image'])) {
             $this->post['image'] = $this->post['old_image'];

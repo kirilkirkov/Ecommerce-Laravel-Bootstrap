@@ -76,5 +76,6 @@ return [
     'user_is_added' => 'User is added',
     'are_u_sure_delete_u' => 'Are you sure want to delete this user?',
     'user_is_deleted' => 'The user is deleted',
-    'admin_panel_title' => 'Admin panel - '
+    'admin_panel_title' => 'Admin panel - ',
+    'login_form' => 'Administrator login'
 ];

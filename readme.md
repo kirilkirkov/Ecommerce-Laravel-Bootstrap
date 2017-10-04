@@ -4,6 +4,10 @@
 Bootsrap Responsive Online Shop with beautiful Metro Style administration!
 Blade template usage. Multi Language
 
+## Donate
+If this project help you reduce time to develop, you can give me a cup of coffee to continue its development :)
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YX2JXRBLWRXPA)
+
 Current versions
 * Laravel Framework 5.5.3 (https://laravel.com/)
 * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -25,7 +29,3 @@ http://yourdomain.com/admin
 ## Screenshot of admin panel
 ![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/fullsize_admin.jpg "Logo Title Text 1")
 ![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile_admin.jpg "Logo Title Text 1")
-
-## Donate
-If this project help you reduce time to develop, you can give me a cup of coffee to continue its development :)
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YX2JXRBLWRXPA)

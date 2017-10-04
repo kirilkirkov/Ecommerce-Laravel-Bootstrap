@@ -1,4 +1,4 @@
-@extends('layouts.app_public')
+@extends('layouts.app_login_admin')
 
 @section('content')
 <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet" /> 
