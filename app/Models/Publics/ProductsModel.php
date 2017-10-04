@@ -28,6 +28,7 @@ class ProductsModel extends Model
                 ->where('hidden', '=', 0)
                 ->where('locale', '=', app()->getLocale())
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
+                ->limit(8)
                 ->get();
         return $products;
     }
@@ -39,7 +40,7 @@ class ProductsModel extends Model
                 ->where('locale', '=', app()->getLocale())
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
                 ->orderBy('procurements', 'desc')
-                ->limit(10)
+                ->limit(8)
                 ->get();
         return $products;
     }
