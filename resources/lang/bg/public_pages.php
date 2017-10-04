@@ -21,5 +21,8 @@ return [
     'close_xs_menu' => 'Затвори',
     'promo_products' => 'Промоционални продукти',
     'buy' => 'Купи',
-    'most_selled' => 'Най-продавани'
+    'most_selled' => 'Най-продавани',
+    'products' => 'Продукти',
+    'bascet' => 'Кошница с добавени',
+    'contacts' => 'Контакти'
 ];

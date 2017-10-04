@@ -21,5 +21,8 @@ return [
     'close_xs_menu' => 'Close',
     'promo_products' => 'Promo products',
     'buy' => 'Buy',
-    'most_selled' => 'Most selled'
+    'most_selled' => 'Most selled',
+    'products' => 'Products',
+    'bascet' => 'My bascet',
+    'contacts' => 'Contacts'
 ];

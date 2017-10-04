@@ -37,15 +37,15 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="" class="buy-product">
+                        <a href="{{ lang_url($vipProduct->url) }}" class="buy-product">
                             <img src="{{asset('storage/'.$vipProduct->image)}}" alt="{{$vipProduct->name}}">
                         </a>
                     </div>
-                    <a href="" class="buy-product">
+                    <a href="{{ lang_url($vipProduct->url) }}" class="buy-product">
                         <h1>{{$vipProduct->name}}</h1>
                     </a>
                     <span class="price">{{$vipProduct->price}}</span>
-                    <a href="" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>
             @endforeach

@@ -12,9 +12,16 @@
  */
 
 /* Public Routes */
+// home page
 Route::get('/', 'Publics\\HomeController@index');
 Route::get('{locale}', 'Publics\\HomeController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
+
+// open product
+Route::get('{any}-{id}', 'Publics\\ProductsController@productPreview')->where('id', '[\d+]+')->where('any', '(.*)');
+Route::get('{locale}/{any}-{id}', 'Publics\\ProductsController@productPreview')
+        ->where('locale', implode('|', Config::get('app.locales')))->where('id', '[\d+]+')->where('any', '(.*)');
+
 
 /* Administration Routes */
 Route::middleware(['auth'])->group(function () { // check for autherization

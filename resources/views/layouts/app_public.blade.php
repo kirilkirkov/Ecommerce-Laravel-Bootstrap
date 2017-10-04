@@ -59,10 +59,9 @@
                     <a class="navbar-brand visible-xs" href="#">{{__('public_pages.menu')}}</a>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li> 
+                            <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
+                            <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li> 
                         </ul>
                     </div>
                 </div>
