@@ -39,13 +39,22 @@ $('.fast-order-btn').click(function () {
     $('.fast-order').show();
     $(this).hide().removeClass('visible-xs');
 });
+/*
+ * Add product to cart
+ */
+$('.buy-now').click(function () {
+    $('#modalBuyBtn').modal('show');
+});
 function checkScroll() {
     if ($(this).scrollTop() > 80) {
         if (xsMode() === false) {
             $('.header .navbar-custom').addClass('navbar-fixed-top').removeClass('trans-hide');
+            var menuHeight = $('.navbar-custom').height();
+            $('.top-part').css('margin-bottom', menuHeight);
         }
     } else {
         $('.header .navbar-custom').removeClass('navbar-fixed-top').addClass('trans-hide');
+        $('.top-part').css('margin-bottom', '0');
     }
 }
 /*

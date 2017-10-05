@@ -24,5 +24,13 @@ return [
     'most_selled' => 'Most selled',
     'products' => 'Products',
     'bascet' => 'My bascet',
-    'contacts' => 'Contacts'
+    'contacts' => 'Contacts',
+    'category_name' => 'Category:',
+    'in_stock' => 'in stock',
+    'out_of_stock' => 'out of stock',
+    'quantity' => 'Quantity:',
+    'details' => 'Details',
+    'success_add_to_cart' => 'Successfully added item in the cart',
+    'go_buy' => 'Continue to checkout',
+    'continue_shopping' => 'Continue shopping'
 ];

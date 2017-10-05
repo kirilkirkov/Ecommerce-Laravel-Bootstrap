@@ -21,11 +21,9 @@
         </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
         </a>
     </div>
     <div class="container">
@@ -66,7 +64,7 @@
                         <h1>{{$mostSelledProduct->name}}</h1>
                     </a>
                     <span class="price">{{$mostSelledProduct->price}}</span>
-                    <a href="" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>
             @endforeach

@@ -132,10 +132,29 @@
                 <li><a href="#">Page 3</a></li>
             </ul>
             <a href="javascript:void(0);" class="close-xs-menu">{{__('public_pages.close_xs_menu')}}</a>
-        </div>
-        <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
+        </div> 
+        <!-- Modal After buy now button -->
+        <div class="modal fade" id="modalBuyBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>{{__('public_pages.success_add_to_cart')}}</h4>
+                        <a href="{{lang_url('checkout')}}" class="go-buy">{{__('public_pages.go_buy')}}</a>
+                        <hr>
+                        <div class="continue-shopping">
+                            <a href="javascript:void(0);" data-dismiss="modal">
+                                {{__('public_pages.continue_shopping')}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
     </body>
 </html>
