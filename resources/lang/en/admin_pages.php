@@ -77,5 +77,15 @@ return [
     'are_u_sure_delete_u' => 'Are you sure want to delete this user?',
     'user_is_deleted' => 'The user is deleted',
     'admin_panel_title' => 'Admin panel - ',
-    'login_form' => 'Administrator login'
+    'login_form' => 'Administrator login',
+    'carousel' => 'Carousel',
+    'add_new_slide' => 'Add slide',
+    'add' => 'Add',
+    'image_slide' => 'Image',
+    'position' => 'Position',
+    'link' => 'Link',
+    'carousel_is_added' => 'Slide is added',
+    'no_selected_image' => 'No selected image',
+    'are_u_sure_delete_s' => 'Are you sure want to delete this slide?',
+    'slider_is_deleted' => 'Slider is deleted'
 ];

@@ -65,8 +65,17 @@ Route::middleware(['auth'])->group(function () { // check for autherization
     Route::post('admin/users', 'Admin\\UsersController@setUser')->where('locale', implode('|', Config::get('app.locales')));
     Route::post('{locale}/admin/users', 'Admin\\UsersController@setUser');
 //////////////
+    Route::get('admin/carousel', 'Admin\\CarouselController@index')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/carousel', 'Admin\\CarouselController@index');
+//////////////
+    Route::post('admin/carousel', 'Admin\\CarouselController@setSlider')->where('locale', implode('|', Config::get('app.locales')));
+    Route::post('{locale}/admin/carousel', 'Admin\\CarouselController@setSlider');
+//////////////
     Route::get('admin/delete/user/{userId}', 'Admin\\UsersController@deleteUser')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/delete/user/{userId}', 'Admin\\UsersController@deleteUser');
+//////////////
+    Route::get('admin/delete/slider/{id}', 'Admin\\CarouselController@deleteSlider')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/delete/slider/{id}', 'Admin\\CarouselController@deleteSlider');
 //////////////
     Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 });

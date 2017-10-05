@@ -74,6 +74,13 @@ table.table td, table.table th {padding: 20px !important;}
 .menu-btn-xs {display: none;}
 .btn.purple-gradient {background: rgba(0, 0, 0, 0) linear-gradient(40deg, #ff6ec4, #7873f5) repeat scroll 0 0;   transition: all 0.5s ease 0s;}
 .bootstrap-tagsinput {border:0 !important; box-shadow: none !important;}
+.add-slider { border-bottom: 1px solid #dcdbdb; padding-bottom: 15px; margin-bottom: 15px;}
+.carousel-sliders .slide { position: relative;  margin-bottom: 20px; }
+.carousel-sliders .slide .position {position: absolute; top:10px; left:10px; background-color: #ffffff; color:#333; height: 50px;  width: 50px; text-align: center; line-height: 50px;  border-radius: 50%;}
+.carousel-sliders .slide img {margin-bottom: 5px;}
+.carousel-sliders .slide .link {background-color: #fff; display: block; padding: 10px; border:1px solid #d7d7d7; font-size:12px; }
+.carousel-sliders .slide .link a {color:#333;}
+.carousel-sliders .slide .delete {position: absolute; right:10px; top:10px;}
 footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15px; width:100%;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}

@@ -56,6 +56,12 @@
                                     </a> 
                                 </li>
                                 <li>
+                                    <a href="{{ lang_url('admin/carousel') }}" class="btn waves-effect waves-light">
+                                        <i class="material-icons">view_carousel</i>
+                                        <p>{{__('admin_pages.carousel')}}</p>
+                                    </a> 
+                                </li>
+                                <li>
                                     <a href="{{ lang_url('admin/users') }}" class="btn waves-effect waves-light">
                                         <i class="material-icons">group</i>
                                         <p>{{__('admin_pages.users')}}</p>

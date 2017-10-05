@@ -3,21 +3,31 @@
 @section('content')
 <div class="home-page">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
+        <ol class="carousel-indicators"> 
+            @php
+            $i=0;
+            @endphp 
+            @foreach($carousel as $slide)
+            <li data-target="#myCarousel" data-slide-to="{{$i}}" class="{{ $i == 0 ? 'active' : ''}}"></li>
+            @php
+            $i++;
+            @endphp 
+            @endforeach
         </ol>
         <div class="carousel-inner">
-            <div class="item active">
-                <a href="">
-                    <img src="{{asset('storage/carousel/slider222b.jpg')}}" alt="Los Angeles">
+            @php
+            $i=0;
+            @endphp 
+            @foreach($carousel as $slide)
+            <div class="item {{ $i == 0 ? 'active' : ''}}">
+                <a href="{{$slide->link}}">
+                    <img src="{{asset('storage/'.$slide->image)}}" alt="">
                 </a>
             </div>
-            <div class="item">
-                <a href="">
-                    <img src="{{asset('storage/carousel/slider333b.jpg')}}" alt="Chicago">
-                </a>
-            </div>
+            @php
+            $i++;
+            @endphp 
+            @endforeach
         </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>

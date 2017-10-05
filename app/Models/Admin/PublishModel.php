@@ -116,7 +116,7 @@ class PublishModel extends Model
          */
         if (isset($this->post['gallery_image']) && !empty($this->post['gallery_image'])) {
             foreach ($this->post['gallery_image'] as $galleryImage) {
-                $aa = Storage::putFile('public/moreImagesFolders/' . $this->post['folder'], $galleryImage);
+                Storage::putFile('public/moreImagesFolders/' . $this->post['folder'], $galleryImage);
             }
         }
     }
