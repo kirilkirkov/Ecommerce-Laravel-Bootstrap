@@ -117,8 +117,21 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .alert.alert-success {background-color: #5cb860;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);    color: #ffffff; border-color: transparent;}
 .alert-top {position: absolute; width:250px; top:10px; left:50%; margin-left: -125px;}
 
+@media screen and (max-width: 991px) {
+    .header .top-part .phone-call .right span{font-size:18px;}
+    .header .top-part .phone-call .right p {font-size:10px;}
+    .header .top-part .user a {font-size:18px;}
+}
+
 @media screen and (max-width: 767px) {
     .header .top-part {height: auto;}
+    .header .top-part .phone-call .right span{font-size:18px;}
+    .header .top-part .phone-call .right p {font-size:10px;}
+    .header .top-part .logo-container {text-align: center; display: block; }
+    .header .top-part .logo-container .logo {display: inline;}
+    .header .top-part .search, .header .top-part .logo-container, .header .top-part .phone-call {margin-bottom: 15px;}
+    .right-menu ul.dropdown-xs li { margin-bottom: 5px; }
+    .right-menu ul.dropdown-xs li a {color:#333;}
     .fast-order { display: none; position: fixed; width: 100%; bottom:0; left:0; border-radius: 0; right:0;}
     .fast-order h2 {font-size:16px; }
     .fast-order label {font-size:12px;}

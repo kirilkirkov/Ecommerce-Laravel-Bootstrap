@@ -15,12 +15,12 @@
         <div class="header">
             <div class="container">
                 <div class="row top-part">
-                    <div class="col-sm-3">
-                        <a href="{{ lang_url('/') }}">
+                    <div class="col-sm-3 col-md-3">
+                        <a href="{{ lang_url('/') }}" class="logo-container">
                             <img src="https://cdncloudcart.com/6070/logo/1_300x300.png?1488267690" class="img-responsive logo" alt=""> 
                         </a>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3 col-md-4">
                         <form class="search" action="" method="GET">
                             <input type="text" class="search-field" value="" placeholder="{{__('public_pages.search')}}">
                             <a href="javascript:void(0);" class="submit-search">
@@ -28,7 +28,7 @@
                             </a>
                         </form>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-md-3">
                         <div class="phone-call">
                             <img src="{{ asset('img/phone.png') }}" alt="">
                             <div class="right">
@@ -38,7 +38,7 @@
                             <div class="clearfix"></div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3 col-md-2">
                         <div class="user">
                             <a href="" class="login">
                                 {{__('public_pages.login')}}
@@ -59,9 +59,9 @@
                     <a class="navbar-brand visible-xs" href="#">{{__('public_pages.menu')}}</a>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-center">
-                            <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li> 
+                            <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>
                             <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
-                            <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li> 
+                            <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>
                         </ul>
                         <div class="nav navbar-nav navbar-right">
                             <div class="dropdown">
@@ -139,10 +139,20 @@
         <div class="backdrop"></div>
         <div class="right-menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>
+                <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
+                <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ app()->getLocale() }}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-xs" role="menu">
+                        @foreach(Config::get('app.locales') as $locale)
+                        <li><a href="{{url(getSameUrlInOtherLang($locale))}}">{{$locale}}</a></li>
+                        @endforeach
+                    </ul>
+                </li>
             </ul>
             <a href="javascript:void(0);" class="close-xs-menu">{{__('public_pages.close_xs_menu')}}</a>
         </div> 

@@ -27,11 +27,11 @@ $('.fast-order .close').click(function () {
     $('.fast-order').fadeOut('slow');
 });
 $('.show-right-menu').click(function () {
-    $('.right-menu').toggle("slide", {direction: "left"}, 1000);
+    $('.right-menu').toggle("slide", {direction: "left"}, 500);
     $('.backdrop').show();
 });
 $('.close-xs-menu').click(function () {
-    $('.right-menu').toggle("slide", {direction: "left"}, 1000);
+    $('.right-menu').toggle("slide", {direction: "left"}, 500);
     $('.backdrop').hide();
 });
 $('.fast-order-btn').click(function () {
