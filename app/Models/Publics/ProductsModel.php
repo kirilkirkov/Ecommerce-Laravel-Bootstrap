@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class ProductsModel extends Model
 {
 
+    public function getProducts()
+    {
+        $products = DB::table('products')
+                ->orderBy('order_position', 'asc')
+                ->where('hidden', '=', 0)
+                ->where('locale', '=', app()->getLocale())
+                ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
+                ->paginate(12);
+        return $products;
+    }
+
     public function getProduct($id)
     {
         $product = DB::table('products')

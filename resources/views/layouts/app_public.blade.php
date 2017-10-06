@@ -165,9 +165,19 @@
                     </div>
                 </div>
             </div>
-            <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
+        </div>
+        @if (session('msg'))
+        <div class="alert {{ session('result') === true ? "alert-success" : "alert-danger" }} alert-top">  
+            @if (is_array(session('msg')))
+            {!! implode('<br>',session('msg')) !!}
+            @else
+            {{session('msg')}}
+            @endif
+        </div>
+        @endif
+        <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
     </body>
 </html>

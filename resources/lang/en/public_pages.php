@@ -32,5 +32,13 @@ return [
     'details' => 'Details',
     'success_add_to_cart' => 'Successfully added item in the cart',
     'go_buy' => 'Continue to checkout',
-    'continue_shopping' => 'Continue shopping'
+    'continue_shopping' => 'Continue shopping',
+    'all_products' => 'Products',
+    'client_email' => 'Your email',
+    'client_message' => 'Message',
+    'send_message' => 'Send message',
+    'message_sended' => 'Message sended',
+    'invalid_email' => 'Invalid email',
+    'too_short_message' => 'Too short message',
+    'problem_message_send' => 'It seems have error with email send! Please call us!'
 ];

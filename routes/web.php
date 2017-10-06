@@ -17,9 +17,24 @@ Route::get('/', 'Publics\\HomeController@index');
 Route::get('{locale}', 'Publics\\HomeController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
-// open product
+// open one product
 Route::get('{any}-{id}', 'Publics\\ProductsController@productPreview')->where('id', '[\d+]+')->where('any', '(.*)');
 Route::get('{locale}/{any}-{id}', 'Publics\\ProductsController@productPreview')
+        ->where('locale', implode('|', Config::get('app.locales')))->where('id', '[\d+]+')->where('any', '(.*)');
+
+// open all products
+Route::get('products', 'Publics\\ProductsController@index')->where('id', '[\d+]+')->where('any', '(.*)');
+Route::get('{locale}/products', 'Publics\\ProductsController@index')
+        ->where('locale', implode('|', Config::get('app.locales')))->where('id', '[\d+]+')->where('any', '(.*)');
+
+// open contacts
+Route::get('contacts', 'Publics\\ContactsController@index')->where('id', '[\d+]+')->where('any', '(.*)');
+Route::get('{locale}/contacts', 'Publics\\ContactsController@index')
+        ->where('locale', implode('|', Config::get('app.locales')))->where('id', '[\d+]+')->where('any', '(.*)');
+
+// send message from contacts
+Route::post('contacts', 'Publics\\ContactsController@sendMessage')->where('id', '[\d+]+')->where('any', '(.*)');
+Route::post('{locale}/contacts', 'Publics\\ContactsController@sendMessage')
         ->where('locale', implode('|', Config::get('app.locales')))->where('id', '[\d+]+')->where('any', '(.*)');
 
 

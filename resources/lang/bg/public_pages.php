@@ -32,5 +32,13 @@ return [
     'details' => 'Детайли',
     'success_add_to_cart' => 'Успешно добавен артикул в количката',
     'go_buy' => 'Продължи към плащане',
-    'continue_shopping' => 'Продължи пазаруването'
+    'continue_shopping' => 'Продължи пазаруването',
+    'all_products' => 'Продукти',
+    'client_email' => 'Вашият имейл',
+    'client_message' => 'Съобщение',
+    'send_message' => 'Изпрати съобщението',
+    'message_sended' => 'Съобщението е изпратено',
+    'invalid_email' => 'Невалиден имейл адрес',
+    'too_short_message' => 'Не сте въвели съобщение',
+    'problem_message_send' => 'Изглежда, че има проблем с изпращането на имейла. Моля обадете ни се!'
 ];

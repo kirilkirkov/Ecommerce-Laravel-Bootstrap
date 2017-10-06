@@ -45,11 +45,11 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="{{ lang_url($promoProduct->url) }}" class="buy-product">
+                        <a href="{{ $promoProduct->link_to != null ? $promoProduct->link_to : lang_url($promoProduct->url) }}" class="buy-product">
                             <img src="{{asset('storage/'.$promoProduct->image)}}" alt="{{$promoProduct->name}}">
                         </a>
                     </div>
-                    <a href="{{ lang_url($promoProduct->url) }}" class="buy-product">
+                    <a href="{{ $promoProduct->link_to != null ? $promoProduct->link_to : lang_url($promoProduct->url) }}" class="buy-product">
                         <h1>{{$promoProduct->name}}</h1>
                     </a>
                     <span class="price">{{$promoProduct->price}}</span>
@@ -66,11 +66,11 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="" class="buy-product">
+                        <a href="{{ $mostSelledProduct->link_to != null ? $mostSelledProduct->link_to : lang_url($promoProduct->url) }}" class="buy-product">
                             <img src="{{asset('storage/'.$mostSelledProduct->image)}}" alt="{{$mostSelledProduct->name}}">
                         </a>
                     </div>
-                    <a href="" class="buy-product">
+                    <a href="{{ $mostSelledProduct->link_to != null ? $mostSelledProduct->link_to : lang_url($promoProduct->url) }}" class="buy-product">
                         <h1>{{$mostSelledProduct->name}}</h1>
                     </a>
                     <span class="price">{{$mostSelledProduct->price}}</span>
