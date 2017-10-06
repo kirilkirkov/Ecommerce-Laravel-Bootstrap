@@ -112,7 +112,10 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .close-xs-menu {position: absolute;top:0;right:-60px;background-color: #393d50; padding: 5px 10px; text-transform: uppercase; font-weight: bold; color:#fff;}
 .close-xs-menu:hover {color:#fff; text-decoration: none;}
 
-.alert-top {position: absolute; width:200px; top:0; left:50%; margin-left: -100px;}
+.alert{text-align: center;}
+.alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}
+.alert.alert-success {background-color: #5cb860;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);    color: #ffffff; border-color: transparent;}
+.alert-top {position: absolute; width:250px; top:10px; left:50%; margin-left: -125px;}
 
 @media screen and (max-width: 767px) {
     .header .top-part {height: auto;}
