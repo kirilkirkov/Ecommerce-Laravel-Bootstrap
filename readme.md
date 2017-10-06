@@ -34,3 +34,7 @@ http://yourdomain.com/admin
 ## Screenshot of admin panel
 ![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/fullsize_admin.jpg "Logo Title Text 1")
 ![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile_admin.jpg "Logo Title Text 1")
+
+## Screenshot of public page
+![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/fullsize_admin.jpg "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile_admin.jpg "Logo Title Text 1")

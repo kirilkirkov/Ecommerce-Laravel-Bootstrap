@@ -17,7 +17,7 @@
                 <div class="row top-part">
                     <div class="col-sm-3 col-md-3">
                         <a href="{{ lang_url('/') }}" class="logo-container">
-                            <img src="https://cdncloudcart.com/6070/logo/1_300x300.png?1488267690" class="img-responsive logo" alt=""> 
+                            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" class="img-responsive logo" alt=""> 
                         </a>
                     </div>
                     <div class="col-sm-3 col-md-4">
@@ -33,7 +33,7 @@
                             <img src="{{ asset('img/phone.png') }}" alt="">
                             <div class="right">
                                 <p>{{__('public_pages.phone_order')}}</p>
-                                <span>0885 681 058</span>
+                                <span>0888 888 888</span>
                             </div>
                             <div class="clearfix"></div>
                         </div>
