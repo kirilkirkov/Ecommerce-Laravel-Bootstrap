@@ -9,10 +9,10 @@ use App\Models\Publics\ProductsModel;
 class ProductsController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $productsModel = new ProductsModel();
-        $products = $productsModel->getProducts();
+        $products = $productsModel->getProducts($request);
         return view('publics.products', [
             'products' => $products
         ]);

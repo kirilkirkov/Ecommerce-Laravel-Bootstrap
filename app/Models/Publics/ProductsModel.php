@@ -8,12 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class ProductsModel extends Model
 {
 
-    public function getProducts()
+    public function getProducts($request)
     {
+        $search = $request->input('find');
         $products = DB::table('products')
                 ->orderBy('order_position', 'asc')
                 ->where('hidden', '=', 0)
                 ->where('locale', '=', app()->getLocale())
+                ->when($search, function ($query) use ($search) {
+                    return $query->where('products_translations.name', 'LIKE', "%$search%");
+                })
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
                 ->paginate(12);
         return $products;

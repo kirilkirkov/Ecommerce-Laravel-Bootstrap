@@ -21,9 +21,9 @@
                         </a>
                     </div>
                     <div class="col-sm-3 col-md-4">
-                        <form class="search" action="" method="GET">
-                            <input type="text" class="search-field" value="" placeholder="{{__('public_pages.search')}}">
-                            <a href="javascript:void(0);" class="submit-search">
+                        <form class="search" id="products-search" action="{{lang_url('products')}}" method="GET">
+                            <input type="text" name="find" class="search-field" value="{{ Request::get('find') }}" placeholder="{{__('public_pages.search')}}">
+                            <a href="javascript:void(0);" class="submit-search" onclick=" document.getElementById('products-search').submit();">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </a>
                         </form>
