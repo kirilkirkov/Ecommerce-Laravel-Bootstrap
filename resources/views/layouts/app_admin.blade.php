@@ -101,6 +101,19 @@
                                             <i class="material-icons">search</i> 
                                         </button>
                                     </form>
+                                    <div class="navbar-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                                                {{ app()->getLocale() }}
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                @foreach(Config::get('app.locales') as $locale)
+                                                <li><a href="{{url(getSameUrlInOtherLang($locale))}}">{{$locale}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </div> 
+                                    </div>
                                 </div>
                             </nav>
                             <button type="button" class="btn purple-gradient btn-sm menu-btn-xs">{{__('admin_pages.show_mine_menu')}}</button>
@@ -153,17 +166,17 @@
         <script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script> 
         <script>
-        var urls = {
-            removeGalleryImage: "{{ url('admin/removeGalleryImage') }}",
-            editCategory: "{{ lang_url('admin/categories') }}",
-            deleteCategories: "{{ lang_url('admin/delete/categories') }}"
-        };
-        var langs = {
-            selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
-            selectJustOneCateg: "{{__('admin_pages.select_just_one_categ')}}",
-            confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}",
-            encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
-        }
+var urls = {
+    removeGalleryImage: "{{ url('admin/removeGalleryImage') }}",
+    editCategory: "{{ lang_url('admin/categories') }}",
+    deleteCategories: "{{ lang_url('admin/delete/categories') }}"
+};
+var langs = {
+    selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
+    selectJustOneCateg: "{{__('admin_pages.select_just_one_categ')}}",
+    confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}",
+    encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
+}
         </script>
         <script src="{{ asset('js/adminCustom.js') }}"></script> 
     </body>

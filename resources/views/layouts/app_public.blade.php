@@ -58,11 +58,24 @@
                     </button>
                     <a class="navbar-brand visible-xs" href="#">{{__('public_pages.menu')}}</a>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav navbar-center">
                             <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li> 
                             <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
                             <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li> 
                         </ul>
+                        <div class="nav navbar-nav navbar-right">
+                            <div class="dropdown">
+                                <button class="btn btn-lang dropdown-toggle" type="button" data-toggle="dropdown">
+                                    {{ app()->getLocale() }}
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    @foreach(Config::get('app.locales') as $locale)
+                                    <li><a href="{{url(getSameUrlInOtherLang($locale))}}">{{$locale}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>

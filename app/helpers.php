@@ -19,3 +19,18 @@ function stringToUrl($string)
     $onlyLetters = preg_replace('/\s/', '-', trim($onlyLetters));
     return $onlyLetters;
 }
+
+function getSameUrlInOtherLang($toLang)
+{
+    $request = request();
+    $segments = $request->segments();
+    foreach (Config::get('app.locales') as $locale) {
+        if (($key = array_search($locale, $segments)) !== false) {
+            unset($segments[$key]);
+        }
+    }
+    if ($toLang != Config::get('app.defaultLocale')) {
+        array_unshift($segments, $toLang);
+    }
+    return implode('/', $segments);
+}
