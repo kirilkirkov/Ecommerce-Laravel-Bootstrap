@@ -14,7 +14,8 @@ class ProductsController extends Controller
         $productsModel = new ProductsModel();
         $products = $productsModel->getProducts($request);
         return view('publics.products', [
-            'products' => $products
+            'products' => $products,
+            'cartProducts' => $this->products
         ]);
     }
 
@@ -26,7 +27,8 @@ class ProductsController extends Controller
             abort(404);
         }
         return view('publics.preview', [
-            'product' => $product
+            'product' => $product,
+            'cartProducts' => $this->products
         ]);
     }
 

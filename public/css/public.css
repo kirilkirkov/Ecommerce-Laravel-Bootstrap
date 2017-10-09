@@ -1,6 +1,6 @@
 body {font-family: 'Roboto', sans-serif;}
 
-.header .top-part {padding: 15px 0; height: 80px; overflow: hidden;}
+.header .top-part {padding: 15px 0; height: 80px;}
 .header .top-part .logo {height: 60px;}
 .header .top-part form.search {position: relative; display: inline-block; width:100%;}
 .header .top-part form.search .search-field {border: 2px solid #8ec63f; color:#9aaab6; width: 100%; padding:13px 10px; padding-right: 40px;}
@@ -111,6 +111,23 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .right-menu ul li a {color:#fff; text-transform: uppercase; font-weight: bold;}
 .close-xs-menu {position: absolute;top:0;right:-60px;background-color: #393d50; padding: 5px 10px; text-transform: uppercase; font-weight: bold; color:#fff;}
 .close-xs-menu:hover {color:#fff; text-decoration: none;}
+
+.cart-button {position: relative; cursor: pointer;}
+.cart-button .badge {position: absolute; top:-10px; right:-10px; }
+.cart-products-fast-view {position: absolute; width:350px; height: 200px; overflow-y: auto; background-color: #393d50; z-index: 20; right:0; bottom: -200px; display: none;}
+.cart-products-fast-view .content {position: relative; padding: 10px; padding-top: 30px; color:#ffffff;}
+.cart-products-fast-view .content .close-me {position: absolute; color:#ffffff; right:5px; top:-1px; font-size:20px;}
+.cart-products-fast-view ul {margin: 0; padding: 0; list-style: none; padding-bottom: 10px; margin-bottom: 10px; border-bottom:1px solid #51546c;}
+.cart-products-fast-view ul li { margin-bottom: 10px; }
+.cart-products-fast-view ul li a {color:#ffffff;}
+.cart-products-fast-view ul li img {width:50px; margin-right: 10px; float:left;}
+.cart-products-fast-view ul li .name {float:left; width:260px; font-size: 12px;}
+.cart-products-fast-view ul li .price {float:left; width:260px; font-size: 12px; color:#99a9b5;}
+.cart-products-fast-view .pay-sum {color:#99a9b5;font-size:20px; font-weight: bold; margin-bottom: 10px;}
+.cart-products-fast-view .pay-sum .text {float:left;}
+.cart-products-fast-view .pay-sum .sum {float:right;}
+.cart-products-fast-view .buy-now-fast-cart {background-color: #8ec63f; border:1px solid #74a62e; display: block; padding: 10px; text-align: center; color:#ffffff; text-transform: uppercase;}
+.cart-products-fast-view .buy-now-fast-cart:hover {text-decoration: none;}
 
 .alert{text-align: center;}
 .alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}

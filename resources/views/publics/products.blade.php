@@ -19,7 +19,7 @@
                         <h1>{{$product->name}}</h1>
                     </a>
                     <span class="price">{{$product->price}}</span>
-                    <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>
             @endforeach

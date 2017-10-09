@@ -40,5 +40,7 @@ return [
     'message_sended' => 'Message sended',
     'invalid_email' => 'Invalid email',
     'too_short_message' => 'Too short message',
-    'problem_message_send' => 'It seems have error with email send! Please call us!'
+    'problem_message_send' => 'It seems have error with email send! Please call us!',
+    'subtotal' => 'Subtotal',
+    'payment' => 'Payment'
 ];

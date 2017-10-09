@@ -20,7 +20,8 @@ class HomeController extends Controller
         return view('publics.home', [
             'promoProducts' => $promoProducts,
             'mostSelledProducts' => $mostSelledProducts,
-            'carousel' => $carousel
+            'carousel' => $carousel,
+            'cartProducts' => $this->products
         ]);
     }
 

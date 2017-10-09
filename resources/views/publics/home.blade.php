@@ -53,7 +53,7 @@
                         <h1>{{$promoProduct->name}}</h1>
                     </a>
                     <span class="price">{{$promoProduct->price}}</span>
-                    <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="javascript:void(0);" data-product-id="{{$promoProduct->id}}" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>
             @endforeach
@@ -74,7 +74,7 @@
                         <h1>{{$mostSelledProduct->name}}</h1>
                     </a>
                     <span class="price">{{$mostSelledProduct->price}}</span>
-                    <a href="javascript:void(0);" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="javascript:void(0);" data-product-id="{{$mostSelledProduct->id}}" class="buy-product buy-now">{{__('public_pages.buy')}}</a>
                 </div>
             </div>
             @endforeach

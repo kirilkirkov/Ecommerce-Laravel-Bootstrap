@@ -32,7 +32,7 @@
                         <span>{{__('public_pages.quantity')}}</span>
                         <input type="text" class="field" name="quantity" value="1">
                     </div>
-                    <a href="javascript:void(0);" class="buy-now">
+                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-now">
                         {{__('public_pages.buy')}}
                     </a>
                     <div class="clearfix"></div>
