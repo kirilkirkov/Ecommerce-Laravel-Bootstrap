@@ -27,7 +27,7 @@ class ProductsModel extends Model
     public function getProduct($id)
     {
         $product = DB::table('products')
-                ->select(DB::raw('products.*, products_translations.*, categories_translations.name as category_name, categories_translations.id as category_id'))
+                ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price, categories_translations.name as category_name, categories_translations.id as category_id'))
                 ->where('products.id', '=', $id)
                 ->where('products_translations.locale', '=', app()->getLocale())
                 ->where('categories_translations.locale', '=', app()->getLocale())

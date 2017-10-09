@@ -86,13 +86,19 @@ function xsMode() {
  * Add product with ajax to cart
  */
 function addProduct(id) {
+    var quantity = 1;
+    var el_qa = $('[name="quantity"]');
+    if (el_qa.length) {
+        quantity = el_qa.val();
+    }
     $.ajax({
         type: 'POST',
         url: urls.addProduct,
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        data: {id: id}
+
+        data: {id: id, quantity: quantity}
     }).done(function (data) {
 
     });

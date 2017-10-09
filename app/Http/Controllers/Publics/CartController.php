@@ -9,6 +9,7 @@ use App\Cart;
 /*
  * Used most of all for ajax requests
  */
+
 class CartController extends Controller
 {
 
@@ -25,8 +26,11 @@ class CartController extends Controller
             abort(404);
         }
         $post = $request->all();
-
-        $this->cart->addProduct($post['id']);
+        $quantity = (int) $post['quantity'];
+        if ($quantity == 0) {
+            $quantity = 1;
+        } 
+        $this->cart->addProduct($post['id'], $quantity);
     }
 
 }

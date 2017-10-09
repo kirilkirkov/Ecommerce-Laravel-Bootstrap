@@ -15,12 +15,14 @@ class Cart
 
     private $cookieExpTime = 2678400;
 
-    public function addProduct($id)
+    public function addProduct($id, $quantity)
     {
         if (!isset($_SESSION['laraCart'])) {
             $_SESSION['laraCart'] = array();
         }
-        $_SESSION['laraCart'][] = (int) $id;
+        for ($i = 0; $i <= $quantity; $i++) { 
+            $_SESSION['laraCart'][] = (int) $id;
+        }
         setcookie('laraCart', serialize($_SESSION['laraCart']), $this->cookieExpTime);
     }
 

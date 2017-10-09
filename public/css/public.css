@@ -46,7 +46,7 @@ body {font-family: 'Roboto', sans-serif;}
 .product .price { text-align: center; display: block; color:#8ec63f; font-weight: bold; font-size:16px; margin-bottom: 10px; height: 20px; overflow: hidden;}
 .product a {color:#333333;}
 .product a:hover {text-decoration: none;}
-.product .img-container {overflow: hidden; height: 220px; text-align: center;  position: relative;}
+.product .img-container {overflow: hidden; height: 220px; text-align: center;  position: relative; margin-bottom: 10px;}
 .product img {transition: all .2s ease-in-out;  display: inline-block;  height: 220px;  position: relative;  text-align: center;}
 .product:hover img {transform: scale(1.1);}
 .product .buy-now {background-color: #8ec63f; border-color:#74a62e; color:#ffffff; font-weight: 700; font-size:14px; text-transform: uppercase; display: block; padding: 10px; text-align: center;}
@@ -153,4 +153,5 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
     .fast-order h2 {font-size:16px; }
     .fast-order label {font-size:12px;}
     .fast-order .form-group, .fast-order p, .fast-order h2 { margin-bottom: 0;}
+    .cart-products-fast-view {width:100%;}
 }
