@@ -29,8 +29,28 @@ class CartController extends Controller
         $quantity = (int) $post['quantity'];
         if ($quantity == 0) {
             $quantity = 1;
-        } 
+        }
         $this->cart->addProduct($post['id'], $quantity);
+    }
+
+    public function renderCartProductsWithHtml(Request $request)
+    {
+        if (!$request->ajax()) {
+            abort(404);
+        }
+        echo json_encode(array(
+            'html' => $this->cart->getCartHtmlWithProducts(),
+            'num_products' => $this->cart->countProducts
+        ));
+    }
+
+    public function removeProductQuantity(Request $request)
+    {
+        if (!$request->ajax()) {
+            abort(404);
+        }
+        $post = $request->all();
+        $this->cart->removeProductQuantity($post['id']);
     }
 
 }

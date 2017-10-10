@@ -8,7 +8,6 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Models\Publics\ProductsModel;
 use App\Cart;
 
 class Controller extends BaseController
@@ -18,7 +17,7 @@ class Controller extends BaseController
         DispatchesJobs,
         ValidatesRequests;
 
-    protected $products = [];
+    protected $products;
 
     /*
      * Get all products from cart
@@ -29,21 +28,7 @@ class Controller extends BaseController
     public function __construct()
     {
         $cart = new Cart();
-        $productsModel = new ProductsModel();
-
-        $products_ids = $cart->getCartProducts();
-        $unique_ids = array_unique($products_ids);
-
-        $products = [];
-        if (!empty($products_ids)) {
-            $products = $productsModel->getProductsWithIds($unique_ids);
-            foreach ($products as &$product) {
-                $counts = array_count_values($products_ids);
-                $numAddedToCart = $counts[$product->id];
-                $product->num_added = $numAddedToCart;
-            }
-        }
-        return $this->products = $products;
+        $this->products = $cart->getCartProducts();
     }
 
 }

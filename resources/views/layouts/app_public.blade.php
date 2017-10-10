@@ -40,56 +40,54 @@
                     </div>
                     <div class="col-sm-3 col-md-2">
                         <div class="user">
-                            <a href="" class="login">
-                                {{__('public_pages.login')}}
-                                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                            </a>
                             <a href="javascript:void(0);" class="cart-button">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                @php 
-                                if(!empty($cartProducts)) {
-                                @endphp
-                                <span class="badge">{{count($cartProducts)}}</span>
-                                @php
-                                }
-                                @endphp
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                                <span class="badge">{{!empty($cartProducts) ? count($cartProducts): 0}}</span>
                             </a>
                         </div>
-                        @php
-                        $sum = 0;
-                        if(!empty($cartProducts)) {
-                        $sum = 0;
-                        @endphp
-                        <div class="cart-products-fast-view">
-                            <div class="content">
-                                <a href="javascript:void(0);" class="close-me"><i class="fa fa-times" aria-hidden="true"></i></a>
-                                <ul>
-                                    @foreach($cartProducts as $cartProduct)
-                                    @php
-                                    $sum += $cartProduct->num_added * (int)$cartProduct->price;
-                                    @endphp
-                                    <li>
-                                        <a href="{{lang_url($cartProduct->url)}}">                                        <img src="{{asset('storage/'.$cartProduct->image)}}" alt="">
-                                            <span class="name">{{$cartProduct->name}}</span>
-                                            <span class="price">
-                                                {{$cartProduct->num_added}} x {{$cartProduct->price}}
-                                            </span>
-                                        </a>
+                        <div class="cart-fast-view-container">
+                            @php
+                            $sum = 0;
+                            if(!empty($cartProducts)) {
+                            $sum = 0;
+                            @endphp
+                            <div class="cart-products-fast-view">
+                                <div class="content">
+                                    <a href="javascript:void(0);" class="close-me" onclick="closeFastCartView()">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                    <ul>
+                                        @foreach($cartProducts as $cartProduct)
+                                        @php
+                                        $sum += $cartProduct->num_added * (int)$cartProduct->price;
+                                        @endphp
+                                        <li>
+                                            <a href="{{lang_url($cartProduct->url)}}" class="link">                                        
+                                                <img src="{{asset('storage/'.$cartProduct->image)}}" alt="">
+                                                <span class="name">{{$cartProduct->name}}</span>
+                                                <span class="price">
+                                                    {{$cartProduct->num_added}} x {{$cartProduct->price}}
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);" class="removeQantity" onclick="removeQuantity({{$cartProduct->id}})">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </a>
+                                            <div class="clearfix"></div>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    <div class="pay-sum">
+                                        <span class="text">{{__('public_pages.subtotal')}}</span>
+                                        <span class="sum">{{$sum}}</span>
                                         <div class="clearfix"></div>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                                <div class="pay-sum">
-                                    <span class="text">{{__('public_pages.subtotal')}}</span>
-                                    <span class="sum">{{$sum}}</span>
-                                    <div class="clearfix"></div>
+                                    </div>
+                                    <a href="{{lang_url('checkout')}}" class="buy-now-fast-cart">{{__('public_pages.payment')}}</a>
                                 </div>
-                                <a href="{{lang_url('checkout')}}" class="buy-now-fast-cart">{{__('public_pages.payment')}}</a>
                             </div>
+                            @php
+                            }
+                            @endphp
                         </div>
-                        @php
-                        }
-                        @endphp
                     </div>
                 </div>
             </div>
@@ -229,7 +227,9 @@
         @endif
         <script>
             var urls = {
-                addProduct: "{{ url('addProduct') }}"
+            addProduct: "{{ url('addProduct') }}",
+                    removeProductQuantity: "{{ url('removeProductQuantity') }}",
+                    getProducts: "{{ url('getGartProducts') }}"
             };
         </script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>

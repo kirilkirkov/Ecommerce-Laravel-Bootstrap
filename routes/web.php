@@ -39,6 +39,10 @@ Route::post('{locale}/contacts', 'Publics\\ContactsController@sendMessage')
 
 // add product to cart from add button (ajax)
 Route::post('addProduct', 'Publics\\CartController@addProduct');
+// get products and cart html
+Route::post('getGartProducts', 'Publics\\CartController@renderCartProductsWithHtml');
+// get products and cart html
+Route::post('removeProductQuantity', 'Publics\\CartController@removeProductQuantity');
 
 
 /* Administration Routes */

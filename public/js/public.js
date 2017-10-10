@@ -46,6 +46,7 @@ $('.buy-now').click(function () {
     $('#modalBuyBtn').modal('show');
     var product_id = $(this).data('product-id');
     addProduct(product_id);
+    renderCartProducts();
 });
 /*
  * Show cart products in fast view
@@ -56,9 +57,9 @@ $('.cart-button').hover(function () {
 /*
  * Hide cart products in fast view
  */
-$('.cart-products-fast-view .close-me').click(function () {
+function closeFastCartView() {
     $('.cart-products-fast-view').fadeOut(200);
-});
+}
 function checkScroll() {
     if ($(this).scrollTop() > 80) {
         if (xsMode() === false) {
@@ -102,4 +103,37 @@ function addProduct(id) {
     }).done(function (data) {
 
     });
+}
+/*
+ * Render cart products
+ */
+function renderCartProducts() {
+    $('.cart-fast-view-container').empty();
+    $.ajax({
+        type: 'POST',
+        url: urls.getProducts,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function (data) {
+        var obj = JSON.parse(data);
+        $('.cart-fast-view-container').append(obj.html);
+        $('.header .user .badge').empty().append(obj.num_products);
+    });
+}
+/*
+ * 
+ */
+function removeQuantity(id) {
+    $.ajax({
+        type: 'POST',
+        url: urls.removeProductQuantity,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {id: id}
+    }).done(function (data) {
+        renderCartProducts();
+    });
+    $('.cart-products-fast-view').show(); // lets show again cart box
 }
