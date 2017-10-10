@@ -122,7 +122,7 @@ function renderCartProducts() {
     });
 }
 /*
- * 
+ * Remove product quantity from cart
  */
 function removeQuantity(id) {
     $.ajax({
@@ -135,5 +135,5 @@ function removeQuantity(id) {
     }).done(function (data) {
         renderCartProducts();
     });
-    $('.cart-products-fast-view').show(); // lets show again cart box
+   
 }
