@@ -100,7 +100,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-center">
                             <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>
-                            <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
+                            <li><a href="{{ lang_url('checkout') }}">{{__('public_pages.checkout')}}</a></li>
                             <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>
                         </ul>
                         <div class="nav navbar-nav navbar-right">
@@ -228,8 +228,8 @@
         <script>
             var urls = {
             addProduct: "{{ url('addProduct') }}",
-                    removeProductQuantity: "{{ url('removeProductQuantity') }}",
-                    getProducts: "{{ url('getGartProducts') }}"
+            removeProductQuantity: "{{ url('removeProductQuantity') }}",
+            getProducts: "{{ url('getGartProducts') }}"
             };
         </script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>

@@ -45,15 +45,25 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="{{ $promoProduct->link_to != null ? $promoProduct->link_to : lang_url($promoProduct->url) }}">
+                        <a href="{{ lang_url($promoProduct->url) }}">
                             <img src="{{asset('storage/'.$promoProduct->image)}}" alt="{{$promoProduct->name}}">
                         </a>
                     </div>
-                    <a href="{{ $promoProduct->link_to != null ? $promoProduct->link_to : lang_url($promoProduct->url) }}">
+                    <a href="{{ lang_url($promoProduct->url) }}">
                         <h1>{{$promoProduct->name}}</h1>
                     </a>
                     <span class="price">{{$promoProduct->price}}</span>
-                    <a href="javascript:void(0);" data-product-id="{{$promoProduct->id}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    if($promoProduct->link_to != null) {
+                    @endphp
+                    <a href="{{lang_url($promoProduct->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    } else {
+                    @endphp
+                    <a href="javascript:void(0);" data-product-id="{{$promoProduct->id}}" class="buy-now to-cart">{{__('public_pages.buy')}}</a>
+                    @php
+                    }
+                    @endphp
                 </div>
             </div>
             @endforeach
@@ -64,17 +74,27 @@
             </div>
             @foreach ($mostSelledProducts as $mostSelledProduct)
             <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="product">
+                 <div class="product">
                     <div class="img-container">
-                        <a href="{{ $mostSelledProduct->link_to != null ? $mostSelledProduct->link_to : lang_url($promoProduct->url) }}">
+                        <a href="{{ lang_url($mostSelledProduct->url) }}">
                             <img src="{{asset('storage/'.$mostSelledProduct->image)}}" alt="{{$mostSelledProduct->name}}">
                         </a>
                     </div>
-                    <a href="{{ $mostSelledProduct->link_to != null ? $mostSelledProduct->link_to : lang_url($promoProduct->url) }}">
+                    <a href="{{ lang_url($mostSelledProduct->url) }}">
                         <h1>{{$mostSelledProduct->name}}</h1>
                     </a>
                     <span class="price">{{$mostSelledProduct->price}}</span>
-                    <a href="javascript:void(0);" data-product-id="{{$mostSelledProduct->id}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    if($mostSelledProduct->link_to != null) {
+                    @endphp
+                    <a href="{{lang_url($mostSelledProduct->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    } else {
+                    @endphp
+                    <a href="javascript:void(0);" data-product-id="{{$mostSelledProduct->id}}" class="buy-now to-cart">{{__('public_pages.buy')}}</a>
+                    @php
+                    }
+                    @endphp
                 </div>
             </div>
             @endforeach

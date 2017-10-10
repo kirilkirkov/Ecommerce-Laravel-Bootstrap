@@ -42,7 +42,7 @@ $('.fast-order-btn').click(function () {
 /*
  * Add product to cart
  */
-$('.buy-now').click(function () {
+$('.buy-now.to-cart').click(function () {
     $('#modalBuyBtn').modal('show');
     var product_id = $(this).data('product-id');
     addProduct(product_id);

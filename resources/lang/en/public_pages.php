@@ -23,7 +23,7 @@ return [
     'buy' => 'Buy',
     'most_selled' => 'Most selled',
     'products' => 'Products',
-    'bascet' => 'My bascet',
+    'checkout' => 'Checkout',
     'contacts' => 'Contacts',
     'category_name' => 'Category:',
     'in_stock' => 'in stock',

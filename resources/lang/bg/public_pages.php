@@ -23,7 +23,7 @@ return [
     'buy' => 'Купи',
     'most_selled' => 'Най-продавани',
     'products' => 'Продукти',
-    'bascet' => 'Кошница с добавени',
+    'checkout' => 'Плащане',
     'contacts' => 'Контакти',
     'category_name' => 'Категория:',
     'in_stock' => 'В наличност',

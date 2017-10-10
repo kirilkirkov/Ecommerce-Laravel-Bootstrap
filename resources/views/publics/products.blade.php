@@ -11,15 +11,25 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <div class="product">
                     <div class="img-container">
-                        <a href="{{ $product->link_to != null ? $product->link_to : lang_url($product->url) }}">
+                        <a href="{{ lang_url($product->url) }}">
                             <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}">
                         </a>
                     </div>
-                    <a href="{{ $product->link_to != null ? $product->link_to : lang_url($product->url) }}">
+                    <a href="{{ lang_url($product->url) }}">
                         <h1>{{$product->name}}</h1>
                     </a>
                     <span class="price">{{$product->price}}</span>
-                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    if($product->link_to != null) {
+                    @endphp
+                    <a href="{{lang_url($product->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    } else {
+                    @endphp
+                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-now to-cart">{{__('public_pages.buy')}}</a>
+                    @php
+                    }
+                    @endphp
                 </div>
             </div>
             @endforeach

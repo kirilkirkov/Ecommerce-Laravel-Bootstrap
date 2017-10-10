@@ -32,9 +32,19 @@
                         <span>{{__('public_pages.quantity')}}</span>
                         <input type="text" class="field" name="quantity" value="1">
                     </div>
-                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-now">
+                    @php
+                    if($product->link_to != null) {
+                    @endphp
+                    <a href="{{ $product->link_to }}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    @php
+                    } else {
+                    @endphp 
+                    <a href="javascript:void(0);" data-product-id="{{$product->id}}" class="buy-now to-cart">
                         {{__('public_pages.buy')}}
                     </a>
+                    @php
+                    }
+                    @endphp
                     <div class="clearfix"></div>
                 </div>
             </div>
