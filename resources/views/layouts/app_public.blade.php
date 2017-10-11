@@ -158,12 +158,12 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="phone-user">{{__('public_pages.phone')}}</label>
-                        <input type="text" class="form-control" placeholder="0888 888 888" id="phone-user">
+                        <input type="text" name="fast_phone" class="form-control" placeholder="0888 888 888" id="phone-user">
                         <span class="error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
                     </div>
                     <div class="form-group">
                         <label for="names-user">{{__('public_pages.names')}}</label>
-                        <input type="text" class="form-control" placeholder="{{__('public_pages.name_and_family')}}" id="names-user">
+                        <input type="text" name="fast_names" class="form-control" placeholder="{{__('public_pages.name_and_family')}}" id="names-user">
                         <span class="error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
                     </div>
                     <p>{{__('public_pages.we_will_contact_u')}}</p>

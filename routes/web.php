@@ -47,6 +47,11 @@ Route::post('contacts', 'Publics\\ContactsController@sendMessage');
 Route::post('{locale}/contacts', 'Publics\\ContactsController@sendMessage')
         ->where('locale', implode('|', Config::get('app.locales')));
 
+// save fast order
+Route::post('fast-order', 'Publics\\CheckoutController@setFastOrder');
+Route::post('{locale}/fast-order', 'Publics\\CheckoutController@setFastOrder')
+        ->where('locale', implode('|', Config::get('app.locales')));
+
 // add product to cart from add button (ajax)
 Route::post('addProduct', 'Publics\\CartController@addProduct');
 // get products and cart html
@@ -57,6 +62,7 @@ Route::post('removeProductQuantity', 'Publics\\CartController@removeProductQuant
 Route::post('getProductsForCheckoutPage', 'Publics\\CartController@getProductsForCheckoutPage');
 // remove product from cart
 Route::post('removeProduct', 'Publics\\CartController@removeProduct');
+
 
 
 /* Administration Routes */

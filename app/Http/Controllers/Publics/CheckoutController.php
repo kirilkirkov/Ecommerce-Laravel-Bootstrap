@@ -28,4 +28,12 @@ class CheckoutController extends Controller
         return redirect(lang_url('/'))->with(['msg' => Lang::get('public_pages.order_accepted'), 'result' => true]);
     }
 
+    public function setFastOrder(Request $request)
+    { 
+        $post = $request->all();
+        $checkoutModel = new CheckoutModel();
+        $checkoutModel->setFastOrder($post);
+        return redirect(lang_url('/'))->with(['msg' => Lang::get('public_pages.order_accepted'), 'result' => true]);
+    }
+
 }

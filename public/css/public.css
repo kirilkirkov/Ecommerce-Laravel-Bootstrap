@@ -95,7 +95,7 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .fast-order .close {position: absolute; right:0; top:0; color:#fff;}
 .fast-order input, .fast-order label {text-transform: uppercase;}
 .fast-order label {font-size:14px; font-weight: 100; margin-bottom: 0;}
-.fast-order input {border:1px solid #ff0000; height: 32px;}
+.fast-order input {border:1px solid #ff0000; padding:8px 10px;}
 .fast-order .submit { float:right; border-radius: 2px; color:#fff; cursor: pointer; background-color: #ff4d4d; padding: 5px 30px; text-transform: uppercase; }
 .fast-order .submit:hover {text-decoration: none;}
 .fast-order .error { color: #ff0000; position: absolute; right: 10px; top: 26px; display: none; }

@@ -18,7 +18,7 @@
                     <h2>{{__('public_pages.delivery_address')}}</h2>
                 </div>
                 <div id="errors" class="alert alert-danger"></div>
-                <form method="POST" id="set-order"> 
+                <form method="POST" action="{{lang_url('checkout')}}" id="set-order"> 
                     {{ csrf_field() }}
                     <div class="radios">
                         <input type="radio" name="payment_type" value="cash_on_delivery">

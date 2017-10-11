@@ -42,4 +42,13 @@ class CheckoutModel extends Model
         });
     }
 
+    public function setFastOrder($post)
+    {
+        $this->post = $post;
+        DB::table('fast_orders')->insert([
+            'phone' => $this->post['fast_phone'],
+            'names' => $this->post['fast_names']
+        ]);
+    }
+
 }
