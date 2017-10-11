@@ -81,7 +81,7 @@
                                         <span class="sum">{{$sum}}</span>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <a href="{{lang_url('checkout')}}" class="buy-now-fast-cart">{{__('public_pages.payment')}}</a>
+                                    <a href="{{lang_url('checkout')}}" class="green-btn">{{__('public_pages.payment')}}</a>
                                 </div>
                             </div>
                             @php
@@ -228,8 +228,12 @@
         <script>
             var urls = {
             addProduct: "{{ url('addProduct') }}",
-            removeProductQuantity: "{{ url('removeProductQuantity') }}",
-            getProducts: "{{ url('getGartProducts') }}"
+                    removeProductQuantity: "{{ url('removeProductQuantity') }}",
+                    getProducts: "{{ url('getGartProducts') }}"
+            };
+            var variables = {
+            addressReq: "{{__('public_pages.address_field_req')}}",
+                    phoneReq: "{{__('public_pages.phone_field_req')}}"
             };
         </script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>

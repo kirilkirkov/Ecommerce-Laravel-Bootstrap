@@ -42,5 +42,21 @@ return [
     'too_short_message' => 'Не сте въвели съобщение',
     'problem_message_send' => 'Изглежда, че има проблем с изпращането на имейла. Моля обадете ни се!',
     'subtotal' => 'Междинна сума',
-    'payment' => 'Плащане'
+    'payment' => 'Плащане',
+    'payment_type' => 'Избери начин на плащане',
+    'cash_on_delivery' => 'Наложен платеж',
+    'delivery_address' => 'Адрес за доставка',
+    'name' => 'Име',
+    'family' => 'Фамилия',
+    'email_address' => 'Имейл адрес',
+    'phone' => 'Телефон',
+    'address' => 'Адрес',
+    'city' => 'Град',
+    'post_code' => 'Пощенски код',
+    'notes' => 'Забележки',
+    'discount_code' => 'Въведи код за отстъпка',
+    'check_discount_code' => 'Провери',
+    'complete_order' => 'Завърши поръчката',
+    'address_field_req' => 'Полето за адрес е задължително',
+    'phone_field_req' => 'Полето за телефон е задължително'
 ];

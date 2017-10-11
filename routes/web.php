@@ -27,6 +27,11 @@ Route::get('products', 'Publics\\ProductsController@index');
 Route::get('{locale}/products', 'Publics\\ProductsController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
+// checkout please
+Route::get('checkout', 'Publics\\CheckoutController@index');
+Route::get('{locale}/checkout', 'Publics\\CheckoutController@index')
+        ->where('locale', implode('|', Config::get('app.locales')));
+
 // open contacts
 Route::get('contacts', 'Publics\\ContactsController@index');
 Route::get('{locale}/contacts', 'Publics\\ContactsController@index')

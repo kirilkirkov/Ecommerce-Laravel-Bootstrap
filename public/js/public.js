@@ -55,6 +55,15 @@ $('.cart-button').hover(function () {
     $('.cart-products-fast-view').fadeIn(200);
 });
 /*
+ * change radio button selection for 
+ * checkout payment type
+ */
+$('.box-type').click(function () {
+    var radio_val = $(this).data('radio-val');
+    $('input:radio[name="payment_type"][value="' + radio_val + '"]').prop('checked', true);
+    $(this).addClass('active');
+});
+/*
  * Hide cart products in fast view
  */
 function closeFastCartView() {
@@ -135,5 +144,31 @@ function removeQuantity(id) {
     }).done(function (data) {
         renderCartProducts();
     });
-   
+
+}
+/*
+ * Complete order from checkout page - submit btn
+ */
+function completeOrder() {
+    $('#errors').empty().hide();
+    var errors = new Array();
+    var phone = $('[name="phone"]').val();
+    var address = $('[name="address"]').val();
+    if ($.trim(phone).length <= 0) {
+        errors[0] = variables.phoneReq;
+    }
+    if ($.trim(address).length <= 0) {
+        errors[1] = variables.addressReq;
+    }
+    if (errors.length > 0) {
+        $.each(errors, function (index, value) {
+            $('#errors').append(value + '<br>');
+        });
+        $('#errors').fadeIn(200);
+        $('html, body').animate({
+            scrollTop: $("#errors").offset().top - 100
+        }, 500);
+    } else {
+        document.getElementById('set-order').submit();
+    }
 }

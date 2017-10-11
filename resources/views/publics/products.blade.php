@@ -4,7 +4,7 @@
 <div class="products-page">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 products-title">
+            <div class="col-xs-12 section-title">
                 <h2>{{__('public_pages.all_products')}}</h2>
             </div>
             @foreach ($products as $product)

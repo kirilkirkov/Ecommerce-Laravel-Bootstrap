@@ -42,5 +42,21 @@ return [
     'too_short_message' => 'Too short message',
     'problem_message_send' => 'It seems have error with email send! Please call us!',
     'subtotal' => 'Subtotal',
-    'payment' => 'Payment'
+    'payment' => 'Payment',
+    'payment_type' => 'Choose payment type',
+    'cash_on_delivery' => 'Cash on delivery',
+    'delivery_address' => 'Delivery address',
+    'name' => 'Name',
+    'family' => 'Family',
+    'email_address' => 'Email Address',
+    'phone' => 'Phone',
+    'address' => 'Address',
+    'city' => 'City',
+    'post_code' => 'Post code',
+    'notes' => 'Notes',
+    'discount_code' => 'Enter discount code',
+    'check_discount_code' => 'Check',
+    'complete_order' => 'Complete order',
+    'address_field_req' => 'Address field is required',
+    'phone_field_req' => 'Phone filed is required'
 ];

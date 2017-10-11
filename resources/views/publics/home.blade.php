@@ -38,7 +38,7 @@
     </div>
     <div class="container">
         <div class="row promo">
-            <div class="col-xs-12 products-title">
+            <div class="col-xs-12 section-title">
                 <h2>{{__('public_pages.promo_products')}}</h2>
             </div>
             @foreach ($promoProducts as $promoProduct)
@@ -69,7 +69,7 @@
             @endforeach
         </div>
         <div class="row">
-            <div class="col-xs-12 products-title">
+            <div class="col-xs-12 section-title">
                 <h2>{{__('public_pages.most_selled')}}</h2>
             </div>
             @foreach ($mostSelledProducts as $mostSelledProduct)
