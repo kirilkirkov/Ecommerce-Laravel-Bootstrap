@@ -61,5 +61,6 @@ return [
     'phone_field_req' => 'Phone filed is required',
     'first_need_add_products' => 'First you need to choose products',
     'sum_for_pay' => 'Sum for pay',
-    'order_accepted' => 'You order is accepted. Wait for us to call you.'
+    'order_accepted' => 'You order is accepted. Wait for us to call you.',
+    'productsReq' => 'No added products'
 ];

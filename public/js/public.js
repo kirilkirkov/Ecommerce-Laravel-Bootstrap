@@ -179,6 +179,9 @@ function completeOrder() {
     if ($.trim(address).length <= 0) {
         errors[1] = variables.addressReq;
     }
+    if ($('[name="id[]"]').length <= 0) {
+        errors[2] = variables.productsReq;
+    }
     if (errors.length > 0) {
 
         $.each(errors, function (index, value) {
