@@ -22,6 +22,7 @@
                 </div>
                 <div id="errors" class="alert alert-danger"></div>
                 <form method="POST" id="set-order">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <input class="form-control" name="first_name" value="" type="text" placeholder="{{__('public_pages.name')}}">
@@ -47,8 +48,60 @@
                         <div class="form-group col-sm-12">
                             <textarea class="form-control" placeholder="{{__('public_pages.notes')}}" name="notes" rows="3"></textarea>
                         </div>
-                    </div> 
+                    </div>
+                    @php
+                    $sum = $sum_total = 0;
+                    if(!empty($cartProducts)) {
+                    $sum = 0;
+                    @endphp
+                    <div class="products-for-checkout">
+                        <ul>
+                            @foreach($cartProducts as $cartProduct)
+                            @php
+                            $sum_total += $cartProduct->num_added * (int)$cartProduct->price;
+                            $sum = $cartProduct->num_added * (int)$cartProduct->price;
+                            @endphp
+                            <li>
+                                <a href="{{lang_url($cartProduct->url)}}" class="link">                                        
+                                    <img src="{{asset('storage/'.$cartProduct->image)}}" alt="">
+                                    <div class="info">
+                                        <span class="name">{{$cartProduct->name}}</span>
+                                        <span class="price">
+                                            {{$cartProduct->num_added}} x {{$cartProduct->price}} = {{$sum}}
+                                        </span> 
+                                    </div>
+                                </a>
+                                <div class="controls">
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <button type="button" onclick="removeQuantity({{$cartProduct->id}})" class="btn btn-default">
+                                                <span class="glyphicon glyphicon-minus"></span>
+                                            </button>
+                                        </span>
+                                        <input type="text" name="quant" disabled="" class="form-control" value="{{$cartProduct->num_added}}">
+                                        <span class="input-group-btn">
+                                            <button type="button" onclick="addProduct({{$cartProduct->id}})" class="btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0);" class="removeProduct" onclick="removeProduct({{$cartProduct->id}})">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                                <div class="clearfix"></div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
                     <a href="javascript:void(0);" onclick="completeOrder()" class="green-btn">{{__('public_pages.complete_order')}}</a>
+                    @php
+                    } else {
+                    @endphp 
+                    <a href="{{lang_url('products')}}" class="green-btn">{{__('public_pages.first_need_add_products')}}</a>
+                    @php 
+                    }
+                    @endphp
                 </form>
             </div>
         </div>

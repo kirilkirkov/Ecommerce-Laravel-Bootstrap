@@ -32,6 +32,11 @@ Route::get('checkout', 'Publics\\CheckoutController@index');
 Route::get('{locale}/checkout', 'Publics\\CheckoutController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
+// checkout post req
+Route::post('checkout', 'Publics\\CheckoutController@setOrder');
+Route::post('{locale}/checkout', 'Publics\\CheckoutController@setOrder')
+        ->where('locale', implode('|', Config::get('app.locales')));
+
 // open contacts
 Route::get('contacts', 'Publics\\ContactsController@index');
 Route::get('{locale}/contacts', 'Publics\\ContactsController@index')

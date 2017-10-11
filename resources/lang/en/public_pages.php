@@ -58,5 +58,6 @@ return [
     'check_discount_code' => 'Check',
     'complete_order' => 'Complete order',
     'address_field_req' => 'Address field is required',
-    'phone_field_req' => 'Phone filed is required'
+    'phone_field_req' => 'Phone filed is required',
+    'first_need_add_products' => 'First you need to choose products'
 ];

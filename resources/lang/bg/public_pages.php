@@ -58,5 +58,6 @@ return [
     'check_discount_code' => 'Провери',
     'complete_order' => 'Завърши поръчката',
     'address_field_req' => 'Полето за адрес е задължително',
-    'phone_field_req' => 'Полето за телефон е задължително'
+    'phone_field_req' => 'Полето за телефон е задължително',
+    'first_need_add_products' => 'Първо трябва да изберете продукти'
 ];

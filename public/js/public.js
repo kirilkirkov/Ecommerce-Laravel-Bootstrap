@@ -151,7 +151,7 @@ function removeQuantity(id) {
  */
 function completeOrder() {
     $('#errors').empty().hide();
-    var errors = new Array();
+    var errors = [];
     var phone = $('[name="phone"]').val();
     var address = $('[name="address"]').val();
     if ($.trim(phone).length <= 0) {
@@ -161,8 +161,11 @@ function completeOrder() {
         errors[1] = variables.addressReq;
     }
     if (errors.length > 0) {
+
         $.each(errors, function (index, value) {
-            $('#errors').append(value + '<br>');
+            if (typeof value !== "undefined") {
+                $('#errors').append(value + '<br>');
+            }
         });
         $('#errors').fadeIn(200);
         $('html, body').animate({

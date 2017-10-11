@@ -155,6 +155,7 @@
             <div class="inner">
                 <h2>{{__('public_pages.fast_order')}}</h2>
                 <form method="POST" id="go-fast-order" action="{{ lang_url('fast-order') }}">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="phone-user">{{__('public_pages.phone')}}</label>
                         <input type="text" class="form-control" placeholder="0888 888 888" id="phone-user">

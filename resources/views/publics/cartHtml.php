@@ -26,6 +26,6 @@
             <span class="sum"><?= $sum ?></span>
             <div class="clearfix"></div>
         </div>
-        <a href="<?= lang_url('checkout') ?>" class="buy-now-fast-cart"><?= __('public_pages.payment') ?></a>
+        <a href="<?= lang_url('checkout') ?>" class="green-btn"><?= __('public_pages.payment') ?></a>
     </div>
 </div>

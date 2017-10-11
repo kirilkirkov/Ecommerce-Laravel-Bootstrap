@@ -126,11 +126,11 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .cart-products-fast-view .pay-sum {color:#99a9b5;font-size:20px; font-weight: bold; margin-bottom: 10px;}
 .cart-products-fast-view .pay-sum .text {float:left;}
 .cart-products-fast-view .pay-sum .sum {float:right;}
-.cart-products-fast-view .removeQantity {position: absolute; right:5px; top:5px; color:#fff;}
+.cart-products-fast-view .removeQantity {position: absolute; right:5px; top:5px; color:#333333;}
 .cart-products-fast-view ul li .link:hover .price {color:#00bcd4; text-decoration: none; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
 
 .green-btn {background-color: #8ec63f; border:1px solid #74a62e; display: block; padding: 10px; text-align: center; color:#ffffff; text-transform: uppercase;}
-.green-btn:hover {text-decoration: none; color:#fff;}
+.green-btn:hover {text-decoration: none; color:#fff; background-color: #72a825; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
 
 .checkout-page .payment-types {margin-bottom: 30px;}
 .checkout-page .radios {display: none;}
@@ -138,7 +138,19 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .checkout-page .box-type img {margin: 0 auto; margin-bottom: 5px; height: 40px;}
 .checkout-page .box-type span {text-transform: uppercase; font-weight: bold}
 .checkout-page .box-type.active, .checkout-page .box-type:hover {border:2px solid #8ec63f; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
-.checkout-page .errors {display: none;}
+.checkout-page #errors {display: none;}
+
+.products-for-checkout ul {margin: 0; padding: 0; list-style: none; padding-bottom: 10px; margin-bottom: 10px;}
+.products-for-checkout ul li { margin-bottom: 10px; padding-bottom: 10px; border-bottom:1px solid #f3f3f3;  position: relative;}
+.products-for-checkout ul li .link {color:#333;}
+.products-for-checkout ul li .link:hover {text-decoration: none;}
+.products-for-checkout ul li img {width:100px; margin-right: 10px; float:left;}
+.products-for-checkout ul li .info {width:100%; }
+.products-for-checkout ul li .info .name {margin-bottom: 10px; display: block;}
+.products-for-checkout ul li .info .price {display:block; font-size: 14px; color:#99a9b5;}
+.products-for-checkout .removeProduct {position: absolute; right:5px; top:5px; color:#333333;}
+.products-for-checkout .controls {width:200px; margin: 0 auto;}
+.products-for-checkout .controls .form-control { border:1px solid #cccccc; height:auto; padding:6px 12px; text-align: center;}
 
 .alert{text-align: center;}
 .alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}
