@@ -9,20 +9,20 @@
                     <h2>{{__('public_pages.payment_type')}}</h2>
                 </div>
                 <div class="payment-types">
-                    <div class="box-type" data-radio-val="econt">
+                    <div class="box-type" data-radio-val="cash_on_delivery">
                         <img src="{{ asset('img/cash_on_deliv.png') }}" alt="econt" class="img-responsive">
                         <span>{{__('public_pages.cash_on_delivery')}}</span>
-                    </div>
-                    <div class="radios">
-                        <input type="radio" name="payment_type" value="cash_on_delivery">
                     </div>
                 </div>
                 <div class="section-title">
                     <h2>{{__('public_pages.delivery_address')}}</h2>
                 </div>
                 <div id="errors" class="alert alert-danger"></div>
-                <form method="POST" id="set-order">
+                <form method="POST" id="set-order"> 
                     {{ csrf_field() }}
+                    <div class="radios">
+                        <input type="radio" name="payment_type" value="cash_on_delivery">
+                    </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <input class="form-control" name="first_name" value="" type="text" placeholder="{{__('public_pages.name')}}">
@@ -62,6 +62,8 @@
                             $sum = $cartProduct->num_added * (int)$cartProduct->price;
                             @endphp
                             <li>
+                                <input name="id[]" value="{{$cartProduct->id}}" type="hidden">
+                                <input name="quantity[]" value="{{$cartProduct->num_added}}" type="hidden">
                                 <a href="{{lang_url($cartProduct->url)}}" class="link">                                        
                                     <img src="{{asset('storage/'.$cartProduct->image)}}" alt="">
                                     <div class="info">
