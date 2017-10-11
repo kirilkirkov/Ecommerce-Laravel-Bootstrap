@@ -126,7 +126,7 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .cart-products-fast-view .pay-sum {color:#99a9b5;font-size:20px; font-weight: bold; margin-bottom: 10px;}
 .cart-products-fast-view .pay-sum .text {float:left;}
 .cart-products-fast-view .pay-sum .sum {float:right;}
-.cart-products-fast-view .removeQantity {position: absolute; right:5px; top:5px; color:#333333;}
+.cart-products-fast-view .removeQantity {position: absolute; right:5px; top:5px; color:#ffffff;}
 .cart-products-fast-view ul li .link:hover .price {color:#00bcd4; text-decoration: none; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
 
 .green-btn {background-color: #8ec63f; border:1px solid #74a62e; display: block; padding: 10px; text-align: center; color:#ffffff; text-transform: uppercase;}
@@ -151,6 +151,7 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .products-for-checkout .removeProduct {position: absolute; right:5px; top:5px; color:#333333;}
 .products-for-checkout .controls {width:200px; margin: 0 auto;}
 .products-for-checkout .controls .form-control { border:1px solid #cccccc; height:auto; padding:6px 12px; text-align: center;}
+.products-for-checkout .final-total {margin-bottom: 20px; text-align: right; font-size:16px; color:#8ec63f; font-weight: bold; }
 
 .alert{text-align: center;}
 .alert.alert-danger {background-color: #f55a4e;    border-radius: 3px;    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);    color: #ffffff; border-color: transparent;}

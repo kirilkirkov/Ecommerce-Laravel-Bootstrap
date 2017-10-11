@@ -46,7 +46,6 @@ $('.buy-now.to-cart').click(function () {
     $('#modalBuyBtn').modal('show');
     var product_id = $(this).data('product-id');
     addProduct(product_id);
-    renderCartProducts();
 });
 /*
  * Show cart products in fast view
@@ -110,7 +109,8 @@ function addProduct(id) {
 
         data: {id: id, quantity: quantity}
     }).done(function (data) {
-
+        renderCartProducts();
+        renderCheckoutCartProducts();
     });
 }
 /*
@@ -131,6 +131,25 @@ function renderCartProducts() {
     });
 }
 /*
+ * Render products for checkout page
+ */
+function renderCheckoutCartProducts() {
+    var products_container = $('.products-for-checkout');
+    if (products_container.length) {
+        products_container.empty();
+        // check only if we are in that page :)
+        $.ajax({
+            type: 'POST',
+            url: urls.getProductsForCheckoutPage,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        }).done(function (data) {
+            $('.products-for-checkout').empty().append(data);
+        });
+    }
+}
+/*
  * Remove product quantity from cart
  */
 function removeQuantity(id) {
@@ -143,8 +162,8 @@ function removeQuantity(id) {
         data: {id: id}
     }).done(function (data) {
         renderCartProducts();
+        renderCheckoutCartProducts();
     });
-
 }
 /*
  * Complete order from checkout page - submit btn
@@ -174,4 +193,20 @@ function completeOrder() {
     } else {
         document.getElementById('set-order').submit();
     }
+}
+/*
+ * Remove product from cart
+ */
+function removeProduct(id) {
+    $.ajax({
+        type: 'POST',
+        url: urls.removeProduct,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {id: id}
+    }).done(function (data) {
+        renderCartProducts();
+        renderCheckoutCartProducts();
+    });
 }

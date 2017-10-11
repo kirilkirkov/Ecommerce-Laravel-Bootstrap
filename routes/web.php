@@ -53,6 +53,10 @@ Route::post('addProduct', 'Publics\\CartController@addProduct');
 Route::post('getGartProducts', 'Publics\\CartController@renderCartProductsWithHtml');
 // get products and cart html
 Route::post('removeProductQuantity', 'Publics\\CartController@removeProductQuantity');
+// get products and cart html for checkout page
+Route::post('getProductsForCheckoutPage', 'Publics\\CartController@getProductsForCheckoutPage');
+// remove product from cart
+Route::post('removeProduct', 'Publics\\CartController@removeProduct');
 
 
 /* Administration Routes */

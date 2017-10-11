@@ -230,7 +230,9 @@
             var urls = {
             addProduct: "{{ url('addProduct') }}",
                     removeProductQuantity: "{{ url('removeProductQuantity') }}",
-                    getProducts: "{{ url('getGartProducts') }}"
+                    getProducts: "{{ url('getGartProducts') }}",
+                    getProductsForCheckoutPage: "{{ url('getProductsForCheckoutPage') }}",
+                    removeProduct: "{{url('removeProduct')}}"
             };
             var variables = {
             addressReq: "{{__('public_pages.address_field_req')}}",

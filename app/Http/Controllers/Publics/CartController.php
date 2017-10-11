@@ -53,4 +53,21 @@ class CartController extends Controller
         $this->cart->removeProductQuantity($post['id']);
     }
 
+    public function getProductsForCheckoutPage(Request $request)
+    {
+        if (!$request->ajax()) {
+            abort(404);
+        }
+        echo $this->cart->getCartHtmlWithProductsForCheckoutPage();
+    }
+
+    public function removeProduct(Request $request)
+    {
+        if (!$request->ajax()) {
+            abort(404);
+        }
+        $post = $request->all();
+        $this->cart->removeProduct($post['id']);
+    }
+
 }

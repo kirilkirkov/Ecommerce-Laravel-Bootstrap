@@ -59,5 +59,6 @@ return [
     'complete_order' => 'Завърши поръчката',
     'address_field_req' => 'Полето за адрес е задължително',
     'phone_field_req' => 'Полето за телефон е задължително',
-    'first_need_add_products' => 'Първо трябва да изберете продукти'
+    'first_need_add_products' => 'Първо трябва да изберете продукти',
+    'sum_for_pay' => 'Сума за плащане'
 ];

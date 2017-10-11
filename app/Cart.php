@@ -106,4 +106,21 @@ class Cart
         }
     }
 
+    public function getCartHtmlWithProductsForCheckoutPage()
+    {
+        $products = $this->getCartProducts();
+
+        $sum = 0;
+        if (!empty($products)) {
+            $sum = 0;
+            ob_start();
+            include '../resources/views/publics/cartHtmlForCheckoutPage.php';
+            $content = ob_get_contents();
+            ob_end_clean();
+            return $content;
+        } else {
+            return $products;
+        }
+    }
+
 }

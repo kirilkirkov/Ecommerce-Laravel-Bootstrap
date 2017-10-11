@@ -93,6 +93,7 @@
                             </li>
                             @endforeach
                         </ul>
+                        <div class="final-total">{{__('public_pages.sum_for_pay')}} {{$sum_total}}</div>
                     </div>
                     <a href="javascript:void(0);" onclick="completeOrder()" class="green-btn">{{__('public_pages.complete_order')}}</a>
                     @php
