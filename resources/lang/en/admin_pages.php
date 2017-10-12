@@ -104,5 +104,12 @@ return [
     'address' => 'Address',
     'city' => 'City',
     'post_code' => 'Post code',
-    'notes' => 'Notes'
+    'notes' => 'Notes',
+    'new_fast_orders' => 'New fast orders',
+    'no_fast_orders' => 'No new fast orders',
+    'names' => 'Names',
+    'action' => 'Action',
+    'viewed_mark' => 'Mark as viewed',
+    'are_u_sure_mark_fOrd' => 'Are you sure want to mark as viewed?',
+    'fast_order_marked' => 'The fast order is marked'
 ];

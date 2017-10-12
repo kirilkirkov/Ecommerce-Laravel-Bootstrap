@@ -20,6 +20,14 @@ class OrdersModel extends Model
         return $products;
     }
 
+    public function getFastOrders()
+    {
+        $fastOrders = DB::table('fast_orders')
+                        ->where('status', 0)
+                        ->get()->toArray();
+        return $fastOrders;
+    }
+
     public function setNewStatus($post)
     {
         $this->post = $post;
@@ -48,6 +56,15 @@ class OrdersModel extends Model
             'years' => array_unique($years),
             'orders' => $orders
         ];
+    }
+
+    public function setFastOrderAsViewed($id)
+    {
+        DB::table('fast_orders')
+                ->where('id', $id)
+                ->update([
+                    'status' => 1
+        ]);
     }
 
 }

@@ -122,6 +122,9 @@ Route::middleware(['auth'])->group(function () { // check for autherization
     Route::get('admin/orders', 'Admin\\OrdersController@index')->where('locale', implode('|', Config::get('app.locales')));
     Route::get('{locale}/admin/orders', 'Admin\\OrdersController@index');
 //////////////
+    Route::get('admin/fast/ord/is/viewed/{id}', 'Admin\\OrdersController@markFastOrder')->where('locale', implode('|', Config::get('app.locales')));
+    Route::get('{locale}/admin/fast/ord/is/viewed/{id}', 'Admin\\OrdersController@markFastOrder');
+//////////////
     Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 //////////////
     Route::post('admin/changeOrderStatus', 'Admin\\OrdersController@changeStatus');

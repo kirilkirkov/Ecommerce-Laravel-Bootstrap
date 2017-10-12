@@ -34,9 +34,9 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
-    {{ $users->links() }}
+    </div>  
 </div>
+{{ $users->links() }}
 <!-- Modal Add/Edit users -->
 <div class="modal fade" id="modalAddEditUsers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">

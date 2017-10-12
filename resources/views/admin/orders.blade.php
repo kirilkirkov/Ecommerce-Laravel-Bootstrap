@@ -95,8 +95,55 @@
                     @endforeach
                 </tbody>
             </table>
+        </div> 
+    </div>
+    {{ $orders->links() }}
+    <div class="fast-orders">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>{{__('admin_pages.new_fast_orders')}}</h2>
+                <div class="card card-cascade narrower">
+                    <div class="table-responsive-xs"> 
+                        <table class="table">
+                            <thead class="blue-grey lighten-4">
+                                <tr>
+                                    <th>{{__('admin_pages.time_created')}}</th>
+                                    <th>{{__('admin_pages.phone')}}</th>
+                                    <th>{{__('admin_pages.names')}}</th>
+                                    <th class="text-right">{{__('admin_pages.action')}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                if(!empty($fastOrders)) {
+                                @endphp
+                                @foreach ($fastOrders as $fOrder) 
+                                <tr>
+                                    <td>{{ $fOrder->time_created }}</td>
+                                    <td>{{ $fOrder->phone }}</td>
+                                    <td>{{ $fOrder->names }}</td>
+                                    <td class="text-right">
+                                        <a href="{{ lang_url('admin/fast/ord/is/viewed/'.$fOrder->id) }}" class="btn btn-sm btn-secondary confirm" data-my-message="{{__('admin_pages.are_u_sure_mark_fOrd')}}">
+                                            {{__('admin_pages.viewed_mark')}}
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                                @php
+                                } else {
+                                @endphp
+                                <tr>
+                                    <td colspan="4">{{__('admin_pages.no_fast_orders')}}</td>
+                                </tr>
+                                @php
+                                }
+                                @endphp
+                            </tbody>
+                        </table>
+                    </div> 
+                </div>
+            </div>
         </div>
-        {{ $orders->links() }}
     </div>
 </div>
 <script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
