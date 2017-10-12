@@ -79,6 +79,18 @@ body {font-family: 'Roboto', sans-serif;}
 .product-preview .buy .buy-now {float: right; margin-top: 10px; background-color: #8ec63f; border:2px solid #7eb531; color:#ffffff; padding: 15px 50px; text-transform: uppercase; font-weight: bold;}
 .product-preview .details {border:1px solid #e8e8e8; padding: 15px;}
 
+.products-page .categories { background-color: #f8f8f8; padding: 15px; color:#333333;}
+.products-page .categories h2 {text-transform: uppercase; font-size:22px; margin: 0; padding: 0; padding-bottom: 10px; margin-bottom: 10px; border-bottom:1px solid #e8e8e8;}
+.products-page .categories a {color:#333333; font-size:14px; text-transform: uppercase; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
+.products-page .categories a:hover, .products-page .categories li.active a {text-decoration: none; color:#8ec63f; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
+.products-page .categories ul {margin: 0; padding: 0; list-style: none;}
+.products-page .categories ul li {margin-bottom: 10px;}
+.products-page .categories ul li span {float: right; cursor: pointer;}
+.products-page .categories ul.children { margin-top: 10px; display: none;}
+.products-page .categories ul.children li {padding-left: 10px;}
+.products-page .categories ul.children a {color:#999999; font-size:12px;}
+.products-page .categories ul.children a:hover, .products-page .categories ul.children li.active a {text-decoration: none; color:#8ec63f; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
+
 .form-control { margin-bottom: 20px; border:2px solid #e8e8e8; box-shadow: none; border-radius: 0; padding: 15px 20px; color:#333333; height: auto;}
 .contacts-page .submit {background-color: #8ec63f; border:1px solid #74a62e; color:#ffffff; font-weight: 700; font-size:14px; text-transform: uppercase; display: block; padding: 10px; text-align: center;}
 

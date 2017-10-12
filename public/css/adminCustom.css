@@ -50,7 +50,6 @@ label.alone {width: 40px; word-break: break-all;}
 .card .card-title a {overflow: hidden; height: 20px; display: inline-block;}
 .card { margin-bottom: 20px; }
 .card .price {height: 20px; overflow: hidden; margin-bottom: 5px;}
-.card h5 {height: 15px; overflow: hidden;}
 .card .card-text {overflow: hidden; height: 40px;}
 .hm-white-slight {box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);} 
 .gallery-images div {display: inline-block; position:relative;}

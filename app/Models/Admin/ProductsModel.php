@@ -22,14 +22,12 @@ class ProductsModel extends Model
     {
         $search = $request->input('search');
         $products = DB::table('products')
-                ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price, categories_translations.name as categoryName'))
+                ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price'))
                 ->where('products_translations.locale', $this->defaultLang)
-                ->where('categories_translations.locale', $this->defaultLang)
                 ->when($search, function ($query) use ($search) {
                     return $query->where('products_translations.name', 'LIKE', "%$search%");
                 })
                 ->join('products_translations', 'products.id', '=', 'products_translations.for_id')
-                ->leftJoin('categories_translations', 'products.category_id', '=', 'categories_translations.for_id')
                 ->paginate(12);
         return $products;
     }

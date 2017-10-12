@@ -27,6 +27,12 @@ Route::get('products', 'Publics\\ProductsController@index');
 Route::get('{locale}/products', 'Publics\\ProductsController@index')
         ->where('locale', implode('|', Config::get('app.locales')));
 
+// open all products with categorie
+Route::get('category/{category}', 'Publics\\ProductsController@index')->where('category', '(.*)');
+Route::get('{locale}/category/{category}', 'Publics\\ProductsController@index')
+        ->where('locale', implode('|', Config::get('app.locales')))->where('category', '(.*)');
+
+
 // checkout please
 Route::get('checkout', 'Publics\\CheckoutController@index');
 Route::get('{locale}/checkout', 'Publics\\CheckoutController@index')

@@ -1,6 +1,17 @@
 $(document).ready(function () {
     checkScroll();
     $(window).scroll(checkScroll);
+    /*
+     * Check for active categories
+     */
+    var objCategories = $('.products-page .categories ul.children li');
+    if (objCategories.length > 0) {
+        objCategories.each(function () {
+            if ($(this).hasClass('active')) {
+                $(this).parent('ul').show();
+            }
+        });
+    }
 });
 $('.fast-order').toggle("slide", {direction: "right"}, 1000);
 $('.fast-order .submit').click(function () {
@@ -61,6 +72,12 @@ $('.box-type').click(function () {
     var radio_val = $(this).data('radio-val');
     $('input:radio[name="payment_type"][value="' + radio_val + '"]').prop('checked', true);
     $(this).addClass('active');
+});
+/*
+ * Show/Hide sub categories when click - or +
+ */
+$('.products-page .categories ul li span').click(function () {
+    $(this).next('.children').slideToggle();
 });
 /*
  * Hide cart products in fast view

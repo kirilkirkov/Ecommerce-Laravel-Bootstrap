@@ -13,9 +13,29 @@ class ProductsController extends Controller
     {
         $productsModel = new ProductsModel();
         $products = $productsModel->getProducts($request);
+        $categores = $productsModel->getCategories();
+
+        function buildTree(array $elements, $parentId = 0)
+        {
+            $branch = array();
+            foreach ($elements as $element) {
+                if ($element->parent == $parentId) {
+                    $children = buildTree($elements, $element->id);
+                    if ($children) {
+                        $element->children = $children;
+                    }
+                    $branch[] = $element;
+                }
+            }
+            return $branch;
+        }
+
+        $tree = buildTree($categores);
         return view('publics.products', [
             'products' => $products,
-            'cartProducts' => $this->products
+            'cartProducts' => $this->products,
+            'categories' => $tree,
+            'selectedCategory' => $request->category
         ]);
     }
 

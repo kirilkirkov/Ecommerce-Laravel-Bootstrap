@@ -14,6 +14,7 @@ class CategoriesModel extends Model
     private $id;
     private $post;
     private $defaultLang;
+    private $urlOfProduct;
 
     public function __construct()
     {
@@ -28,7 +29,8 @@ class CategoriesModel extends Model
             DB::transaction(function () {
                 $id = DB::table('categories')->insertGetId([
                     'parent' => $this->post['parent'],
-                    'position' => $this->post['position']
+                    'position' => $this->post['position'],
+                    'url' => $this->urlOfProduct
                 ]);
                 $i = 0;
                 foreach ($this->post['translation_order'] as $translate) {
@@ -55,9 +57,15 @@ class CategoriesModel extends Model
             if ($translation == $this->defaultLang) {
                 if (trim($this->post['name'][$i]) == '') {
                     $errors[] = Lang::get('admin_pages.no_entered_categ_name');
+                } else {
+                    $this->urlOfProduct = stringToUrl($this->post['name'][$i]);
                 }
             }
             $i++;
+        }
+        $count = DB::table('categories')->where('url', $this->urlOfProduct)->count();
+        if ($count > 0) {
+            $errors[] = Lang::get('admin_pages.category_name_taken');
         }
         $isValid = false;
         if (empty($errors)) {

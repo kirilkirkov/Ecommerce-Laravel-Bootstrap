@@ -62,5 +62,7 @@ return [
     'first_need_add_products' => 'First you need to choose products',
     'sum_for_pay' => 'Sum for pay',
     'order_accepted' => 'You order is accepted. Wait for us to call you.',
-    'productsReq' => 'No added products'
+    'productsReq' => 'No added products',
+    'categories' => 'Categories',
+    'no_products' => 'There are not products'
 ];

@@ -28,7 +28,7 @@ class PublishModel extends Model
         if ($isValid['result'] === true) {
             $this->filesUpload();
             $maxId = DB::table('products')->max('id');
-            $idIs = $maxId + 1;
+            $setId = $maxId + 1;
             DB::transaction(function () {
                 $id = DB::table('products')->insertGetId([
                     'image' => $this->post['image'],
@@ -39,7 +39,7 @@ class PublishModel extends Model
                     'link_to' => $this->post['link_to'],
                     'tags' => trim($this->post['tags']),
                     'hidden' => isset($this->post['hidden']) ? 1 : 0,
-                    'url' => stringToUrl($this->nameOfProduct) . '-' . $idIs
+                    'url' => stringToUrl($this->nameOfProduct) . '-' . $setId
                 ]);
                 $i = 0;
                 foreach ($this->post['translation_order'] as $translate) {

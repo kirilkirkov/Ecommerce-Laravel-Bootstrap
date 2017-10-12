@@ -111,5 +111,6 @@ return [
     'action' => 'Action',
     'viewed_mark' => 'Mark as viewed',
     'are_u_sure_mark_fOrd' => 'Are you sure want to mark as viewed?',
-    'fast_order_marked' => 'The fast order is marked'
+    'fast_order_marked' => 'The fast order is marked',
+    'category_name_taken' => 'The name of this category is taken'
 ];

@@ -10,6 +10,10 @@ class ProductsModel extends Model
 
     public function getProducts($request)
     {
+        $realCategoryId = null;
+        if (isset($request->category)) { 
+            $realCategoryId = DB::table('categories')->where('url', $request->category)->pluck('id');
+        }
         $search = $request->input('find');
         $products = DB::table('products')
                 ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price'))
@@ -18,6 +22,9 @@ class ProductsModel extends Model
                 ->where('locale', '=', app()->getLocale())
                 ->when($search, function ($query) use ($search) {
                     return $query->where('products_translations.name', 'LIKE', "%$search%");
+                })
+                ->when($realCategoryId, function ($query) use ($realCategoryId) {
+                    return $query->where('products.category_id', $realCategoryId);
                 })
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
                 ->paginate(12);
@@ -73,6 +80,16 @@ class ProductsModel extends Model
                         ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
                         ->get()->toArray();
         return $products;
+    }
+
+    public function getCategories()
+    {
+        $categories = DB::table('categories')
+                        ->select(DB::raw('categories.*, categories_translations.name'))
+                        ->where('locale', '=', app()->getLocale())
+                        ->join('categories_translations', 'categories_translations.for_id', '=', 'categories.id')
+                        ->get()->toArray();
+        return $categories;
     }
 
 }
