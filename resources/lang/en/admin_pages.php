@@ -87,5 +87,22 @@ return [
     'carousel_is_added' => 'Slide is added',
     'no_selected_image' => 'No selected image',
     'are_u_sure_delete_s' => 'Are you sure want to delete this slide?',
-    'slider_is_deleted' => 'Slider is deleted'
+    'slider_is_deleted' => 'Slider is deleted',
+    'orders' => 'Orders',
+    'time_created' => 'Time created',
+    'ord_cash_on_delivery' => 'Cash on delivery',
+    'order_type' => 'Order type',
+    'phone' => 'Phone',
+    'status' => 'Status',
+    'ord_status_new' => 'New',
+    'ord_status_processed' => 'Processed',
+    'ord_status_rej' => 'Rejected',
+    'status_changed' => 'Status changed',
+    'first_name' => 'Fist name',
+    'last_name' => 'Last name',
+    'email' => 'Email',
+    'address' => 'Address',
+    'city' => 'City',
+    'post_code' => 'Post code',
+    'notes' => 'Notes'
 ];

@@ -87,5 +87,22 @@ return [
     'carousel_is_added' => 'Слайда е добавен',
     'no_selected_image' => 'Не е избрана снимка',
     'are_u_sure_delete_s' => 'Сигурен ли сте, че искате да изтриете този слайд?',
-    'slider_is_deleted' => 'Слайдера е изтрит'
+    'slider_is_deleted' => 'Слайдера е изтрит',
+    'orders' => 'Поръчки',
+    'time_created' => 'Дата на добавяне',
+    'ord_cash_on_delivery' => 'Наложен платеж',
+    'order_type' => 'Тип на поръчката',
+    'phone' => 'Телефон',
+    'status' => 'Статус',
+    'ord_status_new' => 'Нов',
+    'ord_status_processed' => 'Обработена',
+    'ord_status_rej' => 'Отхвърлена',
+    'status_changed' => 'Статуса е сменен',
+    'first_name' => 'Име',
+    'last_name' => 'Фамилия',
+    'email' => 'Имейл',
+    'address' => 'Адрес',
+    'city' => 'Град',
+    'post_code' => 'Пощенски код',
+    'notes' => 'Забележки'
 ];

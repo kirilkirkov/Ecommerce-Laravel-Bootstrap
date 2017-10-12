@@ -23,8 +23,11 @@ class CheckoutModel extends Model
         }
         $this->post = $post;
         $this->post['products'] = $products;
+        $order_id = DB::table('orders')->max('order_id');
+        $this->post['order_id'] = $order_id + 1;
         DB::transaction(function () {
             $id = DB::table('orders')->insertGetId([
+                'order_id' => $this->post['order_id'],
                 'type' => $this->post['payment_type'],
                 'products' => serialize($this->post['products'])
             ]);

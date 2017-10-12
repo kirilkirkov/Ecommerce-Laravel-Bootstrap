@@ -81,6 +81,14 @@ table.table td, table.table th {padding: 20px !important;}
 .carousel-sliders .slide .link {background-color: #fff; display: block; padding: 10px; border:1px solid #d7d7d7; font-size:12px; }
 .carousel-sliders .slide .link a {color:#333;}
 .carousel-sliders .slide .delete {position: absolute; right:10px; top:10px;}
+.orders-page .tr-more {background-color: #f2f2f2; display: none;}
+.orders-page .fa-chevron-up {display: none;}
+.orders-page .tr-more ul li { margin-bottom: 15px; }
+.orders-page .tr-more .product { margin-bottom: 10px; padding-bottom: 10px; border-bottom:1px solid #e3dede;}
+.orders-page .tr-more .product a {color:#333333;}
+.orders-page .tr-more .product img {float:left; width:100px; margin-right: 5px;}
+.orders-page .tr-more .product .name {display: block; font-size:12px; margin-bottom: 10px;}
+.orders-page .tr-more .product .quantity {font-size: 16px;}
 footer {position: absolute; bottom:0; border-top: 1px solid #e7e7e7; padding: 15px; width:100%;}
 footer .nav li {display: inline-block;}
 footer .nav li a {text-transform: uppercase;color:#333; font-size: 13px;}
@@ -96,4 +104,5 @@ footer .nav li.in-right {float:right;}
     .menu-btn-xs {display: block;}
     .overlay img {height: auto;}
     table.table td, table.table th {padding: 10px !important;}
+    .orders-page .table-responsive-xs {overflow-x:auto}
 }

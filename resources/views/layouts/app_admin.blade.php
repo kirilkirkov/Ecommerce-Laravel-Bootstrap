@@ -50,7 +50,7 @@
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="#" class="btn waves-effect waves-light">
+                                    <a href="{{ lang_url('admin/orders') }}" class="btn waves-effect waves-light">
                                         <i class="material-icons">shopping_basket</i>
                                         <p>{{__('admin_pages.orders')}}</p>
                                     </a> 
@@ -169,7 +169,8 @@
 var urls = {
     removeGalleryImage: "{{ url('admin/removeGalleryImage') }}",
     editCategory: "{{ lang_url('admin/categories') }}",
-    deleteCategories: "{{ lang_url('admin/delete/categories') }}"
+    deleteCategories: "{{ lang_url('admin/delete/categories') }}",
+    changeStatus: "{{ lang_url('admin/changeOrderStatus') }}"
 };
 var langs = {
     selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
