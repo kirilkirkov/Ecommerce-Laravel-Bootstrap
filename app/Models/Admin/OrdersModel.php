@@ -30,4 +30,24 @@ class OrdersModel extends Model
         ]);
     }
 
+    public function getOrdersByMonth()
+    {
+        $result = DB::select('SELECT YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as year, MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as month, COUNT(id) as num FROM orders GROUP BY YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))), MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) ASC ');
+        $orders = array();
+        $years = array();
+        foreach ($result as $res) {
+            if (!isset($orders[$res->year])) {
+                for ($i = 1; $i <= 12; $i++) {
+                    $orders[$res->year][$i] = 0;
+                }
+            }
+            $years[] = $res->year;
+            $orders[$res->year][$res->month] = $res->num;
+        }
+        return [
+            'years' => array_unique($years),
+            'orders' => $orders
+        ];
+    }
+
 }
