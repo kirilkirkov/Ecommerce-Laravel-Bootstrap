@@ -11,11 +11,7 @@
                 <div id="inner-slider" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <div class="inner-img-border">
-                                <div class="inner-img-container" <?= $product->folder != null ? 'style="margin-bottom:20px;"' : '' ?>>
-                                    <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}" data-num="0" class="img-responsive img-thumbnail" alt="{{$product->name}}">
-                                </div>
-                            </div>
+                            <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}" data-num="0" class="img-responsive img-thumbnail" alt="{{$product->name}}">
                         </div>
                         <?php
                         if (!empty($gallery)) {
@@ -23,11 +19,7 @@
                             foreach ($gallery as $image) {
                                 ?>
                                 <div class="item">
-                                    <div class="inner-img-border">
-                                        <div class="inner-img-container" <?= $product->folder != null ? 'style="margin-bottom:20px;"' : '' ?>>
-                                            <img src="<?= $image ?>"  data-num="<?= $i ?>" class="img-responsive img-thumbnail" alt="">
-                                        </div>
-                                    </div>
+                                    <img src="<?= $image ?>"  data-num="<?= $i ?>" class="img-responsive img-thumbnail" alt="">
                                 </div>
                                 <?php
                                 $i++;
@@ -44,10 +36,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="other-images-container row">
+                <div class="row">
                     <div class="col-xs-4 col-sm-6 col-md-4 text-center">
                         <a data-target="#inner-slider" class="active" data-slide-to="0" href="javascript:void(0)">
-                            <img src="{{asset('storage/'.$product->image)}}" class="img-thumbnail the-image" alt="">
+                            <img src="{{asset('storage/'.$product->image)}}" class="img-thumbnail" alt="">
                         </a>
                     </div>
                     <?php
@@ -56,8 +48,8 @@
                         foreach ($gallery as $image) {
                             ?>
                             <div class="col-xs-4 col-sm-6 col-md-4 text-center">
-                                <a data-target="#inner-slider"class="" data-slide-to="<?= $i ?>" href="javascript:void(0)">
-                                    <img src="<?= $image ?>" class="img-thumbnail the-image" alt="">
+                                <a data-target="#inner-slider" data-slide-to="<?= $i ?>" href="javascript:void(0)">
+                                    <img src="<?= $image ?>" class="img-thumbnail" alt="">
                                 </a>
                             </div>
                             <?php
