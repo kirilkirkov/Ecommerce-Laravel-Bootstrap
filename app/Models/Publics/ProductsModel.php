@@ -36,7 +36,8 @@ class ProductsModel extends Model
         $product = DB::table('products')
                 ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price'
                                 . ', (SELECT name FROM categories_translations WHERE for_id = products.category_id AND locale= "' . app()->getLocale() . '") as category_name'
-                                . ', (SELECT name FROM categories_translations WHERE for_id = products.category_id AND locale= "' . app()->getLocale() . '") as category_id'))
+                                . ', (SELECT for_id FROM categories_translations WHERE for_id = products.category_id AND locale= "' . app()->getLocale() . '") as category_id'
+                        . ', (SELECT url FROM categories WHERE id = products.category_id) as category_url'))
                 ->where('products.id', '=', $id)
                 ->where('products_translations.locale', '=', app()->getLocale())
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
