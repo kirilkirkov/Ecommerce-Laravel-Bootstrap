@@ -62,7 +62,7 @@
                     if(!$products->isEmpty()) {
                     @endphp
                     @foreach ($products as $product)
-                    <div class="col-xs-6 col-md-4">
+                    <div class="col-xs-6 col-md-4 product-container">
                         <div class="product">
                             <div class="img-container">
                                 <a href="{{ lang_url($product->url) }}">

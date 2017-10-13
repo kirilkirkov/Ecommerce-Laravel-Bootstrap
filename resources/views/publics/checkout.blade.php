@@ -9,7 +9,7 @@
                     <h2>{{__('public_pages.payment_type')}}</h2>
                 </div>
                 <div class="payment-types">
-                    <div class="box-type" data-radio-val="cash_on_delivery">
+                    <div class="box-type active" data-radio-val="cash_on_delivery">
                         <img src="{{ asset('img/cash_on_deliv.png') }}" alt="econt" class="img-responsive">
                         <span>{{__('public_pages.cash_on_delivery')}}</span>
                     </div>
@@ -21,7 +21,7 @@
                 <form method="POST" action="{{lang_url('checkout')}}" id="set-order"> 
                     {{ csrf_field() }}
                     <div class="radios">
-                        <input type="radio" name="payment_type" value="cash_on_delivery">
+                        <input type="radio" checked="" name="payment_type" value="cash_on_delivery">
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">

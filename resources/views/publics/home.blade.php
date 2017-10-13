@@ -42,7 +42,7 @@
                 <h2>{{__('public_pages.promo_products')}}</h2>
             </div>
             @foreach ($promoProducts as $promoProduct)
-            <div class="col-xs-6 col-sm-4 col-md-3">
+            <div class="col-xs-6 col-sm-4 col-md-3 product-container">
                 <div class="product">
                     <div class="img-container">
                         <a href="{{ lang_url($promoProduct->url) }}">
@@ -73,7 +73,7 @@
                 <h2>{{__('public_pages.most_selled')}}</h2>
             </div>
             @foreach ($mostSelledProducts as $mostSelledProduct)
-            <div class="col-xs-6 col-sm-4 col-md-3">
+            <div class="col-xs-6 col-sm-4 col-md-3 product-container">
                  <div class="product">
                     <div class="img-container">
                         <a href="{{ lang_url($mostSelledProduct->url) }}">
