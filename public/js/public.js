@@ -245,3 +245,16 @@ function removeProduct(id) {
         renderCheckoutCartProducts();
     });
 }
+
+/*
+ * If we are on product preview page
+ * Carusel for images
+ */
+if ($('.product-preview').length > 0) {
+    $("#inner-slider").on('slide.bs.carousel', function (evt) {
+        var thisSlideI = $(this).find('.active').index();
+        var nextSlideI = $(evt.relatedTarget).index();
+        $('[data-slide-to="' + thisSlideI + '"]').removeClass('active');
+        $('[data-slide-to="' + nextSlideI + '"]').addClass('active');
+    });
+}

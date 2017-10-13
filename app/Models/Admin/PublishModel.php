@@ -15,6 +15,7 @@ class PublishModel extends Model
     private $defaultLang;
     private $post = [];
     private $nameOfProduct;
+    private $setId;
 
     public function __construct()
     {
@@ -28,7 +29,7 @@ class PublishModel extends Model
         if ($isValid['result'] === true) {
             $this->filesUpload();
             $maxId = DB::table('products')->max('id');
-            $setId = $maxId + 1;
+            $this->setId = $maxId + 1;
             DB::transaction(function () {
                 $id = DB::table('products')->insertGetId([
                     'image' => $this->post['image'],
@@ -39,7 +40,7 @@ class PublishModel extends Model
                     'link_to' => $this->post['link_to'],
                     'tags' => trim($this->post['tags']),
                     'hidden' => isset($this->post['hidden']) ? 1 : 0,
-                    'url' => stringToUrl($this->nameOfProduct) . '-' . $setId
+                    'url' => stringToUrl($this->nameOfProduct) . '-' . $this->setId
                 ]);
                 $i = 0;
                 foreach ($this->post['translation_order'] as $translate) {

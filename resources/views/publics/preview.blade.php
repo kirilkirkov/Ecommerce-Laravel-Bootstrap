@@ -8,7 +8,64 @@
                 <div class="product-title visible-xs">
                     <h1>{{$product->name}}</h1>
                 </div>
-                <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}" class="img-responsive img-thumbnail">
+                <div id="inner-slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="inner-img-border">
+                                <div class="inner-img-container" <?= $product->folder != null ? 'style="margin-bottom:20px;"' : '' ?>>
+                                    <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}" data-num="0" class="img-responsive img-thumbnail" alt="{{$product->name}}">
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        if (!empty($gallery)) {
+                            $i = 1;
+                            foreach ($gallery as $image) {
+                                ?>
+                                <div class="item">
+                                    <div class="inner-img-border">
+                                        <div class="inner-img-container" <?= $product->folder != null ? 'style="margin-bottom:20px;"' : '' ?>>
+                                            <img src="<?= $image ?>"  data-num="<?= $i ?>" class="img-responsive img-thumbnail" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                $i++;
+                            }
+                        }
+                        ?>
+                    </div>
+                    <div class="controls">
+                        <a class="left carousel-control" href="#inner-slider" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </a>
+                        <a class="right carousel-control" href="#inner-slider" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="other-images-container row">
+                    <div class="col-xs-4 col-sm-6 col-md-4 text-center">
+                        <a data-target="#inner-slider" class="active" data-slide-to="0" href="javascript:void(0)">
+                            <img src="{{asset('storage/'.$product->image)}}" class="img-thumbnail the-image" alt="">
+                        </a>
+                    </div>
+                    <?php
+                    if (!empty($gallery)) {
+                        $i = 1;
+                        foreach ($gallery as $image) {
+                            ?>
+                            <div class="col-xs-4 col-sm-6 col-md-4 text-center">
+                                <a data-target="#inner-slider"class="" data-slide-to="<?= $i ?>" href="javascript:void(0)">
+                                    <img src="<?= $image ?>" class="img-thumbnail the-image" alt="">
+                                </a>
+                            </div>
+                            <?php
+                            $i++;
+                        }
+                    }
+                    ?>
+                </div>
             </div>
             <div class="col-sm-6">
                 <div class="product-title hidden-xs">

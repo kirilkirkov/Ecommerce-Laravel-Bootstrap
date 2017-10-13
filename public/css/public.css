@@ -71,14 +71,17 @@ body {font-family: 'Roboto', sans-serif;}
 .product-preview .price { margin-bottom: 20px; }
 .product-preview .price .detail {color:#8ec63f; font-size:36px; font-weight: 900; float:left; margin-right: 15px; }
 .product-preview .price .label {font-size:12px; float:left; margin-top: 15px; }
-.product-preview .price .label-success {background-color: #3c3; color:#fff; border-radius: 0; text-transform: uppercase;}
-.product-preview .price .label-danger {background-color: red; color:#fff; border-radius: 0; text-transform: uppercase;}
+.product-preview .price .label-success {background-color: #3c3; color:#fff; border-radius: 0; text-transform: uppercase; padding: 10px;}
+.product-preview .price .label-danger {background-color: red; color:#fff; border-radius: 0; text-transform: uppercase; padding: 10px;}
 .product-preview .buy {padding: 20px; background-color: #f8f8f8; color:#333333;}
 .product-preview .buy .quantity {float: left; }
 .product-preview .buy .quantity span {text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px;}
 .product-preview .buy .field {background-color: #ffffff; border: 2px solid #e8e8e8; color:#999999; width:150px; height: 50px; padding: 10px;}
 .product-preview .buy .buy-now {float: right; margin-top: 10px; background-color: #8ec63f; border:2px solid #7eb531; color:#ffffff; padding: 15px 50px; text-transform: uppercase; font-weight: bold;}
 .product-preview .details {border:1px solid #e8e8e8; padding: 15px;}
+.product-preview .gallery {padding-top: 20px;}
+.product-preview .carousel-control.right, .product-preview .carousel-control.left {background-image: none;}
+.product-preview .carousel-control i {font-size: 48px;  position: absolute; top: 50%;}
 
 .products-page .categories { background-color: #f8f8f8; padding: 15px; color:#333333; margin-bottom: 20px;}
 .products-page .categories h2 {text-transform: uppercase; font-size:22px; margin: 0; padding: 0; padding-bottom: 10px; margin-bottom: 10px; border-bottom:1px solid #e8e8e8;}

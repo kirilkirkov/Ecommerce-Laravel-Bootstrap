@@ -52,11 +52,30 @@ class ProductsController extends Controller
         if ($product == null) {
             abort(404);
         }
+
+        $gallery = array();
+        if ($product->folder != null) {
+            $dir = '../storage/app/public/moreImagesFolders/' . $product->folder . '/';
+            if (is_dir($dir)) {
+                if ($dh = opendir($dir)) {
+                    $i = 0;
+                    while (($file = readdir($dh)) !== false) {
+                        if (is_file($dir . $file)) {
+                            $gallery[] = asset('storage/moreImagesFolders/' . $product->folder . '/' . $file);
+                        }
+                        $i++;
+                    }
+                    closedir($dh);
+                }
+            }
+        }
+
         return view('publics.preview', [
             'product' => $product,
             'cartProducts' => $this->products,
             'head_title' => mb_strlen($product->name) > 70 ? str_limit($product->name, 70) : $product->name,
-            'head_description' => mb_strlen($product->description) > 160 ? str_limit($product->description, 160) : $product->description
+            'head_description' => mb_strlen($product->description) > 160 ? str_limit($product->description, 160) : $product->description,
+            'gallery' => $gallery
         ]);
     }
 
