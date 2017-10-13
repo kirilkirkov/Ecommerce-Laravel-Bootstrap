@@ -25,7 +25,10 @@
                             </a>
                             @php if ($children === true) {
                             @endphp
-                            <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                            <span>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </span>
                             @php }
                             if ($children === true) {
                             loop_tree($tree->children, true, $selectedCategory);

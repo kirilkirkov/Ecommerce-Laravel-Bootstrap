@@ -14,7 +14,9 @@ class CheckoutController extends Controller
     public function index()
     {
         return view('publics.checkout', [
-            'cartProducts' => $this->products
+            'cartProducts' => $this->products,
+            'head_title' => Lang::get('seo.title_checkout'),
+            'head_description' => Lang::get('soe.descr_checkout')
         ]);
     }
 
@@ -29,7 +31,7 @@ class CheckoutController extends Controller
     }
 
     public function setFastOrder(Request $request)
-    { 
+    {
         $post = $request->all();
         $checkoutModel = new CheckoutModel();
         $checkoutModel->setFastOrder($post);

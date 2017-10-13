@@ -90,6 +90,7 @@ body {font-family: 'Roboto', sans-serif;}
 .products-page .categories ul.children li {padding-left: 10px;}
 .products-page .categories ul.children a {color:#999999; font-size:12px;}
 .products-page .categories ul.children a:hover, .products-page .categories ul.children li.active a {text-decoration: none; color:#8ec63f; -moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
+.products-page .categories ul li span .fa-minus {display: none;}
 
 .form-control { margin-bottom: 20px; border:2px solid #e8e8e8; box-shadow: none; border-radius: 0; padding: 15px 20px; color:#333333; height: auto;}
 .contacts-page .submit {background-color: #8ec63f; border:1px solid #74a62e; color:#ffffff; font-weight: 700; font-size:14px; text-transform: uppercase; display: block; padding: 10px; text-align: center;}

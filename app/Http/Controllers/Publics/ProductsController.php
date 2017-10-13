@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Publics;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Publics\ProductsModel;
+use Lang;
 
 class ProductsController extends Controller
 {
@@ -14,6 +15,9 @@ class ProductsController extends Controller
         $productsModel = new ProductsModel();
         $products = $productsModel->getProducts($request);
         $categores = $productsModel->getCategories();
+        if ($request->category != null) {
+            $categoryName = $productsModel->getCategoryName($request->category);
+        }
 
         function buildTree(array $elements, $parentId = 0)
         {
@@ -35,7 +39,9 @@ class ProductsController extends Controller
             'products' => $products,
             'cartProducts' => $this->products,
             'categories' => $tree,
-            'selectedCategory' => $request->category
+            'selectedCategory' => $request->category,
+            'head_title' => $request->category == null ? Lang::get('seo.title_products') : $categoryName[0],
+            'head_description' => $request->category == null ? Lang::get('soe.descr_products') : Lang::get('seo.descr_products_category') . $categoryName[0],
         ]);
     }
 
@@ -48,7 +54,9 @@ class ProductsController extends Controller
         }
         return view('publics.preview', [
             'product' => $product,
-            'cartProducts' => $this->products
+            'cartProducts' => $this->products,
+            'head_title' => mb_strlen($product->name) > 70 ? str_limit($product->name, 70) : $product->name,
+            'head_description' => mb_strlen($product->description) > 160 ? str_limit($product->description, 160) : $product->description
         ]);
     }
 

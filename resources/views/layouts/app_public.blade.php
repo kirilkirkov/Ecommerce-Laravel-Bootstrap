@@ -4,20 +4,21 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <meta name="csrf-token" content="{{ csrf_token() }}"> 
-        <title>{{ config('app.name', 'Laravel') }}</title> 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="description" content="{{ $head_description }}">
+        <title>{{ $head_title }}</title>
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="{{ asset('css/public.css') }}" rel="stylesheet">
     </head>
-    <body> 
+    <body>
         <div class="header">
             <div class="container">
                 <div class="row top-part">
                     <div class="col-sm-3 col-md-3">
                         <a href="{{ lang_url('/') }}" class="logo-container">
-                            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" class="img-responsive logo" alt=""> 
+                            <img src="{{asset('storage/ExtractiLogo.png')}}" class="img-responsive logo" alt="{{ $head_title }}">
                         </a>
                     </div>
                     <div class="col-sm-3 col-md-4">
@@ -30,7 +31,7 @@
                     </div>
                     <div class="col-sm-3 col-md-3">
                         <div class="phone-call">
-                            <img src="{{ asset('img/phone.png') }}" alt="">
+                            <img src="{{ asset('img/phone.png') }}" alt="{{ $head_title }}">
                             <div class="right">
                                 <p>{{__('public_pages.phone_order')}}</p>
                                 <span>0888 888 888</span>
@@ -228,16 +229,16 @@
         @endif
         <script>
             var urls = {
-                addProduct: "{{ url('addProduct') }}",
-                removeProductQuantity: "{{ url('removeProductQuantity') }}",
-                getProducts: "{{ url('getGartProducts') }}",
-                getProductsForCheckoutPage: "{{ url('getProductsForCheckoutPage') }}",
-                removeProduct: "{{url('removeProduct')}}"
+            addProduct: "{{ url('addProduct') }}",
+                    removeProductQuantity: "{{ url('removeProductQuantity') }}",
+                    getProducts: "{{ url('getGartProducts') }}",
+                    getProductsForCheckoutPage: "{{ url('getProductsForCheckoutPage') }}",
+                    removeProduct: "{{url('removeProduct')}}"
             };
             var variables = {
-                addressReq: "{{__('public_pages.address_field_req')}}",
-                phoneReq: "{{__('public_pages.phone_field_req')}}",
-                productsReq: "{{__('public_pages.productsReq')}}"
+            addressReq: "{{__('public_pages.address_field_req')}}",
+                    phoneReq: "{{__('public_pages.phone_field_req')}}",
+                    productsReq: "{{__('public_pages.productsReq')}}"
             };
         </script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>

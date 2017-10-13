@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Publics\ProductsModel;
 use App\Models\Publics\HomeModel;
+use Lang;
 
 class HomeController extends Controller
 {
@@ -21,7 +22,9 @@ class HomeController extends Controller
             'promoProducts' => $promoProducts,
             'mostSelledProducts' => $mostSelledProducts,
             'carousel' => $carousel,
-            'cartProducts' => $this->products
+            'cartProducts' => $this->products,
+            'head_title' => Lang::get('seo.title_home'),
+            'head_description' => Lang::get('soe.descr_home')
         ]);
     }
 

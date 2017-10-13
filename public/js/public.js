@@ -9,6 +9,11 @@ $(document).ready(function () {
         objCategories.each(function () {
             if ($(this).hasClass('active')) {
                 $(this).parent('ul').show();
+                $(this).parent('ul').prev('span').find('.fa-minus').show();
+                $(this).parent('ul').prev('span').find('.fa-plus').hide();
+            } else {
+                $(this).parent('ul').prev('span').find('.fa-minus').hide();
+                $(this).parent('ul').prev('span').find('.fa-plus').show();
             }
         });
     }
@@ -77,7 +82,17 @@ $('.box-type').click(function () {
  * Show/Hide sub categories when click - or +
  */
 $('.products-page .categories ul li span').click(function () {
-    $(this).next('.children').slideToggle();
+    var span = $(this);
+    span.next('.children').slideToggle('fast', function () {
+        if ($(this).is(':visible')) {
+            span.find('.fa-minus').show();
+            span.find('.fa-plus').hide();
+        } else {
+            span.find('.fa-minus').hide();
+            span.find('.fa-plus').show();
+        }
+    });
+
 });
 /*
  * Hide cart products in fast view

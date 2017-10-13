@@ -18,7 +18,9 @@ class ContactsController extends Controller
     public function index()
     {
         return view('publics.contacts', [
-            'cartProducts' => $this->products
+            'cartProducts' => $this->products,
+            'head_title' => Lang::get('seo.title_contacts'),
+            'head_description' => Lang::get('soe.descr_contacts')
         ]);
     }
 
