@@ -179,6 +179,7 @@ var langs = {
     encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
 }
         </script>
+        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/adminCustom.js') }}"></script> 
     </body>
 </html>

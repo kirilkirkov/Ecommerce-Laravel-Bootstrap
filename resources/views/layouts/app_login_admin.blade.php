@@ -17,6 +17,7 @@
         @yield('content')
         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script>  
+        <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
     </body>
 </html>

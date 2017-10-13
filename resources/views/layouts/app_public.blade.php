@@ -244,6 +244,7 @@
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
     </body>
 </html>
