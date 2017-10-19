@@ -8,7 +8,7 @@ $(document).ready(function () {
     if (objCategories.length > 0) {
         objCategories.each(function () {
             if ($(this).hasClass('active')) {
-                $(this).parent('ul').show();
+                $(this).parents('ul').show();
                 $(this).parent('ul').prev('span').find('.fa-minus').show();
                 $(this).parent('ul').prev('span').find('.fa-plus').hide();
             } else {
