@@ -24,7 +24,7 @@ class HomeController extends Controller
             'carousel' => $carousel,
             'cartProducts' => $this->products,
             'head_title' => Lang::get('seo.title_home'),
-            'head_description' => Lang::get('soe.descr_home')
+            'head_description' => Lang::get('seo.descr_home')
         ]);
     }
 
