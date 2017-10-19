@@ -62,12 +62,12 @@
                         <div class="dropdown dropdown-order">
                             <button class="btn btn-bordered dropdown-toggle" type="button" data-toggle="dropdown">
                                 @php
-                                if($_GET['order_by'] == 'created_at' && $_GET['type'] == 'asc'){
+                                if(isset($_GET['order_by']) == 'created_at' && isset($_GET['type']) == 'asc'){
                                 @endphp
                                 {{__('public_pages.order_date_asc')}}
                                 @php
                                 }
-                                elseif($_GET['order_by'] == 'created_at' && $_GET['type'] == 'desc'){                    
+                                elseif(isset($_GET['order_by']) == 'created_at' && isset($_GET['type']) == 'desc'){                    
                                 @endphp
                                 {{__('public_pages.order_date_desc')}}
                                 @php
