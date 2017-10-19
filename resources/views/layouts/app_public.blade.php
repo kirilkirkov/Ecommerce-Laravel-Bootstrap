@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="{{ $head_description }}">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+        <meta name="csrf-token" content="{{ csrf_token() }}"/>
+        <meta name="description" content="{{ $head_description }}"/>
+        <meta property="og:title" content="{{ $head_title }}" />
+        <meta property="og:description" content="{{ $head_description }}" />
+        <meta property="og:url" content="{{urldecode(url()->current())}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="{{isset($product->image) ? asset('storage/'.$product->image) : asset('storage/ExtractiLogo.png')}}" />
         <title>{{ $head_title }}</title>
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="{{ asset('css/public.css') }}" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link href="{{ asset('css/public.css') }}" rel="stylesheet"/>
     </head>
     <body>
         <div class="header">

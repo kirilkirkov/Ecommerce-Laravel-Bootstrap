@@ -65,7 +65,7 @@
                 </div>
                 <div class="category">
                     <span>{{__('public_pages.category_name')}}</span>
-                    <a href="{{ lang_url('category/'.$product->category_url) }}">{{$product->category_name}}</a>
+                    <a href="{{ lang_url('category/'.$product->category_url) }}" title="{{__('public_pages.category_name')}} {{$product->category_name}}">{{$product->category_name}}</a>
                 </div>
                 <div class="price">
                     <span class="detail">{{$product->price}}</span>
