@@ -64,5 +64,8 @@ return [
     'order_accepted' => 'You order is accepted. Wait for us to call you.',
     'productsReq' => 'No added products',
     'categories' => 'Categories',
-    'no_products' => 'There are not products'
+    'no_products' => 'There are not products',
+    'title_order' => 'Sort by',
+    'order_date_asc' => 'Sort By Date - Ascending',
+    'order_date_desc' => 'Sort By Date - Descending'
 ];

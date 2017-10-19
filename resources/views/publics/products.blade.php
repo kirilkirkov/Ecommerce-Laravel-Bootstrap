@@ -1,6 +1,7 @@
 @extends('layouts.app_public')
 
 @section('content')
+<link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" /> 
 <div class="products-page">
     <div class="container">
         <div class="row">
@@ -22,6 +23,7 @@
                         <li class="{{ isset($selectedCategory) && $selectedCategory == $tree->url ? 'active' : ''}}"> 
                             <a href="{{ lang_url('category/'.$tree->url) }}">
                                 {{$tree->name}}
+                                <span></span>
                             </a>
                             @php if ($children === true) {
                             @endphp
@@ -57,7 +59,33 @@
                 <div class="row">
                     <div class="col-xs-12 section-title">
                         <h2>{{__('public_pages.all_products')}}</h2>
+                        <div class="dropdown dropdown-order">
+                            <button class="btn btn-bordered dropdown-toggle" type="button" data-toggle="dropdown">
+                                @php
+                                if($_GET['order_by'] == 'created_at' && $_GET['type'] == 'asc'){
+                                @endphp
+                                {{__('public_pages.order_date_asc')}}
+                                @php
+                                }
+                                elseif($_GET['order_by'] == 'created_at' && $_GET['type'] == 'desc'){                    
+                                @endphp
+                                {{__('public_pages.order_date_desc')}}
+                                @php
+                                } else {
+                                @endphp
+                                {{__('public_pages.title_order')}}
+                                @php 
+                                }
+                                @endphp 
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="?order_by=created_at&type=asc">{{__('public_pages.order_date_asc')}}</a></li>
+                                <li><a href="?order_by=created_at&type=desc">{{__('public_pages.order_date_desc')}}</a></li>
+                            </ul>
+                        </div>
                     </div>
+
                     @php
                     if(!$products->isEmpty()) {
                     @endphp
@@ -69,7 +97,7 @@
                                     <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}">
                                 </a>
                             </div>
-                            <a href="{{ lang_url($product->url) }}">
+                            <a href="{{ lang_url($product->url) }}" title="{{$product->name}}">
                                 <h1>{{$product->name}}</h1>
                             </a>
                             <span class="price">{{$product->price}}</span>
@@ -102,4 +130,5 @@
         </div> 
     </div>
 </div>
+<script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 @endsection
