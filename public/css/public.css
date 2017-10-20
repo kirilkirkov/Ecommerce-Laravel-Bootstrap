@@ -112,6 +112,7 @@ body {font-family: 'Roboto', sans-serif;}
 
 .form-control { margin-bottom: 20px; border:2px solid #e8e8e8; box-shadow: none; border-radius: 0; padding: 15px 20px; color:#333333; height: auto;}
 .contacts-page .submit {background-color: #8ec63f; border:1px solid #74a62e; color:#ffffff; font-weight: 700; font-size:14px; text-transform: uppercase; display: block; padding: 10px; text-align: center;}
+.form-control:focus {border:2px solid #8ec63f;}
 
 footer .social {background-color: #8ec63f; padding: 20px 0; color:#ffffff; text-align: center;}
 footer .social a, footer .pages a {color:#ffffff;}
@@ -127,6 +128,7 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .fast-order input, .fast-order label {text-transform: uppercase;}
 .fast-order label {font-size:14px; font-weight: 100; margin-bottom: 0;}
 .fast-order input {border:1px solid #ff0000; padding:8px 10px;}
+.fast-order input:focus {border:1px solid #ff0000;}
 .fast-order .submit { float:right; border-radius: 2px; color:#fff; cursor: pointer; background-color: #ff4d4d; padding: 5px 30px; text-transform: uppercase; }
 .fast-order .submit:hover {text-decoration: none;  background-color: #fc3e3e; cursor: pointer; }
 .fast-order .error { color: #ff0000; position: absolute; right: 10px; top: 26px; display: none; }
@@ -247,6 +249,14 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
     .cart-products-fast-view {width:100%;}
     .product-preview h1 {font-size:22px;}
     .section-title h2, .section-title h1 {font-size: 18px;}
+    #modalBuyBtn h4 {font-size:16px;}
+    #modalBuyBtn .go-buy {font-size:14px; padding:10px 20px;}
+    #modalBuyBtn .continue-shopping a {font-size:14px;}
+    .section-title h2, .section-title h1 {font-size:16px;}
+    .product-preview .product-title h1 {font-size:22px;}
+    .product-preview .buy .quantity {float: none; display: block;}
+    .product-preview .buy .field {width:auto; height: auto; padding:10px;}
+    .product-preview .buy .buy-now {padding:5px 30px;}
 }
 
 @media screen and (max-width: 374px) {

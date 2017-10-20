@@ -187,7 +187,7 @@
         <div class="right-menu">
             <ul>
                 <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>
-                <li><a href="{{ lang_url('bascet') }}">{{__('public_pages.bascet')}}</a></li>
+                <li><a href="{{ lang_url('checkout') }}">{{__('public_pages.checkout')}}</a></li>
                 <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
