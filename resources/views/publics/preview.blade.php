@@ -13,19 +13,19 @@
                         <div class="item active">
                             <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}" data-num="0" class="img-responsive img-thumbnail" alt="{{$product->name}}">
                         </div>
-                        <?php
+                        @php
                         if (!empty($gallery)) {
                             $i = 1;
                             foreach ($gallery as $image) {
-                                ?>
+                                @endphp
                                 <div class="item">
-                                    <img src="<?= $image ?>"  data-num="<?= $i ?>" class="img-responsive img-thumbnail" alt="">
+                                    <img src="{{$image}}"  data-num="{{$i}}" class="img-responsive img-thumbnail" alt="{{$product->name}}">
                                 </div>
-                                <?php
+                                @php
                                 $i++;
                             }
                         }
-                        ?>
+                        @endphp
                     </div>
                     <div class="controls">
                         <a class="left carousel-control" href="#inner-slider" role="button" data-slide="prev">
@@ -42,21 +42,21 @@
                             <img src="{{asset('storage/'.$product->image)}}" class="img-thumbnail" alt="">
                         </a>
                     </div>
-                    <?php
+                    @php
                     if (!empty($gallery)) {
                         $i = 1;
                         foreach ($gallery as $image) {
-                            ?>
+                            @endphp
                             <div class="col-xs-4 col-sm-6 col-md-4 text-center">
-                                <a data-target="#inner-slider" data-slide-to="<?= $i ?>" href="javascript:void(0)">
-                                    <img src="<?= $image ?>" class="img-thumbnail" alt="">
+                                <a data-target="#inner-slider" data-slide-to="{{$i}}" href="javascript:void(0)">
+                                    <img src="{{$image}}" class="img-thumbnail" alt="">
                                 </a>
                             </div>
-                            <?php
+                            @php
                             $i++;
                         }
                     }
-                    ?>
+                    @endphp
                 </div>
             </div>
             <div class="col-sm-6">

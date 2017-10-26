@@ -97,14 +97,14 @@
                                     <img src="{{asset('storage/'.$product->image)}}" alt="{{$product->name}}">
                                 </a>
                             </div>
-                            <a href="{{ lang_url($product->url) }}" title="{{$product->name}}">
+                            <a href="{{ lang_url($product->url) }}">
                                 <h1>{{$product->name}}</h1>
                             </a>
                             <span class="price">{{$product->price}}</span>
                             @php
                             if($product->link_to != null) {
                             @endphp
-                            <a href="{{lang_url($product->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                            <a href="{{lang_url($product->url)}}" class="buy-now" title="{{$product->name}}">{{__('public_pages.buy')}}</a>
                             @php
                             } else {
                             @endphp

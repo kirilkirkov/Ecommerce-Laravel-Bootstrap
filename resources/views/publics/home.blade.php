@@ -56,7 +56,7 @@
                     @php
                     if($promoProduct->link_to != null) {
                     @endphp
-                    <a href="{{lang_url($promoProduct->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="{{lang_url($promoProduct->url)}}" class="buy-now" title="{{$promoProduct->name}}">{{__('public_pages.buy')}}</a>
                     @php
                     } else {
                     @endphp
@@ -87,7 +87,7 @@
                     @php
                     if($mostSelledProduct->link_to != null) {
                     @endphp
-                    <a href="{{lang_url($mostSelledProduct->url)}}" class="buy-now">{{__('public_pages.buy')}}</a>
+                    <a href="{{lang_url($mostSelledProduct->url)}}" class="buy-now" title="{{$mostSelledProduct->name}}">{{__('public_pages.buy')}}</a>
                     @php
                     } else {
                     @endphp
