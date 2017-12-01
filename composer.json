@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "kirilkirkov/shopping-cart-solution-laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
