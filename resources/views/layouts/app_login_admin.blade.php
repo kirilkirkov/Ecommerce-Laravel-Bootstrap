@@ -11,13 +11,13 @@
         <link href="{{ asset('css/adminCustom.css') }}" rel="stylesheet" /> 
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-        <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     </head>
     <body>
         @yield('content')
-        <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/bootbox.min.js') }}"></script>
+        <script src="{{ asset('js/mdb.min.js') }}"></script>
+        <script src="{{ asset('js/placeholders.min.js') }}"></script>
     </body>
 </html>

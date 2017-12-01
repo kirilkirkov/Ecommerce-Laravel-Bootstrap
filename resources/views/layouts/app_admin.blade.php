@@ -11,7 +11,7 @@
         <link href="{{ asset('css/adminCustom.css') }}" rel="stylesheet" /> 
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-        <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -162,24 +162,24 @@
             @endif
         </div>
         @endif
-        <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script> 
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/bootbox.min.js') }}"></script>
+        <script src="{{ asset('js/mdb.min.js') }}"></script> 
         <script>
-var urls = {
-    removeGalleryImage: "{{ url('admin/removeGalleryImage') }}",
-    editCategory: "{{ lang_url('admin/categories') }}",
-    deleteCategories: "{{ lang_url('admin/delete/categories') }}",
-    changeStatus: "{{ lang_url('admin/changeOrderStatus') }}"
-};
-var langs = {
-    selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
-    selectJustOneCateg: "{{__('admin_pages.select_just_one_categ')}}",
-    confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}",
-    encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
-}
+        var urls = {
+            removeGalleryImage: "{{ url('admin/removeGalleryImage') }}",
+            editCategory: "{{ lang_url('admin/categories') }}",
+            deleteCategories: "{{ lang_url('admin/delete/categories') }}",
+            changeStatus: "{{ lang_url('admin/changeOrderStatus') }}"
+        };
+        var langs = {
+            selectOnlyOneCateg: "{{__('admin_pages.select_only_one_category')}}",
+            selectJustOneCateg: "{{__('admin_pages.select_just_one_categ')}}",
+            confirmDeleteCategories: "{{__('admin_pages.confirm_delete_categories')}}",
+            encorrectemailAddr: "{{__('admin_pages.incorrect_email_addr')}}"
+        }
         </script>
-        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/placeholders.min.js') }}"></script>
         <script src="{{ asset('js/adminCustom.js') }}"></script> 
     </body>
 </html>
