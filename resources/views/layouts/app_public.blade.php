@@ -18,7 +18,7 @@
         <link href="{{ asset('css/public.css') }}" rel="stylesheet"/>
     </head>
     <body>
-        <div class="header">
+        <header>
             <div class="container">
                 <div class="row top-part">
                     <div class="col-sm-3 col-md-3">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </header>
         @yield('content')
         <footer>
             <div class="social">
@@ -204,7 +204,7 @@
             <a href="javascript:void(0);" class="close-xs-menu">{{__('public_pages.close_xs_menu')}}</a>
         </div> 
         <!-- Modal After buy now button -->
-        <div class="modal fade" id="modalBuyBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="modalBuyBtn" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -246,10 +246,10 @@
                     productsReq: "{{__('public_pages.productsReq')}}"
             };
         </script>
-        <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/placeholders.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/public.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-ui-1.12.1/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/placeholders.min.js') }}"></script>
+        <script src="{{ asset('js/public.js') }}"></script>
     </body>
 </html>

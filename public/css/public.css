@@ -1,35 +1,35 @@
 body {font-family: 'Roboto', sans-serif;}
 
-.header .top-part {padding: 15px 0; height: 80px;}
-.header .top-part .logo {height: 60px;}
-.header .top-part form.search {position: relative; display: inline-block; width:100%;}
-.header .top-part form.search .search-field {border: 2px solid #8ec63f; color:#9aaab6; width: 100%; padding:13px 10px; padding-right: 40px;}
-.header .top-part form.search .submit-search {color:#8ec63f; position: absolute; right: 10px; top: 8px; font-size:24px;}
-.header .top-part .phone-call {width:220px; height: 50px; overflow: hidden;}
-.header .top-part .phone-call img {height: 50px; width: 50px; float:left;}
-.header .top-part .phone-call .right {float:right; width:160px; height: 50px; overflow: hidden;}
-.header .top-part .phone-call .right p {margin: 0; color:#9aaab6; font-size: 12px; text-transform: uppercase;}
-.header .top-part .phone-call .right span {font-size:22px; color:#8ec63f;}
-.header .top-part .user {text-align: right; line-height: 50px;}
-.header .top-part .user a {color:#8ec63f; font-size:20px;}
-.header .top-part .user .login { margin-right: 5px; padding-right: 5px; border-right: 1px solid #b8c1c7;}
-.header .top-part .user a:hover {text-decoration: none; color: #5a8a17;  }
-.header .navbar-custom {background-color: #8ec63f; border-color: #8ec63f; border-radius: 0;}
-.header .navbar-custom ul.navbar-nav li a {color:#fff; padding: 15px 30px; text-transform: uppercase; font-size: 13px;}
-.header .navbar-custom ul.navbar-nav li a:hover {background-color: #5a8a17;  }
-.header .navbar-custom.navbar {margin-bottom: 0;}
-.header .navbar-custom .navbar-center { width: 100%; text-align: center; }
-.header .navbar-custom .navbar-nav li { float: initial; }
-.header .navbar-custom .navbar-right .dropdown { margin-top: -41px; margin-right: -2px; }
-.header .navbar-custom .navbar-right .dropdown li {display: block; text-transform: uppercase;}
-.header .navbar-custom .navbar-right .dropdown .btn-lang {color:#ffffff; background-color:transparent; border: 1px solid #ffffff; text-transform: uppercase;}
-.header .navbar-custom .nav li { display:inline-block;}
-.header .navbar-custom .navbar-brand {color:#fff;}
-.header .navbar-custom .show-right-menu {color:#fff; font-size:16px;}
-.header .navbar-custom.navbar-fixed-top { background-color: #fff; transition: all 0.4s ease-in;}
-.header .navbar-custom.navbar-fixed-top ul.navbar-nav li a {color:#8ec63f;}
-.header .navbar-custom.navbar-fixed-top ul.navbar-nav li a:hover {background-color: #eee;  }
-.header .navbar-custom.navbar-fixed-top .navbar-right .dropdown .btn-lang {color:#8ec63f; background-color:transparent; border: 1px solid #8ec63f;}
+header .top-part {padding: 15px 0; height: 80px;}
+header .top-part .logo {height: 60px;}
+header .top-part form.search {position: relative; display: inline-block; width:100%;}
+header .top-part form.search .search-field {border: 2px solid #8ec63f; color:#9aaab6; width: 100%; padding:13px 10px; padding-right: 40px;}
+header .top-part form.search .submit-search {color:#8ec63f; position: absolute; right: 10px; top: 8px; font-size:24px;}
+header .top-part .phone-call {width:220px; height: 50px; overflow: hidden;}
+header .top-part .phone-call img {height: 50px; width: 50px; float:left;}
+header .top-part .phone-call .right {float:right; width:160px; height: 50px; overflow: hidden;}
+header .top-part .phone-call .right p {margin: 0; color:#9aaab6; font-size: 12px; text-transform: uppercase;}
+header .top-part .phone-call .right span {font-size:22px; color:#8ec63f;}
+header .top-part .user {text-align: right; line-height: 50px;}
+header .top-part .user a {color:#8ec63f; font-size:20px;}
+header .top-part .user .login { margin-right: 5px; padding-right: 5px; border-right: 1px solid #b8c1c7;}
+header .top-part .user a:hover {text-decoration: none; color: #5a8a17;  }
+header .navbar-custom {background-color: #8ec63f; border-color: #8ec63f; border-radius: 0;}
+header .navbar-custom ul.navbar-nav li a {color:#fff; padding: 15px 30px; text-transform: uppercase; font-size: 13px;}
+header .navbar-custom ul.navbar-nav li a:hover {background-color: #5a8a17;  }
+header .navbar-custom.navbar {margin-bottom: 0;}
+header .navbar-custom .navbar-center { width: 100%; text-align: center; }
+header .navbar-custom .navbar-nav li { float: initial; }
+header .navbar-custom .navbar-right .dropdown { margin-top: -41px; margin-right: -2px; }
+header .navbar-custom .navbar-right .dropdown li {display: block; text-transform: uppercase;}
+header .navbar-custom .navbar-right .dropdown .btn-lang {color:#ffffff; background-color:transparent; border: 1px solid #ffffff; text-transform: uppercase;}
+header .navbar-custom .nav li { display:inline-block;}
+header .navbar-custom .navbar-brand {color:#fff;}
+header .navbar-custom .show-right-menu {color:#fff; font-size:16px;}
+header .navbar-custom.navbar-fixed-top { background-color: #fff; transition: all 0.4s ease-in;}
+header .navbar-custom.navbar-fixed-top ul.navbar-nav li a {color:#8ec63f;}
+header .navbar-custom.navbar-fixed-top ul.navbar-nav li a:hover {background-color: #eee;  }
+header .navbar-custom.navbar-fixed-top .navbar-right .dropdown .btn-lang {color:#8ec63f; background-color:transparent; border: 1px solid #8ec63f;}
 .trans-hide {transition: all 0.4s ease-out;}
 
 .btn-bordered {color:#999999; border:2px solid #e8e8e8; background-color: #ffffff; border-radius: 0;}
@@ -195,12 +195,12 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .product .buy-now:hover, 
 .product-preview .buy .buy-now, 
 .product-preview .buy .buy-now:hover, 
-.header .top-part .user a:hover, 
-.header .top-part .user a, 
-.header .navbar-custom ul.navbar-nav li a:hover, 
-.header .navbar-custom ul.navbar-nav li a, 
-.header .navbar-custom.navbar-fixed-top ul.navbar-nav li a:hover, 
-.header .navbar-custom.navbar-fixed-top ul.navbar-nav li a, 
+header .top-part .user a:hover, 
+header .top-part .user a, 
+header .navbar-custom ul.navbar-nav li a:hover, 
+header .navbar-custom ul.navbar-nav li a, 
+header .navbar-custom.navbar-fixed-top ul.navbar-nav li a:hover, 
+header .navbar-custom.navbar-fixed-top ul.navbar-nav li a, 
 .btn-default, 
 .btn-default:hover, 
 #modalBuyBtn .go-buy:hover,
@@ -227,19 +227,19 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 .checkout-page .box-type {-moz-transition: all .2s ease-in; -o-transition: all .2s ease-in;  -webkit-transition: all .2s ease-in;  transition: all .2s ease-in;}
 
 @media screen and (max-width: 991px) {
-    .header .top-part .phone-call .right span{font-size:18px;}
-    .header .top-part .phone-call .right p {font-size:10px;}
-    .header .top-part .user a {font-size:18px;}
+    header .top-part .phone-call .right span{font-size:18px;}
+    header .top-part .phone-call .right p {font-size:10px;}
+    header .top-part .user a {font-size:18px;}
     .product-preview h1 {font-size:28px;}
 }
 
 @media screen and (max-width: 767px) {
-    .header .top-part {height: auto;}
-    .header .top-part .phone-call .right span{font-size:18px;}
-    .header .top-part .phone-call .right p {font-size:10px;}
-    .header .top-part .logo-container {text-align: center; display: block; }
-    .header .top-part .logo-container .logo {display: inline;}
-    .header .top-part .search, .header .top-part .logo-container, .header .top-part .phone-call {margin-bottom: 15px;}
+    header .top-part {height: auto;}
+    header .top-part .phone-call .right span{font-size:18px;}
+    header .top-part .phone-call .right p {font-size:10px;}
+    header .top-part .logo-container {text-align: center; display: block; }
+    header .top-part .logo-container .logo {display: inline;}
+    header .top-part .search, header .top-part .logo-container, header .top-part .phone-call {margin-bottom: 15px;}
     .right-menu ul.dropdown-xs li { margin-bottom: 5px; }
     .right-menu ul.dropdown-xs li a {color:#333;}
     .fast-order { display: none; position: fixed; width: 100%; bottom:0; left:0; border-radius: 0; right:0;}
