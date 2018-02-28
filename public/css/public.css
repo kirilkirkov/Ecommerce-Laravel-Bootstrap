@@ -147,8 +147,8 @@ footer .copy-rights {background-color: #212331; color:#616f7a; padding: 10px 0;}
 
 .cart-button {position: relative; cursor: pointer;}
 .cart-button .badge {position: absolute; top:-10px; right:-10px; }
-.cart-products-fast-view {position: absolute; width:350px; height: 200px; overflow-y: auto; background-color: #393d50; z-index: 20; right:0; bottom: -200px; display: none;}
-.cart-products-fast-view .content {position: relative; padding: 10px; padding-top: 30px; color:#ffffff;}
+.cart-products-fast-view {position: absolute; width:350px; height: 200px; z-index: 20; right:0; top:30px; padding-top: 20px; display: none;}
+.cart-products-fast-view .content {position: relative; padding: 10px; padding-top: 30px; height: 200px; color:#ffffff; overflow-y: auto; background-color: #393d50;}
 .cart-products-fast-view .content .close-me {position: absolute; color:#ffffff; right:5px; top:-1px; font-size:20px;}
 .cart-products-fast-view ul {margin: 0; padding: 0; list-style: none; padding-bottom: 10px; margin-bottom: 10px; border-bottom:1px solid #51546c;}
 .cart-products-fast-view ul li { margin-bottom: 10px; position: relative;}

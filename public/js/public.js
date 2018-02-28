@@ -66,8 +66,14 @@ $('.buy-now.to-cart').click(function () {
 /*
  * Show cart products in fast view
  */
-$('.cart-button').hover(function () {
+$('.cart-button').on('click mouseover', function () {
     $('.cart-products-fast-view').fadeIn(200);
+});
+/*
+ * If mouse leave, hide products fast view
+ */
+$('.cart-fast-view-container').on('mouseleave', function () {
+    $('.cart-products-fast-view').fadeOut(200);
 });
 /*
  * change radio button selection for 
