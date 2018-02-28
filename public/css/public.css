@@ -253,7 +253,7 @@ header .navbar-custom.navbar-fixed-top ul.navbar-nav li a,
     #modalBuyBtn .go-buy {font-size:14px; padding:10px 20px;}
     #modalBuyBtn .continue-shopping a {font-size:14px;}
     .section-title h2, .section-title h1 {font-size:16px;}
-    .product-preview .product-title h1 {font-size:22px;}
+    .product-preview .product-title h1 {font-size:18px; text-align: center;}
     .product-preview .buy .quantity {float: none; display: block;}
     .product-preview .buy .field {width:auto; height: auto; padding:10px;}
     .product-preview .buy .buy-now {padding:5px 30px;}

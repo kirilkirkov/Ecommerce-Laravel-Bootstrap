@@ -36,7 +36,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row hidden-xs">
                     <div class="col-xs-4 col-sm-6 col-md-4 text-center">
                         <a data-target="#inner-slider" class="active" data-slide-to="0" href="javascript:void(0)">
                             <img src="{{asset('storage/'.$product->image)}}" class="img-thumbnail" alt="">
