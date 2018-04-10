@@ -54,7 +54,7 @@
                             <div class="element-label-text">
                                 <div class="upload-wrap">
                                     <button type="button" class="btn btn-secondary">{{ __('admin_pages.choose_cover_img')}}</button>
-                                    <input type="file" name="image[]" class="upload-btn">
+                                    <input type="file" name="image_{{$locale}}[]" class="upload-btn">
                                     <div class="file-name"></div>
                                 </div>
                             </div>

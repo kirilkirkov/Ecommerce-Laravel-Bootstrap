@@ -35,8 +35,8 @@ class CarouselModel extends Model
     public function setNewSlider($post)
     {
         $this->post = $post;
-        if (isset($this->post['image']) && !empty($this->post['image'])) {
-            $this->filesUpload();
+        $this->filesUpload();
+        if (isset($this->post['img']) && !empty($this->post['img'])) {
             DB::transaction(function () {
                 $id = DB::table('carousel')->insertGetId([
                     'position' => $this->post['position'] == null ? 1 : $this->post['position'],
@@ -66,8 +66,12 @@ class CarouselModel extends Model
 
     private function filesUpload()
     {
-        foreach ($this->post['image'] as $image) {
-            $this->post['img'][] = str_replace('public/', '', Storage::putFile('public/carousel', $image));
+        foreach ($this->post['translation_order'] as $translate) {
+            if (isset($this->post['image_' . $translate])) {
+                $this->post['img'][] = str_replace('public/', '', Storage::putFile('public/carousel', $this->post['image_' . $translate][0]));
+            } else {
+                $this->post['img'][] = '';
+            }
         }
     }
 
