@@ -1,3 +1,4 @@
+var csrf = $('meta[name="csrf-token"]').attr('content');
 $(document).ready(function () {
     checkScroll();
     $(window).scroll(checkScroll);
@@ -142,7 +143,7 @@ function addProduct(id) {
         type: 'POST',
         url: urls.addProduct,
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            'X-CSRF-TOKEN': csrf
         },
 
         data: {id: id, quantity: quantity}
@@ -160,7 +161,7 @@ function renderCartProducts() {
         type: 'POST',
         url: urls.getProducts,
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            'X-CSRF-TOKEN': csrf
         }
     }).done(function (data) {
         var obj = JSON.parse(data);
@@ -173,17 +174,19 @@ function renderCartProducts() {
  */
 function renderCheckoutCartProducts() {
     var products_container = $('.products-for-checkout');
+    var current_height = products_container.height();
     if (products_container.length) {
+        products_container.height(current_height);
         products_container.empty();
         // check only if we are in that page :)
         $.ajax({
             type: 'POST',
             url: urls.getProductsForCheckoutPage,
             headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                'X-CSRF-TOKEN': csrf
             }
         }).done(function (data) {
-            $('.products-for-checkout').empty().append(data);
+            products_container.empty().append(data).height('auto');
         });
     }
 }
@@ -195,7 +198,7 @@ function removeQuantity(id) {
         type: 'POST',
         url: urls.removeProductQuantity,
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            'X-CSRF-TOKEN': csrf
         },
         data: {id: id}
     }).done(function (data) {
@@ -243,7 +246,7 @@ function removeProduct(id) {
         type: 'POST',
         url: urls.removeProduct,
         headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            'X-CSRF-TOKEN': csrf
         },
         data: {id: id}
     }).done(function (data) {
