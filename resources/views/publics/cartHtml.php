@@ -4,7 +4,7 @@
         <ul>
             <?php
             foreach ($products as $cartProduct) {
-                $sum += $cartProduct->num_added * (int) $cartProduct->price;
+                $sum += $cartProduct->num_added * (float) $cartProduct->price;
                 ?>
                 <li>
                     <a href="<?= lang_url($cartProduct->url) ?>" class="link"> 

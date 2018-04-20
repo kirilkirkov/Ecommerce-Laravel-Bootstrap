@@ -2,8 +2,8 @@
     <?php
     $sum_total = $sum = 0;
     foreach ($products as $cartProduct) {
-        $sum_total += $cartProduct->num_added * (int) $cartProduct->price;
-        $sum = $cartProduct->num_added * (int) $cartProduct->price;
+        $sum_total += $cartProduct->num_added * (float) $cartProduct->price;
+        $sum = $cartProduct->num_added * (float) $cartProduct->price;
         ?>
         <li>
             <input name="id[]" value="<?= $cartProduct->id ?>" type="hidden">
