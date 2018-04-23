@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $productsModel = new ProductsModel();
         $homeModel = new HomeModel();
-        $promoProducts = $productsModel->getProductsWithTags(['promo']);
+        $promoProducts = $productsModel->getProductsWithTag('promo');
         $mostSelledProducts = $productsModel->getMostSelledProducts();
         $carousel = $homeModel->getCarouselSliders();
         return view('publics.home', [

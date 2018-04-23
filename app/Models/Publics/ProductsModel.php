@@ -67,11 +67,11 @@ class ProductsModel extends Model
         return $product;
     }
 
-    public function getProductsWithTags($arrayTags)
+    public function getProductsWithTag($tag)
     {
         $products = DB::table('products')
                 ->select(DB::raw('products.*, products_translations.name, products_translations.description, products_translations.price'))
-                ->whereIn('tags', $arrayTags)
+                ->where('tags', 'LIKE', '%'.$tag.'%')
                 ->where('hidden', '=', 0)
                 ->where('locale', '=', app()->getLocale())
                 ->join('products_translations', 'products_translations.for_id', '=', 'products.id')
