@@ -124,8 +124,8 @@
                     @php
                     }
                     @endphp
-                    {{ $products->links() }}
                 </div>
+                {{ $products->links() }}
             </div>
         </div> 
     </div>
