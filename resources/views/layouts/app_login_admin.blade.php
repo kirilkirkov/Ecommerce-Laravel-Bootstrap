@@ -10,7 +10,7 @@
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/adminCustom.css') }}" rel="stylesheet" /> 
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons" rel="stylesheet" type="text/css" />
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     </head>
     <body>
