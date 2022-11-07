@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card card-cascade narrower">
-    <div class="table-responsive"> 
+    <div class="table-responsive">
         <table class="table">
             <thead class="blue-grey lighten-4">
                 <tr>
@@ -19,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user) 
+                @foreach ($users as $user)
                 <tr>
                     <th scope="row">{{$user->id}}</th>
                     <td>{{$user->name}}</td>
@@ -30,11 +30,11 @@
                         <a href="?edit={{$user->id}}" class="btn btn-sm btn-secondary waves-effect waves-light">{{__('admin_pages.edit_user')}}</a>
                         <a href="{{lang_url('admin/delete/user/'.$user->id)}}" class="btn btn-sm btn-secondary waves-effect waves-light confirm" data-my-message="{{__('admin_pages.are_u_sure_delete_u')}}">{{__('admin_pages.delete_user')}}</a>
                     </td>
-                </tr> 
+                </tr>
                 @endforeach
             </tbody>
         </table>
-    </div>  
+    </div>
 </div>
 {{ $users->links() }}
 <!-- Modal Add/Edit users -->
@@ -47,8 +47,8 @@
             </div>
             <div class="modal-body">
                 <form method="POST" action="" id="formManageUsers">
-                    {{ csrf_field() }} 
-                    <input type="hidden" name="edit" value="{{isset($_GET['edit']) ? $_GET['edit'] : 0 }}"> 
+                    {{ csrf_field() }}
+                    <input type="hidden" name="edit" value="{{isset($_GET['edit']) ? $_GET['edit'] : 0 }}">
                     <div class="md-form">
                         <i class="fa fa-user prefix grey-text"></i>
                         <input type="text" name="name" value="{{$userInfo != null? $userInfo->name : ''}}" id="defaultForm-name" class="form-control">
@@ -75,16 +75,15 @@
 </div>
 <script>
     @php
-            if (isset($_GET['edit']))
-    {
-    @endphp
-            $(document).ready(function(){
-    $('#modalAddEditUsers').modal('show');
-    });
-            $("#modalAddEditUsers").on("hidden.bs.modal", function () {
-    window.location.href = "{{ lang_url('admin/users') }}";
-    });
-            @php
+    if (isset($_GET['edit'])) {
+        @endphp
+        $(document).ready(function() {
+            $('#modalAddEditUsers').modal('show');
+        });
+        $("#modalAddEditUsers").on("hidden.bs.modal", function() {
+            window.location.href = "{{ lang_url('admin/users') }}";
+        });
+        @php
     }
     @endphp
 </script>

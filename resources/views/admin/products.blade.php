@@ -2,23 +2,23 @@
 
 @section('content')
 <div class="row">
-    @php 
+    @php
     if(!$products->isEmpty()) {
     @endphp
-    @foreach ($products as $product) 
-    <div class="col-md-4 col-lg-3"> 
-        <div class="card card-cascade narrower hm-zoom"> 
+    @foreach ($products as $product)
+    <div class="col-md-4 col-lg-3">
+        <div class="card card-cascade narrower hm-zoom">
             <div class="view overlay hm-white-slight">
                 <img src="{{asset('storage/'.$product->image)}}" class="img-fluid" alt="{{__('admin_pages.no_choosed_image')}}">
                 <a>
                     <div class="mask"></div>
                 </a>
-            </div> 
+            </div>
             <div class="card-body text-center no-padding">
-                <h4 class="card-title"><strong><a href="">{{$product->name}}</a></strong></h4> 
+                <h4 class="card-title"><strong><a href="">{{$product->name}}</a></strong></h4>
                 <p class="card-text">
                     {{strip_tags($product->description)}}
-                </p> 
+                </p>
                 <div class="card-footer">
                     <div class="text-center price">{{$product->price}}</div>
                     <span class="right">
@@ -30,17 +30,17 @@
                         </a>
                     </span>
                 </div>
-            </div> 
-        </div> 
+            </div>
+        </div>
     </div>
     @endforeach
-    @php 
+    @php
     } else {
     @endphp
     <div class="col-xs-12">
         <div class="alert alert-success">{{__('admin_pages.no_product_results')}}</div>
     </div>
-    @php 
+    @php
     }
     @endphp
 </div>

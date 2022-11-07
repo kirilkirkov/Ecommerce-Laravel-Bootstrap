@@ -13,7 +13,7 @@
 </div>
 
 <div class="row carousel-sliders">
-    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> 
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         @foreach ($sliders as $slider)
         <div class="slide">
             <img src="{{asset('storage/'.$slider->image)}}" class="img-fluid z-depth-1" alt="1">
@@ -48,8 +48,8 @@
                     <hr>
                     @foreach ($locales as $locale)
                     <input type="hidden" name="translation_order[]" value="{{$locale}}">
-                    <div class="locale-container locale-container-{{$locale}}" @if ($currentLocale == $locale) style="display:block;" @endif>
-                         <div class="md-form">
+                    <div class="locale-container locale-container-{{$locale}}" @if ($currentLocale==$locale) style="display:block;" @endif>
+                        <div class="md-form">
                             <label class="alone">{{__('admin_pages.image_slide')}}</label>
                             <div class="element-label-text">
                                 <div class="upload-wrap">
@@ -64,13 +64,13 @@
                     <div class="md-form">
                         <label class="alone">{{__('admin_pages.position')}}</label>
                         <div class="element-label-text">
-                            <input type="text" value="" placeholder="1" name="position"  class="form-control"> 
+                            <input type="text" value="" placeholder="1" name="position" class="form-control">
                         </div>
                     </div>
                     <div class="md-form">
                         <label class="alone">{{__('admin_pages.link')}}</label>
                         <div class="element-label-text">
-                            <input type="text" value="" placeholder="http://yoursite.com/product-link-1" name="link"  class="form-control"> 
+                            <input type="text" value="" placeholder="http://yoursite.com/product-link-1" name="link" class="form-control">
                         </div>
                     </div>
                 </form>
@@ -83,7 +83,7 @@
     </div>
 </div>
 <script>
-    $('.upload-btn').change(function () {
+    $('.upload-btn').change(function() {
         $(this).next('.file-name').show().append($(this).val());
     });
 </script>

@@ -156,6 +156,7 @@ function addProduct(id) {
  * Render cart products
  */
 function renderCartProducts() {
+
     $('.cart-fast-view-container').empty();
     $.ajax({
         type: 'POST',
@@ -166,7 +167,7 @@ function renderCartProducts() {
     }).done(function (data) {
         var obj = JSON.parse(data);
         $('.cart-fast-view-container').append(obj.html);
-        $('.header .user .badge').empty().append(obj.num_products);
+        $('header .user .badge').empty().append(obj.num_products);
     });
 }
 /*

@@ -14,7 +14,7 @@ class PublishController extends Controller
 {
 
     public function index(Request $request)
-    {  
+    {
         $productInfo = null;
         $categoriesModel = new CategoriesModel();
         if (isset($request->number) && (int) $request->number > 0) {
@@ -55,5 +55,4 @@ class PublishController extends Controller
         }
         return '0';
     }
-
 }

@@ -102,7 +102,7 @@
                         @endforeach
                     </div>
                     @foreach ($locales as $locale)
-                    @php $lKey = false; if($category['translations'] != null) { $lKey = array_search($locale, array_column($category['translations'], 'locale')); } @endphp
+                    @php $lKey = false; if($category !== null && $category['translations'] != null) { $lKey = array_search($locale, array_column($category['translations'], 'locale')); } @endphp
                     <input type="hidden" name="translation_order[]" value="{{$locale}}">
                     <div class="locale-container locale-container-{{$locale}}" @if ($currentLocale == $locale) style="display:block;" @endif>
                          <div class="md-form form-sm">
@@ -141,17 +141,16 @@
 <script>
 $('.selectpicker').selectpicker();
 @php
-if (isset($_GET['edit']))
-{
+    if (isset($_GET['edit'])) {
 @endphp
-$(document).ready(function(){
-$('#modalAddEditCategory').modal('show');
-});
-$("#modalAddEditCategory").on("hidden.bs.modal", function () {
- window.location.href = "{{ lang_url('admin/categories') }}";
-});
+    $(document).ready(function(){
+        $('#modalAddEditCategory').modal('show');
+    });
+    $("#modalAddEditCategory").on("hidden.bs.modal", function () {
+        window.location.href = "{{ lang_url('admin/categories') }}";
+    });
 @php
-}
+    }
 @endphp
 </script>
 @endsection

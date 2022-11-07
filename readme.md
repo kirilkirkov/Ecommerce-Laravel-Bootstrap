@@ -4,12 +4,15 @@
 ## Bootsrap Responsive Online Shop with beautiful metro style administration!
 
 Current versions
-* Laravel Framework 5.5.3 (https://laravel.com/)
+* Laravel Framework 7.30.6 (https://laravel.com/)
 * Bootstrap v3.3.7 (http://getbootstrap.com)
 
 ## Donate
 If this project help you reduce time to develop, you can give me a cup of coffee to continue its development :)
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YX2JXRBLWRXPA)
+
+## See also
+<p><a href="https://codecanyon.net/item/wp-invoices-pdf-electronic-invoicing-system/36891583" title="Electronic invoicing and warehouse management plugin which allows you to issue, send and download invoices as pdf file">WordPress PDF Invoices Plugin</a> - Create, Send, Manage and Download as PDF or CSV Invoices in Multiple Templates</p>
 
 ## We support following features
 1. Bootstrap responsive
@@ -20,21 +23,22 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### Server Requirements
 PHP >= 7.0.0
 
-## Installation in 3 easy steps
-1. Import lara_cms.sql to your mysql
-2. Set hostname, username and password in .env for your SQL
-3. Set APP_URL in .env with your site url - http://yourdomain.com
-(Maybe you know but you must set your virtual host point to public/ directory or start laravel web server for testing with php artisan serve)
+## Installation in 4 easy steps
+1. Copy env.example to .env and change your - DB Credentials and APP_URL.
+2. php artisan migrate
+3. php artisan db:seed
+4. php artisan storage:link
 
 ## Login to administration
 http://yourdomain.com/admin
-* Email: kiro@dev.bg
+* Email: admin@github.com
 * Pass: admin
 
-## Screenshot of admin panel
-![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/fullsize_admin.jpg "Logo Title Text 1")
-![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile_admin.jpg "Logo Title Text 1")
+## Screenshots Of Admin Panel
+![Laravel Administration Ecommerce](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/fullsize_admin.jpg "Laravel Administration Ecommerce")
+![Laravel Administration Ecommerce Publish Product](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/publish-product.png "Laravel Administration Ecommerce Publish Product")
+![Laravel Mobile Administration Ecommerce](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile_admin.jpg "Laravel Mobile Administration Ecommerce")
 
-## Screenshot of public page
-![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/desctop-public.jpg "Logo Title Text 1")
-![alt text](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile-public.jpg "Logo Title Text 1")
+## Screenshot Of Public Page
+![Laravel Shopping Card - Ecommerce](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/desctop-public.jpg "Laravel Shopping Card - Ecommerce")
+![Laravel Mobile Ecommerce](https://raw.githubusercontent.com/kirilkirkov/Shopping-Cart-Solution-Laravel/master/github/mobile-public.jpg "Laravel Mobile Ecommerce")

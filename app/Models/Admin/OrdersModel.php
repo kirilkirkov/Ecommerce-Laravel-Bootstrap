@@ -40,7 +40,7 @@ class OrdersModel extends Model
 
     public function getOrdersByMonth()
     {
-        $result = DB::select('SELECT YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as year, MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as month, COUNT(id) as num FROM orders GROUP BY YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))), MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) ASC ');
+        $result = DB::select('SELECT YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as year, MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))) as month, COUNT(id) as num FROM orders GROUP BY YEAR(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created))), MONTH(FROM_UNIXTIME(UNIX_TIMESTAMP(time_created)))');
         $orders = array();
         $years = array();
         foreach ($result as $res) {

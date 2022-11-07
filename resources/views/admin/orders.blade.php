@@ -1,10 +1,10 @@
 @extends('layouts.app_admin')
 
 @section('content')
-<link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" /> 
+<link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" />
 <div class="orders-page">
     <div class="card card-cascade narrower">
-        <div class="table-responsive-xs"> 
+        <div class="table-responsive-xs">
             <table class="table">
                 <thead class="blue-grey lighten-4">
                     <tr>
@@ -17,14 +17,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($orders as $order) 
+                    @foreach ($orders as $order)
                     <tr>
                         <td>{{ $order->order_id }}</td>
                         <td>{{ $order->time_created }}</td>
                         <td>{{ __('admin_pages.ord_'.$order->type) }}</td>
                         <td>{{ $order->phone }}</td>
                         <td>
-                            <select class="selectpicker change-ord-status" data-ord-id="{{$order->orderId}}" data-style="btn-secondary"> 
+                            <select class="selectpicker change-ord-status" data-ord-id="{{$order->orderId}}" data-style="btn-secondary">
                                 <option {{ $order->status == 0 ? 'selected="selected"' : '' }} value="0">{{__('admin_pages.ord_status_new')}}</option>
                                 <option {{ $order->status == 1 ? 'selected="selected"' : '' }} value="1">{{__('admin_pages.ord_status_processed')}}</option>
                                 <option {{ $order->status == 2 ? 'selected="selected"' : '' }} value="2">{{__('admin_pages.ord_status_rej')}}</option>
@@ -95,7 +95,7 @@
                     @endforeach
                 </tbody>
             </table>
-        </div> 
+        </div>
     </div>
     {{ $orders->links() }}
     <div class="fast-orders">
@@ -103,7 +103,7 @@
             <div class="col-sm-6">
                 <h2>{{__('admin_pages.new_fast_orders')}}</h2>
                 <div class="card card-cascade narrower">
-                    <div class="table-responsive-xs"> 
+                    <div class="table-responsive-xs">
                         <table class="table">
                             <thead class="blue-grey lighten-4">
                                 <tr>
@@ -117,7 +117,7 @@
                                 @php
                                 if(!empty($fastOrders)) {
                                 @endphp
-                                @foreach ($fastOrders as $fOrder) 
+                                @foreach ($fastOrders as $fOrder)
                                 <tr>
                                     <td>{{ $fOrder->time_created }}</td>
                                     <td>{{ $fOrder->phone }}</td>
@@ -140,7 +140,7 @@
                                 @endphp
                             </tbody>
                         </table>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,32 +148,35 @@
 </div>
 <script src="{{ asset('js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 <script>
-$('.change-ord-status').change(function () {
-    var order_id = $(this).data('ord-id');
-    var order_value = $(this).val();
-    $.ajax({
-        type: "POST",
-        url: urls.changeStatus,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        data: {order_id: order_id, order_value: order_value}
-    }).done(function (data) {
-        showAlert('success', "{{ __('admin_pages.status_changed') }}");
+    $('.change-ord-status').change(function() {
+        var order_id = $(this).data('ord-id');
+        var order_value = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: urls.changeStatus,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                order_id: order_id,
+                order_value: order_value
+            }
+        }).done(function(data) {
+            showAlert('success', "{{ __('admin_pages.status_changed') }}");
+        });
     });
-});
-$('.show-more').click(function () {
-    var tr_id = $(this).data('show-tr');
-    $('table').find('[data-tr="' + tr_id + '"]').toggle(function () {
-        if ($('[data-tr="' + tr_id + '"]').is(':visible')) {
-            $('.orders-page .fa-chevron-up').show();
-            $('.orders-page .fa-chevron-down').hide();
-        } else {
-            $('.orders-page .fa-chevron-up').hide();
-            $('.orders-page .fa-chevron-down').show();
-        }
-    });
+    $('.show-more').click(function() {
+        var tr_id = $(this).data('show-tr');
+        $('table').find('[data-tr="' + tr_id + '"]').toggle(function() {
+            if ($('[data-tr="' + tr_id + '"]').is(':visible')) {
+                $('.orders-page .fa-chevron-up').show();
+                $('.orders-page .fa-chevron-down').hide();
+            } else {
+                $('.orders-page .fa-chevron-up').hide();
+                $('.orders-page .fa-chevron-down').show();
+            }
+        });
 
-});
+    });
 </script>
 @endsection

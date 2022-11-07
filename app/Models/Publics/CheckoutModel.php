@@ -29,7 +29,8 @@ class CheckoutModel extends Model
             $id = DB::table('orders')->insertGetId([
                 'order_id' => $this->post['order_id'],
                 'type' => $this->post['payment_type'],
-                'products' => serialize($this->post['products'])
+                'products' => serialize($this->post['products']),
+                'time_created' => now(),
             ]);
             DB::table('orders_clients')->insert([
                 'for_order' => $id,
@@ -50,7 +51,8 @@ class CheckoutModel extends Model
         $this->post = $post;
         DB::table('fast_orders')->insert([
             'phone' => $this->post['fast_phone'],
-            'names' => $this->post['fast_names']
+            'names' => $this->post['fast_names'],
+            'time_created' => now(),
         ]);
     }
 

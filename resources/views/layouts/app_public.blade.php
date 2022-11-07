@@ -23,7 +23,7 @@
                 <div class="row top-part">
                     <div class="col-sm-3 col-md-3">
                         <a href="{{ lang_url('/') }}" class="logo-container">
-                            <img src="{{asset('storage/ExtractiLogo.png')}}" class="img-responsive logo" alt="{{ $head_title }}">
+                            <img src="{{asset('img/site-logo.png')}}" class="img-responsive logo" alt="{{ $head_title }}">
                         </a>
                     </div>
                     <div class="col-sm-3 col-md-4">
@@ -136,9 +136,9 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-3">
                             <ul>
-                                <li class="header">GMMB Solutions</li>
+                                <li class="header">KirilKirkov Github</li>
                                 <li><a href="">About us</a></li>
-                                <li><a href="">Firm info</a></li>
+                                <li><a href="https://github.com/kirilkirkov/Ecommerce-Laravel-Bootstrap" target="_blank">Company Info</a></li>
                             </ul>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            Copyright 2017 yourfarma.eu
+                            Copyright {{ date('Y') }} https://github.com/kirilkirkov/Ecommerce-Laravel-Bootstrap
                         </div>
                         <div class="col-sm-6">
                             При възникване на спор, свързан с покупка онлайн, можете да ползвате сайта ОРС

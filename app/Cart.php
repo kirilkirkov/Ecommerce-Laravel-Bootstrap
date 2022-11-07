@@ -31,7 +31,7 @@ class Cart
     }
 
     public function removeProductQuantity($id)
-    {
+    { 
         if (($key = array_search($id, $_SESSION['laraCart'])) !== false) {
             unset($_SESSION['laraCart'][$key]);
         }
