@@ -23,11 +23,12 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### Server Requirements
 PHP >= 7.0.0
 
-## Installation in 4 easy steps
-1. Copy env.example to .env and change your - DB Credentials and APP_URL.
-2. php artisan migrate
-3. php artisan db:seed
-4. php artisan storage:link
+## Installation in 5 easy steps
+1. composer install
+2. Copy env.example to .env and change your - DB Credentials and APP_URL.
+3. php artisan migrate
+4. php artisan db:seed
+5. php artisan storage:link
 
 ## Login to administration
 http://yourdomain.com/admin
