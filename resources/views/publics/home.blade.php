@@ -107,6 +107,10 @@
                 </div>
             </div>
             @endforeach
+
+            @if(!count($carousel))
+                {{__('public_pages.no_products')}}
+            @endif
         </div>
     </div>
 </div>
