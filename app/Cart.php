@@ -7,7 +7,7 @@ use App\Models\Publics\ProductsModel;
 /**
  * This class manage shopping cart of users
  *
- * @author kiro
+ * @author kirilkirkov
  */
 class Cart
 {
@@ -61,7 +61,7 @@ class Cart
         $products = array();
         if (!isset($_SESSION['laraCart']) || empty($_SESSION['laraCart'])) {
             if (isset($_COOKIE['laraCart']) && $_COOKIE['laraCart'] == null && !empty($_COOKIE['laraCart'])) {
-                $_SESSION['laraCart'] = unserialize($_COOKIE['laraCart']);
+                $_SESSION['laraCart'] = unserialize($_COOKIE['laraCart'], ["allowed_classes" => false]);
             }
         } else {
             $products = $_SESSION['laraCart'];
