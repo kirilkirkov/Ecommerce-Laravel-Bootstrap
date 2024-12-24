@@ -21,7 +21,7 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 4. Products with tree structure categories and tags
 
 ### Server Requirements
-PHP >= 7.0.0
+PHP ^8.0
 
 ## Installation in 5 easy steps
 1. composer install
