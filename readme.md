@@ -1,4 +1,4 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg"></p>
 <p align="center">Shopping Cart Solution - Laravel and Bootstrap</p>
 
 ## Bootsrap Responsive Online Shop with beautiful metro style administration!
@@ -12,7 +12,7 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YX2JXRBLWRXPA)
 
 ## See also
-<p><a href="https://codecanyon.net/item/wp-invoices-pdf-electronic-invoicing-system/36891583" title="Electronic invoicing and warehouse management plugin which allows you to issue, send and download invoices as pdf file">WordPress PDF Invoices Plugin</a> - Create, Send, Manage and Download as PDF or CSV Invoices in Multiple Templates</p>
+<p><a href="https://wordpress.org/plugins/kirilkirkov-pdf-invoice-manager/" title="Invoct - Electronic invoicing and warehouse management plugin which allows you to issue, send and download invoices as pdf file">Invoct - WordPress PDF Invoices Plugin</a> - Create, Send, Manage and Download as PDF or CSV Invoices in Multiple Templates</p>
 
 ## We support following features
 1. Bootstrap responsive
